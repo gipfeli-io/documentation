@@ -57,7 +57,7 @@ const config = {
           },
           {to: '/meeting-notes', label: 'Meeting Notes', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/gipfeli-io',
             label: 'GitHub',
             position: 'right',
           },
