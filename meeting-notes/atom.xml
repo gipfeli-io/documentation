@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.gipfeli.io/meeting-notes</id>
+    <title>gipfeli.io Blog</title>
+    <updated>2022-04-08T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.gipfeli.io/meeting-notes"/>
+    <subtitle>gipfeli.io Blog</subtitle>
+    <icon>https://www.gipfeli.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Kick Off gipfeli.io]]></title>
+        <id>kickoff</id>
+        <link href="https://www.gipfeli.io/meeting-notes/kickoff"/>
+        <updated>2022-04-08T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In order to kick things off, we decided to start with a very general kick off meeting.]]></summary>
+        <content type="html"><![CDATA[<p>In order to kick things off, we decided to start with a very general kick off meeting.</p><p>This meeting was not yet part of any sprint, but rather designed as a setup-meeting for all things to come.</p><p>The following points were discussed.</p><h1>Time tracking</h1><p>We decided to use the <a href="https://clockify.me/" target="_blank" rel="noopener noreferrer">Clockify.me</a> service. This service allows time tracking with detailed descriptions and in various projects. This will allow us to keep track of our invested time as well as how much time we spend developing and time in meetings.</p><h1>Prototype milestones</h1><p>lorem ipsum...</p>]]></content>
+        <author>
+            <name>Sabrina Wullschleger</name>
+            <uri>https://github.com/Saela</uri>
+        </author>
+        <author>
+            <name>Lukas Merz</name>
+            <uri>https://github.com/Tugark</uri>
+        </author>
+        <category label="general" term="general"/>
+    </entry>
+</feed>

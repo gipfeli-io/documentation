@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>gipfeli.io Blog</title>
+        <link>https://www.gipfeli.io/meeting-notes</link>
+        <description>gipfeli.io Blog</description>
+        <lastBuildDate>Fri, 08 Apr 2022 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Kick Off gipfeli.io]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/kickoff</link>
+            <guid>kickoff</guid>
+            <pubDate>Fri, 08 Apr 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[In order to kick things off, we decided to start with a very general kick off meeting.]]></description>
+            <content:encoded><![CDATA[<p>In order to kick things off, we decided to start with a very general kick off meeting.</p><p>This meeting was not yet part of any sprint, but rather designed as a setup-meeting for all things to come.</p><p>The following points were discussed.</p><h1>Time tracking</h1><p>We decided to use the <a href="https://clockify.me/" target="_blank" rel="noopener noreferrer">Clockify.me</a> service. This service allows time tracking with detailed descriptions and in various projects. This will allow us to keep track of our invested time as well as how much time we spend developing and time in meetings.</p><h1>Prototype milestones</h1><p>lorem ipsum...</p>]]></content:encoded>
+            <category>general</category>
+        </item>
+    </channel>
+</rss>

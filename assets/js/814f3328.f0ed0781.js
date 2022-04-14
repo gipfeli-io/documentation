@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumentation=self.webpackChunkdocumentation||[]).push([[535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent Meetings","items":[{"title":"Kick Off gipfeli.io","permalink":"/meeting-notes/kickoff"}]}')}}]);
