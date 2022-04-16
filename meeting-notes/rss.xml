@@ -14,7 +14,31 @@
             <guid>kickoff</guid>
             <pubDate>Fri, 08 Apr 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[In order to kick things off, we decided to start with a very general kick off meeting.]]></description>
-            <content:encoded><![CDATA[<p>In order to kick things off, we decided to start with a very general kick off meeting.</p><p>This meeting was not yet part of any sprint, but rather designed as a setup-meeting for all things to come.</p><p>The following points were discussed.</p><h1>Time tracking</h1><p>We decided to use the <a href="https://clockify.me/" target="_blank" rel="noopener noreferrer">Clockify.me</a> service. This service allows time tracking with detailed descriptions and in various projects. This will allow us to keep track of our invested time as well as how much time we spend developing and time in meetings.</p><h1>Prototype milestones</h1><p>lorem ipsum...</p>]]></content:encoded>
+            <content:encoded><![CDATA[<p>In order to kick things off, we decided to start with a very general kick off meeting.</p><p>This meeting was not yet part of any sprint, but rather designed as a setup-meeting for all things to come.</p><p>The following points were discussed.</p><h1>Time tracking</h1><p>We decided to use the <a href="https://clockify.me/" target="_blank" rel="noopener noreferrer">Clockify.me</a> service. This service allows time tracking with detailed descriptions and in various projects. This will allow us to keep track of our invested time as well as how much time we spend developing and time in meetings.</p><h1>Prototype content</h1><p>As a first milestone, we see the tech review in early June. The goal there is to have a walking skeleton with most of the architectural decisions set in stone. As such, we
+agreed on the following features that should be working in a prototypical fashion:</p><ul><li>Staging Environment with auto deployment</li><li>Login for existing users (without management functions and profile functions)</li><li>List of existing tours</li><li>CRUD functionality for tours</li><li>Offline functionality (at least conceptually, does not have to work yet)</li></ul><p>This set of features will allow us to showcase most of our application and architectural ideas, and it requires to have a working infrastructure ready. We also see the offline
+functionality as one of the most critical aspects, so we want to focus on that as well.</p><h1>Development process and timeplans</h1><p>As per our thesis agreement, we will use an agile, Scrum-inspired approach. Therefore, we agreed on the following cornerstones:</p><ul><li><p>Sprints are 2 weeks long, leading us to 11 sprints in total</p></li><li><p>We use <a href="https://github.com/orgs/gipfeli-io/projects/1" target="_blank" rel="noopener noreferrer">a shared Github Project</a> with both repository-specific tickets and overall tickets. They are organized in several
+buckets and will be used for our sprintplanning ("iterations" in Github projects). The following labels exist:</p><ul><li><code>Backlog</code>: All tickets that come up during development or that have not been planned yet</li><li><code>Sprint Backlog</code>: Tickets that are used for a given iteration (and have the iteration label attached)</li><li><code>In Progress</code>: Tickets that are in development</li><li><code>PR pending</code>: Tickets that are in technical review</li><li><code>Testing</code>: Tickets that can be tested during the sprint review, i.e. they are already merged to staging</li><li><code>Done</code>: Tickets that have been tested and can be deployed as a release artifact.</li></ul></li></ul><h1>Various echnical discussions and decisions</h1><ul><li>We will be using <a href="https://mui.com/" target="_blank" rel="noopener noreferrer">Material UI</a> for frontend components</li><li>We will try to use <a href="https://next-auth.js.org/" target="_blank" rel="noopener noreferrer">next-auth</a> and use <a href="https://auth0.com/" target="_blank" rel="noopener noreferrer">Auth0</a> as an identity provider.</li><li>We will try to use OpenAPI sepcifications and use the <a href="https://docs.nestjs.com/openapi/introduction" target="_blank" rel="noopener noreferrer">corresponding nest.js plugin</a> for auto-generated docs.</li><li>As we have two repositories for frontend and backend, we should discuss how we handle shared types. Possibilities are custom npm packages or no sharing at all.</li></ul><p>Entscheid Weekly:
+Immer am Dienstag 20:00
+Besprechen:
+Was wurde erledigt.
+An was wird gearbeitet.
+Gibt es Probleme?
+Timeboxed: 20 min
+Entscheid Retro + Planning:
+Jeweils am Dienstag von Sprint Beginn, 17:30
+Besprechen:
+Rückblick auf Sprint: Was haben wir erreicht?
+Planning nächster Sprint
+Timeboxed: 1 Stunde</p><p>Notiz Offline Funktionalität:
+Unvollständige Touren sollen gekennzeichnet werden
+Notiz Benutzer:
+Zwei Rollen: Admin und User
+<a href="https://auth0.com/blog/developing-a-secure-api-with-nestjs-adding-authorization/" target="_blank" rel="noopener noreferrer">https://auth0.com/blog/developing-a-secure-api-with-nestjs-adding-authorization/</a> </p><p>Meeting mit Tobi:
+Opensource oder nur Docs opensource?
+Auth Provider
+Allgemein: Was erwartet er in Bezug auf Dokumentation? Wie oft treffen? Milestones?
+DoD?
+Punkt 10 Packages -&gt; Tobi</p>]]></content:encoded>
             <category>general</category>
         </item>
     </channel>
