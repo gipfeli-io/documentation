@@ -30,6 +30,8 @@ overview of the project</li><li>A decision log should be kept in a central locat
             <name>Tobias Büchel</name>
             <uri>https://www.ost.ch</uri>
         </author>
+        <category label="sprint" term="sprint"/>
+        <category label="planning" term="planning"/>
         <category label="general" term="general"/>
     </entry>
     <entry>
