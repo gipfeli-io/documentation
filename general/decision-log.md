@@ -1,9 +1,8 @@
 ---
 id: decision-log 
-sidebar_position: 3
+sidebar_position: 4
+title: "Decision log"
 ---
-
-# Decision log
 
 Throughout the course of this thesis, a lot of decisions will be made. This log provides a transparent overview of all
 these decisions and can be used as a reference in other documents.

@@ -1,9 +1,8 @@
 ---
 id: organization
 sidebar_position: 2
+title: Organization
 ---
-
-# Organization
 
 This project is conducted as part of the *Master of Advanced Studies in Software Engineering 20-22* at the OST
 Fachhochschule Rapperswil. Its goal is to complete a software engineering project from A to Z, covering all of the

@@ -1,9 +1,8 @@
 ---
 id: index
 sidebar_position: 1
+title: Intro
 ---
-
-# Intro
 
 This documentation holds all general content in terms of our master thesis. Any organizational content such as decision
 logs or guidelines can be found here.
