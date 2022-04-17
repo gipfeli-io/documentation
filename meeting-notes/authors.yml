@@ -9,3 +9,9 @@ lukas:
   title: gipfeli.io Co-Creator
   url: https://github.com/Tugark
   image_url: https://github.com/tugark.png
+
+tobias:
+  name: Tobias Büchel
+  title: Thesis supervisor
+  url: https://www.ost.ch
+  image_url: https://github.com/apollocoder.png
