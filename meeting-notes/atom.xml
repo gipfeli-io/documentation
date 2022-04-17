@@ -2,42 +2,60 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.gipfeli.io/meeting-notes</id>
     <title>gipfeli.io Blog</title>
-    <updated>2022-04-08T00:00:00.000Z</updated>
+    <updated>2022-04-12T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.gipfeli.io/meeting-notes"/>
     <subtitle>gipfeli.io Blog</subtitle>
     <icon>https://www.gipfeli.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Sprint 1: Kickoff]]></title>
+        <id>sprint-1-kickoff</id>
+        <link href="https://www.gipfeli.io/meeting-notes/sprint-1-kickoff"/>
+        <updated>2022-04-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The first sprint begins! Besides the initial sprint planning, we also discussed some organizational questions with our]]></summary>
+        <content type="html"><![CDATA[<p>The first sprint begins! Besides the initial sprint planning, we also discussed some organizational questions with our
+supervisor Tobias.</p><p><strong>Sprint #1 goals</strong></p><ul><li>Have the basic deployment pipeline for frontend/backend/deployment up and running</li><li>Have the basic infrastructure (Google Cloud Run) up and running</li><li>Have an initial set of wireframes/screen layouts ready</li></ul><p>As an important decision, we also agreed on our branching strategy.</p><p>The following questions were discussed with Tobias.</p><p><strong>Can we opensource our code? This would allow for more flexibility in the free plan on Github.com</strong></p><ul><li>According to Tobias, this is not an issue. However, he asked us to discuss this with Luc to get an official</li><li>response.</li><li><em>Update 17/04/22: We received official confirmation that this approach is fine.</em></li></ul><p><strong>Can we use Auth0?</strong></p><ul><li>Yes, this is fine.</li></ul><p><strong>What is required in terms of documentation, meetings, milestones, definition of done?</strong></p><ul><li>Documentation:<ul><li>accounts for roughly 1/3 of the final grade</li><li>Should be written for a developer well-versed in the technology, but new to the project</li><li>Should cover the domain, architecture, models, technical behaviours and use cases/sequential flows for some of the
+more complicated cases</li><li>Wireframes should be conceptually correct</li><li>As for the <strong>first milestone</strong> (the technical review in June), the documentation shall offer a quick and thorough
+overview of the project</li><li>A decision log should be kept in a central location</li><li>The documentation can be spread across various services, but should have a single central entrypoint</li></ul></li><li>Meetings with supervisor:<ul><li>Once every two weeks in the beginning</li><li>Might be reduced later on</li></ul></li><li>Milestones:<ul><li>We should use milestones</li><li>The first milestone will be the tech review, after that, milestones can be e.g. the release of a complex features.
+2-3 are optimal.</li><li>There should be a graphical overview with milestones and sprints, not technical.</li></ul></li><li>Testing depth:<ul><li>Not all testing types are required and no 100% coverage is expected</li><li>Choose tests wisely and document any decisions</li></ul></li><li>Definition of done:<ul><li>Required</li></ul></li><li>Language:<ul><li>Can be English, but should be discussed with Luc.</li><li><em>Update 17/04/22: We received official confirmation that this approach is fine.</em></li></ul></li></ul><p><strong>Best practices for sharing types across repositories?</strong></p><ul><li>Various approaches exist - the package one can be clean but takes a lot of effort to maintain.</li><li>In general, we should start with duplicate types and only if we have the time, we can try the shared approach.</li></ul><h1>Time tracking</h1>]]></content>
+        <author>
+            <name>Sabrina Wullschleger</name>
+            <uri>https://github.com/Saela</uri>
+        </author>
+        <author>
+            <name>Lukas Merz</name>
+            <uri>https://github.com/Tugark</uri>
+        </author>
+        <author>
+            <name>Tobias Büchel</name>
+            <uri>https://www.ost.ch</uri>
+        </author>
+        <category label="general" term="general"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Kick Off gipfeli.io]]></title>
         <id>kickoff</id>
         <link href="https://www.gipfeli.io/meeting-notes/kickoff"/>
         <updated>2022-04-08T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[In order to kick things off, we decided to start with a very general kick off meeting.]]></summary>
-        <content type="html"><![CDATA[<p>In order to kick things off, we decided to start with a very general kick off meeting.</p><p>This meeting was not yet part of any sprint, but rather designed as a setup-meeting for all things to come.</p><p>The following points were discussed.</p><h1>Time tracking</h1><p>We decided to use the <a href="https://clockify.me/" target="_blank" rel="noopener noreferrer">Clockify.me</a> service. This service allows time tracking with detailed descriptions and in various projects. This will allow us to keep track of our invested time as well as how much time we spend developing and time in meetings.</p><h1>Prototype content</h1><p>As a first milestone, we see the tech review in early June. The goal there is to have a walking skeleton with most of the architectural decisions set in stone. As such, we
-agreed on the following features that should be working in a prototypical fashion:</p><ul><li>Staging Environment with auto deployment</li><li>Login for existing users (without management functions and profile functions)</li><li>List of existing tours</li><li>CRUD functionality for tours</li><li>Offline functionality (at least conceptually, does not have to work yet)</li></ul><p>This set of features will allow us to showcase most of our application and architectural ideas, and it requires to have a working infrastructure ready. We also see the offline
-functionality as one of the most critical aspects, so we want to focus on that as well.</p><h1>Development process and timeplans</h1><p>As per our thesis agreement, we will use an agile, Scrum-inspired approach. Therefore, we agreed on the following cornerstones:</p><ul><li><p>Sprints are 2 weeks long, leading us to 11 sprints in total</p></li><li><p>We use <a href="https://github.com/orgs/gipfeli-io/projects/1" target="_blank" rel="noopener noreferrer">a shared Github Project</a> with both repository-specific tickets and overall tickets. They are organized in several
-buckets and will be used for our sprintplanning ("iterations" in Github projects). The following labels exist:</p><ul><li><code>Backlog</code>: All tickets that come up during development or that have not been planned yet</li><li><code>Sprint Backlog</code>: Tickets that are used for a given iteration (and have the iteration label attached)</li><li><code>In Progress</code>: Tickets that are in development</li><li><code>PR pending</code>: Tickets that are in technical review</li><li><code>Testing</code>: Tickets that can be tested during the sprint review, i.e. they are already merged to staging</li><li><code>Done</code>: Tickets that have been tested and can be deployed as a release artifact.</li></ul></li></ul><h1>Various echnical discussions and decisions</h1><ul><li>We will be using <a href="https://mui.com/" target="_blank" rel="noopener noreferrer">Material UI</a> for frontend components</li><li>We will try to use <a href="https://next-auth.js.org/" target="_blank" rel="noopener noreferrer">next-auth</a> and use <a href="https://auth0.com/" target="_blank" rel="noopener noreferrer">Auth0</a> as an identity provider.</li><li>We will try to use OpenAPI sepcifications and use the <a href="https://docs.nestjs.com/openapi/introduction" target="_blank" rel="noopener noreferrer">corresponding nest.js plugin</a> for auto-generated docs.</li><li>As we have two repositories for frontend and backend, we should discuss how we handle shared types. Possibilities are custom npm packages or no sharing at all.</li></ul><p>Entscheid Weekly:
-Immer am Dienstag 20:00
-Besprechen:
-Was wurde erledigt.
-An was wird gearbeitet.
-Gibt es Probleme?
-Timeboxed: 20 min
-Entscheid Retro + Planning:
-Jeweils am Dienstag von Sprint Beginn, 17:30
-Besprechen:
-Rückblick auf Sprint: Was haben wir erreicht?
-Planning nächster Sprint
-Timeboxed: 1 Stunde</p><p>Notiz Offline Funktionalität:
-Unvollständige Touren sollen gekennzeichnet werden
-Notiz Benutzer:
-Zwei Rollen: Admin und User
-<a href="https://auth0.com/blog/developing-a-secure-api-with-nestjs-adding-authorization/" target="_blank" rel="noopener noreferrer">https://auth0.com/blog/developing-a-secure-api-with-nestjs-adding-authorization/</a> </p><p>Meeting mit Tobi:
-Opensource oder nur Docs opensource?
-Auth Provider
-Allgemein: Was erwartet er in Bezug auf Dokumentation? Wie oft treffen? Milestones?
-DoD?
-Punkt 10 Packages -&gt; Tobi</p>]]></content>
+        <content type="html"><![CDATA[<p>In order to kick things off, we decided to start with a very general kick off meeting.</p><p>This meeting was not yet part of any sprint, but rather designed as a setup-meeting for all things to come.</p><p>The following points were discussed.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="time-tracking">Time tracking<a class="hash-link" href="#time-tracking" title="Direct link to heading">​</a></h2><p>We decided to use the <a href="https://clockify.me/" target="_blank" rel="noopener noreferrer">Clockify.me</a> service. This service allows time tracking with detailed
+descriptions and in various projects. This will allow us to keep track of our invested time as well as how much time we
+spend developing and time in meetings.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="prototype-content">Prototype content<a class="hash-link" href="#prototype-content" title="Direct link to heading">​</a></h2><p>As a first milestone, we see the tech review in early June. The goal there is to have a walking skeleton with most of
+the architectural decisions set in stone. As such, we agreed on the following features that should be working in a
+prototypical fashion:</p><ul><li>Staging Environment with auto deployment</li><li>Login for existing users (without management functions and profile functions)</li><li>List of existing tours</li><li>CRUD functionality for tours</li><li>Offline functionality (at least conceptually, does not have to work yet)</li></ul><p>This set of features will allow us to showcase most of our application and architectural ideas, and it requires to have
+a working infrastructure ready. We also see the offline functionality as one of the most critical aspects, so we want to
+focus on that as well.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="development-process-and-timeplans">Development process and timeplans<a class="hash-link" href="#development-process-and-timeplans" title="Direct link to heading">​</a></h2><p>As per our thesis agreement, we will use an agile, Scrum-inspired approach. Therefore, we agreed on the following
+cornerstones:</p><ul><li><p>Sprints are 2 weeks long, leading us to 11 sprints in total.</p></li><li><p>We do not use the product owner/scrum master roles explicitly, since this does not really make sense in a team of two.
+However, we will jointly manage our backlog both from a product owner and developer perspective, and we will help each
+other to facilitate our development.</p></li><li><p>We will use a modified subset of the typical Scrum ceremonies. They are at fixed intervals so as to guarantee a degree
+of consistency.</p><ul><li><code>Weekly</code>: Serves as our daily - we will discuss what has been achieved, what is being worked on and where issues
+arose. This meeting is <strong>timeboxed to 20 minutes</strong> and is scheduled to happen <strong>each Tuesday at 18:00</strong>.</li><li><code>Sprint ending</code>: At the end of each sprint, we will hold a <strong>1-hour long</strong> meeting covering the sprint review,
+retrospective and planning for the next sprint. This meeting will be held on Tuesday as well, bi-weekly, whenever
+a new sprint starts.</li></ul></li><li><p>We use <a href="https://github.com/orgs/gipfeli-io/projects/1" target="_blank" rel="noopener noreferrer">a shared Github Project</a> with both repository-specific tickets
+and overall tickets. They are organized in several buckets and will be used for our sprintplanning ("iterations" in
+Github projects). The following labels exist:</p><ul><li><code>Backlog</code>: All tickets that come up during development or that have not been planned yet</li><li><code>Sprint Backlog</code>: Tickets that are used for a given iteration (and have the iteration label attached)</li><li><code>In Progress</code>: Tickets that are in development</li><li><code>PR pending</code>: Tickets that are in technical review</li><li><code>Testing</code>: Tickets that can be tested during the sprint review, i.e. they are already merged to staging</li><li><code>Done</code>: Tickets that have been tested and can be deployed as a release artifact.</li></ul></li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="various-technical-discussions-and-decisions">Various technical discussions and decisions<a class="hash-link" href="#various-technical-discussions-and-decisions" title="Direct link to heading">​</a></h2><ul><li>We will be using <a href="https://mui.com/" target="_blank" rel="noopener noreferrer">Material UI</a> for frontend components</li><li>We will try to use <a href="https://next-auth.js.org/" target="_blank" rel="noopener noreferrer">next-auth</a> and use <a href="https://auth0.com/" target="_blank" rel="noopener noreferrer">Auth0</a> as an identity provider.</li><li>We will try to use OpenAPI sepcifications and use
+the <a href="https://docs.nestjs.com/openapi/introduction" target="_blank" rel="noopener noreferrer">corresponding nest.js plugin</a> for auto-generated docs.</li><li>As we have two repositories for frontend and backend, we should discuss how we handle shared types. Possibilities are
+custom npm packages or no sharing at all.</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="further-unsorted-notes">Further unsorted notes<a class="hash-link" href="#further-unsorted-notes" title="Direct link to heading">​</a></h2><ul><li>Offline functionality: incomplete tours (i.e. offline tours without maps) shall be designated as such</li><li>Users shall have two roles - administrators and users.</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="questions-for-supervisor">Questions for supervisor<a class="hash-link" href="#questions-for-supervisor" title="Direct link to heading">​</a></h2><ul><li>Can we opensource our code? This would allow for more flexibility in the free plan on Github.com</li><li>Can we use Auth0?</li><li>What is required in terms of documentation, meetings, milestones, definition of done?</li><li>Best practices for sharing types across repositories?</li></ul>]]></content>
         <author>
             <name>Sabrina Wullschleger</name>
             <uri>https://github.com/Saela</uri>
