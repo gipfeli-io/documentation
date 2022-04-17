@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'gipfeli.io',
-    tagline: 'Documentation',
+    tagline: 'This is the comprehensive documentation to developing gipfeli.io',
     url: 'https://www.gipfeli.io',
     baseUrl: '/',
     onBrokenLinks: 'throw',
@@ -92,7 +92,7 @@ const config = {
             },
             footer: {
                 style: 'dark',
-                copyright: `Copyright © ${new Date().getFullYear()} gipfeli.io | Built with Docusaurus.`,
+                copyright: `Copyright © ${new Date().getFullYear()} gipfeli.io<br />Built with <a href="https://docusaurus.io/" title="Docusaurus">Docusaurus</a> | Illustrations by <a href="https://undraw.co/" title="Undraw">unDraw</a>`,
             },
             prism: {
                 theme: lightCodeTheme,
