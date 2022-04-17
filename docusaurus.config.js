@@ -75,7 +75,12 @@ const config = {
                     },
                     {
                         to: '/meeting-notes',
-                        label: 'Meeting Notes',
+                        label: 'Recent Meeting Notes',
+                        position: 'left'
+                    },
+                    {
+                        to: '/meeting-notes/archive',
+                        label: 'Meeting Notes Archive',
                         position: 'left'
                     },
                     {

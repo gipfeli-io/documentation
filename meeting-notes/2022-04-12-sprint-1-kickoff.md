@@ -2,7 +2,7 @@
 slug: sprint-1-kickoff 
 title: "Sprint 1: Kickoff"
 authors: [sabrina, lukas, tobias]
-tags: [general]
+tags: [sprint, planning, general]
 ---
 
 The first sprint begins! Besides the initial sprint planning, we also discussed some organizational questions with our
