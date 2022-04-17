@@ -1,6 +1,6 @@
 ---
 id: organization
-sidebar_position: 2
+sidebar_position: 2 
 title: Organization
 ---
 
@@ -46,6 +46,13 @@ sense that we have a certain vision of our project that we want it to fulfill.
 As for the time structure, given the timeframe of the thesis and our availability, we organize ourselves in **sprints of
 2 weeks duration**, starting on Tuesdays. The first sprint started on Tuesday, 12th of April, which leads to a (planned)
 total of 12 sprints until the 23rd of September, where we have to hand-in our final abstract.
+
+:::tip Note
+
+We regard the handing-in of the final abstract as some sort of the final point. The remaining time will be used to
+polish the documentation and prepare the presentation, which we do not see as part of our agile development process.
+
+:::
 
 We use a modified set of meetings as, for example, it is not possible to have daily meetings, given that we both are
 working full-time. However, to maintain consistency, we define the following fixed meetings that should only be
