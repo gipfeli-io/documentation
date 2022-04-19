@@ -4,10 +4,30 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Tue, 12 Apr 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 28 Apr 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Development Meeting 1]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/development-meeting-1</link>
+            <guid>development-meeting-1</guid>
+            <pubDate>Thu, 28 Apr 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[This meeting was held in-person in Zurich since we had to discuss several topics.]]></description>
+            <content:encoded><![CDATA[<p>This meeting was held in-person in Zurich since we had to discuss several topics.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="definition-of-done">Definition of Done<a class="hash-link" href="#definition-of-done" title="Direct link to heading">​</a></h2><p>lorem ipsum</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="milestone-planning">Milestone Planning<a class="hash-link" href="#milestone-planning" title="Direct link to heading">​</a></h2><p>Lorem ipsum</p>]]></content:encoded>
+            <category>general</category>
+        </item>
+        <item>
+            <title><![CDATA[Sprint 1 Review & Sprint 2 Planning]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/sprint-1-review-sprint-2-planning</link>
+            <guid>sprint-1-review-sprint-2-planning</guid>
+            <pubDate>Tue, 26 Apr 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[These are the notes for the sprint 1 review and sprint 2 planning.]]></description>
+            <content:encoded><![CDATA[<p>These are the notes for the sprint 1 review and sprint 2 planning.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="review">Review<a class="hash-link" href="#review" title="Direct link to heading">​</a></h2><p>lorem ipsum</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="planning">Planning<a class="hash-link" href="#planning" title="Direct link to heading">​</a></h2><p>Lorem ipsum</p>]]></content:encoded>
+            <category>sprint</category>
+            <category>review</category>
+            <category>planning</category>
+        </item>
         <item>
             <title><![CDATA[Sprint 1: Kickoff]]></title>
             <link>https://www.gipfeli.io/meeting-notes/sprint-1-kickoff</link>
