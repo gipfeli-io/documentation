@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumentation=self.webpackChunkdocumentation||[]).push([[2605],{8513:function(t){t.exports=JSON.parse('{"allTagsPath":"/meeting-notes/tags","name":"sprint","count":2,"permalink":"/meeting-notes/tags/sprint"}')}}]);
