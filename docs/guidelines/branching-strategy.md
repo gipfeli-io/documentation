@@ -23,6 +23,13 @@ merge it into both branches. **Only do this in emergencies!**
 
 :::
 
+:::tip Note for the documentation repository
+
+The documentation is an exception to this rule - since we want to push documentation as quick as possible, changes 
+always are pushed directly to `main` and deployed as such.
+
+:::
+
 ## `main`
 
 This is the main branch that gets deployed to the production environment. This branch should only be changed through
