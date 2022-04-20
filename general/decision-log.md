@@ -1,5 +1,7 @@
 ---
-id: decision-log sidebar_position: 5 title: "Decision log"
+id: decision-log 
+sidebar_position: 5 
+title: "Decision log"
 ---
 
 Throughout the course of this thesis, a lot of decisions will be made. This log provides a transparent overview of all
