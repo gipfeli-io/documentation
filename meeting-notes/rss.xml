@@ -4,7 +4,7 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Thu, 28 Apr 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 03 May 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,18 +12,27 @@
             <title><![CDATA[Development Meeting 1]]></title>
             <link>https://www.gipfeli.io/meeting-notes/development-meeting-1</link>
             <guid>development-meeting-1</guid>
+            <pubDate>Tue, 03 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Todo: General description]]></description>
+            <content:encoded><![CDATA[<p>Todo: General description</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="open-questions">Open questions<a class="hash-link" href="#open-questions" title="Direct link to heading">​</a></h2><ul><li>Do we need to estimate the tickets?</li></ul>]]></content:encoded>
+            <category>general</category>
+        </item>
+        <item>
+            <title><![CDATA[Development Meeting 1]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/development-meeting-1</link>
+            <guid>development-meeting-1</guid>
             <pubDate>Thu, 28 Apr 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[This meeting was held in-person in Zurich since we had to discuss several topics.]]></description>
-            <content:encoded><![CDATA[<p>This meeting was held in-person in Zurich since we had to discuss several topics.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="definition-of-done">Definition of Done<a class="hash-link" href="#definition-of-done" title="Direct link to heading">​</a></h2><p>lorem ipsum</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="milestone-planning">Milestone Planning<a class="hash-link" href="#milestone-planning" title="Direct link to heading">​</a></h2><p>Lorem ipsum</p>]]></content:encoded>
+            <content:encoded><![CDATA[<p>Todo: General description</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="open-questions">Open questions<a class="hash-link" href="#open-questions" title="Direct link to heading">​</a></h2><ul><li>Do we need to estimate the tickets?</li></ul>]]></content:encoded>
             <category>general</category>
         </item>
         <item>
             <title><![CDATA[Sprint 1 Review & Sprint 2 Planning]]></title>
             <link>https://www.gipfeli.io/meeting-notes/sprint-1-review-sprint-2-planning</link>
             <guid>sprint-1-review-sprint-2-planning</guid>
-            <pubDate>Tue, 26 Apr 2022 00:00:00 GMT</pubDate>
+            <pubDate>Mon, 25 Apr 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[These are the notes for the sprint 1 review and sprint 2 planning.]]></description>
-            <content:encoded><![CDATA[<p>These are the notes for the sprint 1 review and sprint 2 planning.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="review">Review<a class="hash-link" href="#review" title="Direct link to heading">​</a></h2><p>lorem ipsum</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="planning">Planning<a class="hash-link" href="#planning" title="Direct link to heading">​</a></h2><p>Lorem ipsum</p>]]></content:encoded>
+            <content:encoded><![CDATA[<p>These are the notes for the sprint 1 review and sprint 2 planning.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="review">Review<a class="hash-link" href="#review" title="Direct link to heading">​</a></h2><ul><li>We currently do not have a DoD, but we don't need it for those tickets as it was prep work</li><li>We could close all the tickets in the sprint. Setup of the project incl. deployment is done.</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="retro">Retro<a class="hash-link" href="#retro" title="Direct link to heading">​</a></h2><ul><li>We both are happy with how the sprint went. </li><li>We planned enough work and could finish all the tasks in time.</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="planning">Planning<a class="hash-link" href="#planning" title="Direct link to heading">​</a></h2><ul><li>Sprint Goals: <ul><li>Landing page finished</li><li>Login possible with predefined user (no registration etc.)</li><li>DB setup finished</li><li>DoD finished</li></ul></li></ul>]]></content:encoded>
             <category>sprint</category>
             <category>review</category>
             <category>planning</category>
