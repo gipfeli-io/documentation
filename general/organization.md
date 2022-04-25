@@ -88,3 +88,16 @@ We use the following labels for all tasks:
 * `PR pending`: Tickets that are in technical review
 * `Testing`: Tickets that can be tested during the sprint review, i.e. they are already merged to staging
 * `Done`: Tickets that have been tested and can be deployed as a release artifact.
+
+### GIT Workflow
+
+#### Branch naming
+[Todo]
+
+#### Pull requests
+
+- After creating the PR we mark the other person to tell them that there is a PR.
+- If we think the PR does not need a review we can merge it directly and move the ticket in the board to Testing
+- If the PR needs a review (e.g. because it is a critical change) we move the ticket in the board to PR pending
+- In either case the other person will check the PR when they have time and need to leave a quick comment that the PR was reviewed
+- If the PR was not ok the person reviewing the PR needs to create an issue on the project board and assign it to the person that created the PR
