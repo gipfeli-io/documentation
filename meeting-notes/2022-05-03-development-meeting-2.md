@@ -1,6 +1,6 @@
 ---
-slug: development-meeting-1
-title: "Development Meeting 1"
+slug: development-meeting-2
+title: "Development Meeting 2"
 authors: [sabrina, lukas, tobias]
 tags: [general]
 ---
