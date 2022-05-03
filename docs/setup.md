@@ -27,8 +27,8 @@ via the `.env` variable, so when you run the backend on another port, this has t
 
 ### Database
 The easiest way to setup the database is to use the postgres docker image. Do the following steps to configure it:
-1. docker pull postgres:14.2
-2. docker run -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=postgres -p 5432:5432 library/postgres
+1. `docker pull postgres:14.2`
+2. `docker run -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=postgres -p 5432:5432 library/postgres`
 3. Feel free to create a new database with any naming you like or use the default database 'postgres'
 
 :::info
