@@ -39,6 +39,9 @@ Connect to database instance with your favorite db tool (e.g. DBeaver, DataGrip 
 - Password: postgres
 :::
 
+### Database migrations
+1. Run with `npm run migration`
+
 ### Code
 1. Clone the repository
 2. Run `npm i` to set up all dependencies
