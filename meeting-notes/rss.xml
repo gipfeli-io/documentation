@@ -13,17 +13,22 @@
             <link>https://www.gipfeli.io/meeting-notes/development-meeting-2</link>
             <guid>development-meeting-2</guid>
             <pubDate>Tue, 03 May 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Todo: General description]]></description>
-            <content:encoded><![CDATA[<p>Todo: General description</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="open-questions">Open questions<a class="hash-link" href="#open-questions" title="Direct link to heading">​</a></h2><ul><li>Do we need to estimate the tickets?</li></ul>]]></content:encoded>
+            <description><![CDATA[This bi-weekly meeting was to show Tobias, our supervisor, our current progress.]]></description>
+            <content:encoded><![CDATA[<p>This bi-weekly meeting was to show Tobias, our supervisor, our current progress.</p><p>We showed our current progress, including</p><ul><li>Documentation</li><li>Deployments</li><li>Current frontend progress with skeleton pages</li></ul><p>We also discussed our development workflow and our milestone planning. All in all, it seems like we are on track.</p><p>As an <strong>improvement</strong>, Tobias pointed out that we should link our code to the issues. We agreed to do this in line with
+our development workflow by assigning our pull requests to the corresponding issue(s). That way, one can look at the
+issue and directly see what has been changed. Since we also decided to add more descriptions to our issues, this will
+allow any bystander to graps what the issue was about.</p>]]></content:encoded>
             <category>general</category>
         </item>
         <item>
             <title><![CDATA[Development Meeting 1]]></title>
             <link>https://www.gipfeli.io/meeting-notes/development-meeting-1</link>
             <guid>development-meeting-1</guid>
-            <pubDate>Thu, 28 Apr 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[This meeting was held in-person in Zurich since we had to discuss several topics.]]></description>
-            <content:encoded><![CDATA[<p>This meeting was held in-person in Zurich since we had to discuss several topics.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="definition-of-done">Definition of Done<a class="hash-link" href="#definition-of-done" title="Direct link to heading">​</a></h2><p>lorem ipsum</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="milestone-planning">Milestone Planning<a class="hash-link" href="#milestone-planning" title="Direct link to heading">​</a></h2><p>Lorem ipsum</p>]]></content:encoded>
+            <pubDate>Sun, 01 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[In this meeting, we defined our Definition of Done and fleshed out our milestone planning.]]></description>
+            <content:encoded><![CDATA[<p>In this meeting, we defined our Definition of Done and fleshed out our milestone planning.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="definition-of-done">Definition of Done<a class="hash-link" href="#definition-of-done" title="Direct link to heading">​</a></h2><p>We decided to only specify the Definition of Done for our issues. The project-wide Definition of Done (i.e. in relation
+to feature completeness) can be found in our Master Thesis contract.</p><p>For more details, see our <a href="/general/definition-of-done">Definition of Done</a>.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="milestone-planning">Milestone Planning<a class="hash-link" href="#milestone-planning" title="Direct link to heading">​</a></h2><p>We decided on four milestones that allow us for some flexibility while also guaranteeing that we meet the criteria for
+the tech review.</p><p>For more details, see the <a href="/general/milestones-planning">Milesontes and Planning section</a>.</p>]]></content:encoded>
             <category>general</category>
         </item>
         <item>
