@@ -7,8 +7,6 @@ tags: [sprint, review, planning]
 
 These are the notes for the sprint 1 review and sprint 2 planning.
 
-<!--truncate-->
-
 ## Review
 - We currently do not have a DoD, but we don't need it for those tickets as it was prep work
 - We could close all the tickets in the sprint. Setup of the project incl. deployment is done.
