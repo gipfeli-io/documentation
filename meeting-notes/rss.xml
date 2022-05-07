@@ -4,10 +4,17 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Tue, 03 May 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 10 May 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Development Meeting 3]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/development-meeting-3</link>
+            <guid>development-meeting-3</guid>
+            <pubDate>Tue, 10 May 2022 00:00:00 GMT</pubDate>
+            <category>general</category>
+        </item>
         <item>
             <title><![CDATA[Development Meeting 2]]></title>
             <link>https://www.gipfeli.io/meeting-notes/development-meeting-2</link>
@@ -17,7 +24,7 @@
             <content:encoded><![CDATA[<p>This bi-weekly meeting was to show Tobias, our supervisor, our current progress.</p><p>We showed our current progress, including</p><ul><li>Documentation</li><li>Deployments</li><li>Current frontend progress with skeleton pages</li></ul><p>We also discussed our development workflow and our milestone planning. All in all, it seems like we are on track.</p><p>As an <strong>improvement</strong>, Tobias pointed out that we should link our code to the issues. We agreed to do this in line with
 our development workflow by assigning our pull requests to the corresponding issue(s). That way, one can look at the
 issue and directly see what has been changed. Since we also decided to add more descriptions to our issues, this will
-allow any bystander to graps what the issue was about.</p>]]></content:encoded>
+allow any bystander to grasp what the issue was about.</p>]]></content:encoded>
             <category>general</category>
         </item>
         <item>
