@@ -9,7 +9,7 @@ static page rendering, we use [GitHub Pages](https://pages.github.com/) to host 
 
 ## Deployment steps
 
-Deployment always happens when a push is sent to master. This triggers
+Deployment always happens when a push is sent to main. This triggers
 the [GitHub Action](https://github.com/gipfeli-io/documentation/blob/main/.github/workflows/deploy.yml) that performs
 the following steps:
 

@@ -8,7 +8,7 @@ Our backend is built with [nest.js](https://nestjs.com/) and runs its own proces
 
 ## Deployment steps
 
-Deployment always happens when a push is sent to master. This triggers
+Deployment always happens when a push is sent to main. This triggers
 the [GitHub Action](https://github.com/gipfeli-io/gipfeli-api/blob/stage/.github/workflows/deployment.yml) that performs
 the following steps:
 

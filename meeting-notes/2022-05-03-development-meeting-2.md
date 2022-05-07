@@ -18,4 +18,4 @@ We also discussed our development workflow and our milestone planning. All in al
 As an **improvement**, Tobias pointed out that we should link our code to the issues. We agreed to do this in line with
 our development workflow by assigning our pull requests to the corresponding issue(s). That way, one can look at the
 issue and directly see what has been changed. Since we also decided to add more descriptions to our issues, this will
-allow any bystander to graps what the issue was about.
+allow any bystander to grasp what the issue was about.
