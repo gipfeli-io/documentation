@@ -5,7 +5,7 @@ title: Api Architecture
 ---
 [TODO: add image of structure used (e.g. hexagonal)]
 
-#Folder structure
+# Folder structure
 
 ```
 gipfeli-api/
