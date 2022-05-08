@@ -23,6 +23,7 @@ const config = {
             ({
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
+                    remarkPlugins: [require('mdx-mermaid')],
                 },
                 blog: {
                     path: 'meeting-notes',
