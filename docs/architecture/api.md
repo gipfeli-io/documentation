@@ -1,7 +1,7 @@
 ---
 id: architecture_api
 sidebar_position: 2
-title: Api Architecture
+title: API Architecture
 ---
 [TODO: add image of structure used (e.g. hexagonal)]
 
