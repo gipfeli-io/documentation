@@ -8,10 +8,15 @@
     <subtitle>gipfeli.io Blog</subtitle>
     <icon>https://www.gipfeli.io/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Development Meeting 3]]></title>
-        <id>development-meeting-3</id>
-        <link href="https://www.gipfeli.io/meeting-notes/development-meeting-3"/>
+        <title type="html"><![CDATA[Sprint 2 Review, Sprint 3 Planning]]></title>
+        <id>sprint-2-review-sprint-3-planning.md</id>
+        <link href="https://www.gipfeli.io/meeting-notes/sprint-2-review-sprint-3-planning.md"/>
         <updated>2022-05-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We could finish almost all the stories except the ones that were trying]]></summary>
+        <content type="html"><![CDATA[<p>We could finish almost all the stories except the ones that were trying
+to use TypeOrm with Cloud Sql.
+Currently, the frontend and backend can communicate with each other so we
+can log in with a dummy user.</p><p>Decisions: <a href="/general/decision-log">Decision Log</a></p><h1>Sprint Planning</h1><h2 class="anchor anchorWithStickyNavbar_mojV" id="sprint-goals">Sprint Goals:<a class="hash-link" href="#sprint-goals" title="Direct link to heading">​</a></h2><ul><li>Finish setting up the database integration</li><li>Add all the view components (mock the data)</li><li>All Api endpoints mocked</li><li>Have basics of architecture documented</li><li>Offline functionality concept finished</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="retro">Retro<a class="hash-link" href="#retro" title="Direct link to heading">​</a></h2><ul><li>We both are happy with how the sprint went even though we could not finish all the tasks.</li></ul>]]></content>
         <author>
             <name>Sabrina Wullschleger</name>
             <uri>https://github.com/Saela</uri>
