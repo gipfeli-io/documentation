@@ -12,7 +12,7 @@ to use TypeOrm with Cloud Sql.
 Currently, the frontend and backend can communicate with each other so we
 can log in with a dummy user.
 
-Decisions: [Decision Log](/general/decision-log.md)
+Decisions: [Decision Log](/general/decision-log)
 
 # Sprint Planning
 
