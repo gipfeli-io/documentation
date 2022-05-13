@@ -3,6 +3,8 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const simplePlantUML = require('@akebifiky/remark-simple-plantuml');
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -23,7 +25,7 @@ const config = {
             ({
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
-                    remarkPlugins: [require('mdx-mermaid')],
+                    remarkPlugins: [require('mdx-mermaid'), simplePlantUML],
                 },
                 blog: {
                     path: 'meeting-notes',
