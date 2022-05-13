@@ -17,7 +17,7 @@ against this criterion.
 
 :::
 
-## Criteria
+## Criteria for code tickets
 
 - [ ] Code is written
 - [ ] Tests (if necessary) are written
@@ -27,3 +27,12 @@ against this criterion.
 - [ ] Build is successful (including all tests passed)
 - [ ] Deployment to staging works
 - [ ] Manual testing on staging by peer
+
+### Criteria for documentation tickets
+
+Since the documentation has other requirements, the definition of done for tickets related to the documentation is shorter and adjusted.
+
+- [ ] Documentation is written
+- [ ] Documentation is reviewed
+- [ ] Build is successful
+- [ ] Deployment to production works

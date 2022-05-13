@@ -4,9 +4,11 @@ sidebar_position: 1
 title: Basics
 ---
 
-# Clean Architecture
+# Architecture Overview
 
-We generally adhere to the principles of Clean Architecture with deviations where they make more sense
-or might be more practical. This depends mainly on how this is compatible with the libraries used.
-Using clean architecture we make our application easily testable with a multitude of different testing 
-approaches.
+We are using a three tier architecture consisting of a presentation layer (NextJs Application), 
+business layer (NestJs Application) and a persistence layer (PostgreSql database). 
+Each of the layers is hosted on a different Google Service (for details see [Infrastructure](../infrastructure/basics))
+and has it's own update cycle. 
+
+[Todo: Visual overview of the layers]
