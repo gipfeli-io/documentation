@@ -44,6 +44,13 @@ Connect to database instance with your favorite db tool (e.g. DBeaver, DataGrip 
 - Password: postgres
 :::
 
+### Alternative database setup without docker
+If you do not want to use docker please install postgres on your machine. You can follow the guides on the official
+[PostgreSQL](https://www.postgresql.org/) page. 
+
+After setting up postgres locally create a new database (if you do not want to use the standard postgres database) and install the PostGIS extension with
+`CREATE EXTENSION postgis;`. For more information check out the [PostGIS](https://postgis.net/) page.
+
 ### Generate new migration
 If you add a new entity you have to generate a migration file.
 Execute the command below after adding the new entity. This will generate a new migration file
