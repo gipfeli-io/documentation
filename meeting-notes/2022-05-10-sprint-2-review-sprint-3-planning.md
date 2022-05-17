@@ -1,6 +1,6 @@
 ---
 slug: sprint-2-review-sprint-3-planning.md
-title: "Sprint 2 Review, Sprint 3 Planning"
+title: "Sprint 2 Review & Sprint 3 Planning"
 authors: [sabrina, lukas]
 tags: [general]
 ---
