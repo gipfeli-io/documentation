@@ -12,3 +12,12 @@ Any documentation relating to the master thesis can be found in the [general doc
 the [meeting notes](../meeting-notes) section.
 
 :::
+
+## Environments
+
+### Staging
+
+**URL:** https://staging.gipfeli.io
+
+Hosts our current staging build with the latest changes. Does not represent the current production state.
+
