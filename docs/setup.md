@@ -26,12 +26,15 @@ via the `.env` variable, so when you run the backend on another port, this has t
 ## Backend
 
 ### Database
-The easiest way to setup the database is to use the postgres docker image. Do the following steps to configure it:
-1. `docker pull postgres:14.2`
-2. `docker run --name pg14_container -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -v /data:/var/lib/postgresql/data -d postgres`
+
+TypeORM is configured in class `src/infrastructure/config/database-config.ts`. Entities have to be named like this `*.entity.ts`
+and will be automatically included in the search for changes when generating a new migration.
+
+The easiest way to setup the database is to use the postgres postgis docker image. Do the following steps to configure it:
+1. `docker pull postgis/postgis`
+2. `docker run -d --name postgis_docker -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=postgres -p 5432:5432 postgis/postgis`
    - `-p` : this maps the internal container port to an external port so we can connect to the database from outside of the container
-   - `-v` : this is used do sync data to a local folder so that we won't lose it after the docker container is stopped
-3. Feel free to create a new database with any naming you like or use the default database 'postgres'
+3. Feel free to create a new database with any naming you like or use the default database 'postgres'. Make sure to update the database name in the .env file.
 
 :::info
 Connect to database instance with your favorite db tool (e.g. DBeaver, DataGrip etc.) and use the following config (only working if you executed the docker command as shown above):
@@ -41,14 +44,21 @@ Connect to database instance with your favorite db tool (e.g. DBeaver, DataGrip 
 - Password: postgres
 :::
 
-### Database migrations
-2. Run with `npm run migration`
+### Generate new migration
+If you add a new entity you have to generate a migration file.
+Execute the command below after adding the new entity. This will generate a new migration file
+in the folder `src/infrastructure/migrations`.
 
-### Code
-1. Clone the repository
-2. Run `npm i` to set up all dependencies
-3. Create a `.env` file based on the `.env.example` and adjust the values
-4. Run `npm run start:dev` to get a development process with hot-reloading running
+```bash
+$ npm run typeorm
+```
+
+### Executing migrations
+Run the command below to execute migrations:
+
+```bash
+$ npm run typeorm-migration
+```
 
 ## Documentation
 
