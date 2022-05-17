@@ -4,12 +4,22 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Tue, 10 May 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 17 May 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[Sprint 2 Review, Sprint 3 Planning]]></title>
+            <title><![CDATA[Development Meeting 3]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/development-meeting-3</link>
+            <guid>development-meeting-3</guid>
+            <pubDate>Tue, 17 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[This bi-weekly meeting was to show Tobias, our supervisor, our current progress.]]></description>
+            <content:encoded><![CDATA[<p>This bi-weekly meeting was to show Tobias, our supervisor, our current progress.</p><p>We showed our current progress, including</p><ul><li>Documentation</li><li>Frontend with backend integration</li><li>Testing implementation</li></ul><p>Tobias mentioned we should not waste too much time on CICD issues, which is why we decided to postpone database tests to
+a later stage and focus on unit tests.</p>]]></content:encoded>
+            <category>general</category>
+        </item>
+        <item>
+            <title><![CDATA[Sprint 2 Review & Sprint 3 Planning]]></title>
             <link>https://www.gipfeli.io/meeting-notes/sprint-2-review-sprint-3-planning.md</link>
             <guid>sprint-2-review-sprint-3-planning.md</guid>
             <pubDate>Tue, 10 May 2022 00:00:00 GMT</pubDate>
