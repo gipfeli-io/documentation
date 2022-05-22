@@ -21,7 +21,10 @@ described in more detail below.
 
 [(enlarge image)](/img/docs/infrastructure/overview.svg)
 ![Infrastructure diagram](/img/docs/infrastructure/overview.svg)
-
+<!--
+Use https://googlecloudcheatsheet.withgoogle.com/architecture andimport ./diagrams/cloud_infrastructure.excalidraw
+Make sure to always export the file if any changes happen and overwrite the existing file.
+-->
 :::info Note
 
 For simplicity, the documentation part is left out in the above documentation. More information can be
@@ -75,10 +78,23 @@ We chose Cloud Run because
 * It has a very generous free tier
 * It works similar to Heroku with pods automatically shutting down if no requests are received, which is optimal for
   staging environments
-* It works out-of-the-box and integreates seamlessly with all GCP services
+* It works out-of-the-box and integrates seamlessly with all GCP services
 * It allows for a completely private API - Cloud Run does not make its instances public by default, yet Cloud Run
   instances may talk to each other. As such, the frontend may be public, while the API itself remains private and can
   only be access through the frontend.
+
+### GCP: Secret Manager
+
+Cloud Run offers two means of injecting environment variables into its container: Plain environment variables which are
+defined on the deployment itself and variables set within the Secret Manager offering. For sensitive variables such as
+database passwords or JWT secrets, we are using the Secret Manager. It allows for securely defining variables that
+cannot be read by anyone after saving and even offers the possibility to version them. As such, they get injected into
+the Cloud Run deployments, but are not readably from any logs.
+
+We chose Secret Manager because
+
+* It is the only way to ensure sensitive variables are not logged in any outputs/traces
+* It integrates seamlessly with Cloud Run
 
 ## Persistence
 
