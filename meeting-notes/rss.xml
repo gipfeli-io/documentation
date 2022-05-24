@@ -4,10 +4,21 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Tue, 17 May 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 May 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Sprint 3 Review & Sprint 4 Planning]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/sprint-3-review-sprint-4-planning.md</link>
+            <guid>sprint-3-review-sprint-4-planning.md</guid>
+            <pubDate>Tue, 24 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[We added too many tickets and couldn't finish the whole sprint.]]></description>
+            <content:encoded><![CDATA[<p>We added too many tickets and couldn't finish the whole sprint.
+The integration of the map took more time than expected and couldn't be finished in time. But we still could finish a lot of
+open tickets and create a good foundation for the upcoming review.</p><h1>Sprint Planning</h1><h2 class="anchor anchorWithStickyNavbar_mojV" id="sprint-goals">Sprint Goals:<a class="hash-link" href="#sprint-goals" title="Direct link to heading">​</a></h2><ul><li>Finish map integration incl. setting of start and end point</li><li>Integrate api endpoints</li><li>Offline functionality concept finished</li><li>Offline functionality setup finished</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="retro">Retro<a class="hash-link" href="#retro" title="Direct link to heading">​</a></h2><ul><li>We did some work that was not in the sprint (client side vs. server side props) which delayed the other tasks</li><li>For the next sprints we want to reduce the amount of stories to work on</li><li>But nonetheless: We are very happy with the things we could solve</li></ul>]]></content:encoded>
+            <category>general</category>
+        </item>
         <item>
             <title><![CDATA[Development Meeting 3]]></title>
             <link>https://www.gipfeli.io/meeting-notes/development-meeting-3</link>

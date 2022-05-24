@@ -2,11 +2,30 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.gipfeli.io/meeting-notes</id>
     <title>gipfeli.io Blog</title>
-    <updated>2022-05-17T00:00:00.000Z</updated>
+    <updated>2022-05-24T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.gipfeli.io/meeting-notes"/>
     <subtitle>gipfeli.io Blog</subtitle>
     <icon>https://www.gipfeli.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Sprint 3 Review & Sprint 4 Planning]]></title>
+        <id>sprint-3-review-sprint-4-planning.md</id>
+        <link href="https://www.gipfeli.io/meeting-notes/sprint-3-review-sprint-4-planning.md"/>
+        <updated>2022-05-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We added too many tickets and couldn't finish the whole sprint.]]></summary>
+        <content type="html"><![CDATA[<p>We added too many tickets and couldn't finish the whole sprint.
+The integration of the map took more time than expected and couldn't be finished in time. But we still could finish a lot of
+open tickets and create a good foundation for the upcoming review.</p><h1>Sprint Planning</h1><h2 class="anchor anchorWithStickyNavbar_mojV" id="sprint-goals">Sprint Goals:<a class="hash-link" href="#sprint-goals" title="Direct link to heading">​</a></h2><ul><li>Finish map integration incl. setting of start and end point</li><li>Integrate api endpoints</li><li>Offline functionality concept finished</li><li>Offline functionality setup finished</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="retro">Retro<a class="hash-link" href="#retro" title="Direct link to heading">​</a></h2><ul><li>We did some work that was not in the sprint (client side vs. server side props) which delayed the other tasks</li><li>For the next sprints we want to reduce the amount of stories to work on</li><li>But nonetheless: We are very happy with the things we could solve</li></ul>]]></content>
+        <author>
+            <name>Sabrina Wullschleger</name>
+            <uri>https://github.com/Saela</uri>
+        </author>
+        <author>
+            <name>Lukas Merz</name>
+            <uri>https://github.com/Tugark</uri>
+        </author>
+        <category label="general" term="general"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Development Meeting 3]]></title>
         <id>development-meeting-3</id>
