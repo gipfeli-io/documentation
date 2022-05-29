@@ -11,4 +11,10 @@ business layer (NestJs Application) and a persistence layer (PostgreSql database
 Each of the layers is hosted on a different Google Service (for details see [Infrastructure](../infrastructure/basics))
 and has it's own update cycle. 
 
-[Todo: Visual overview of the layers]
+```mermaid
+graph TD;
+    A(Presentation Layer: Gipfeli Frontend)-->B(Business Layer: Gipfeli Api);
+    B-->C(Data Layer: PostgreSQL);
+    C-->D(PostgeSQL Server);
+```
+
