@@ -6,55 +6,70 @@ title: API Architecture
 
 # Api Architecture
 
-We are using a three layer architecture separating the api into the layers `app`, `core` and `infrastructure`.
-Each of the layers consists of a NestJs module which is divided into further sub-folders. This way one can get a 
-good overview of the application quickly. This division also allows us to easily test, extend and maintain the application.
+We are using the out-of-the-box architecture provided by NestJs which consists of a modular approach. Each domain gets its own feature module
+which can then be imported by other modules (by default modules are singletons and thus can be shared). Each NestJs application
+has at least one root module which is the starting point for Nest to build the internal data structure to resolve relationships between
+modules, providers and dependencies. Using the recommended architecture gives us a scalable, testable ad loosely coupled application which is also
+easily maintainable. In addition, it allows us to the CLI Nest provides which makes creating new components (modules, services, controllers etc.) easy and fast.
 
-## Layers
+## Modules
 
-```mermaid
-graph TD;
-    app-->core;
-    core-->infrastructure;
-    infrastructure-->id1[(Database)]
-```
+Each module represents a domain in our application and may consist of the following elements:
+- DTOs
+- Interfaces
+- Types
+- Controllers
+- Services
+- Validators
+- Decorators
 
-### app
-This layer is the single point of communication with the user and contains the access points of the api. 
-The controllers and the auth configurations needed to guard the communication reside here. 
-As we are using the passport libraries the auth folder also contains the strategies and guards we need to implement the security.
-The controllers are simple and don't contain any business logic. They just receive the data and immediately propagate it to the core services.
+There are also some more elements you can have in a module. Please refer to the official Nest documentation for a complete overview: [Nest Documentation](https://docs.nestjs.com)
 
-### core
-This is the business/domain layer which contains our business logic. This layer is referenced by the
-app layer and provides and manipulates the data according to our business rules. We also specify our
-interfaces here which allows us to be able to easily test the application. Services are used to
-establish communication between the app and core layers.
+### Utils
+For elements which do not have a domain per se (e.g. a service to hash passwords) we created a module called "shared". This module serves as a kind of utils module
+where we add helpers we need in different parts of the application.
 
-### infrastructure
-This layer handles all the work needed to get the data from the database and keep the data up to date with the 
-current model changes. The repositories are provided by TypeOrm and are not implemented by us. TypeOrm provides a set of standard
-functionalities for CRUD operations in their repositories which are more than enough for what we need and therefore it does not make sense
-to create custom implementations.
+### Project structure
 
-## Project folder structure
+This gives us the following project structure (to keep it easily readable we only show the root module (app) and the tour module):
 
 ```
 gipfeli-api/
+├── migrations
 ├── src/
 │   ├── app/
-│   │   ├── auth/
-│   │   │   ├── strategies
-│   │   │   └── guards
-│   │   └── controllers
-│   ├── core/
-│   │   ├── common
-│   │   ├── dtos
-│   │   ├── services
-│   ├── infrastructure/
-│   │   ├── config
-│   │   ├── entities
-│   │   └── migrations
+│   │   ├── app.controller.ts
+│   │   ├── app.module.ts
+│   │   └── app.service.ts
+│   ├── tour/
+│   │   ├── dto/
+│   │   │   ├── validators/
+│   │   │   │   ├── is-point.decorator.spec.ts
+│   │   │   │   └── is-point.decorator.ts
+│   │   │   └── tour.ts
+│   │   ├── entities/
+│   │   │   └── tour.entity.ts
+│   │   ├── mocks/
+│   │   │   ├── tour.data.mock.ts
+│   │   │   └── tour.repository.mock.ts
+│   │   ├── tour.controller.spec.ts
+│   │   ├── tour.controller.ts
+│   │   ├── tour.module.ts
+│   │   ├── tour.service.spec.ts
+│   │   └── tour.service.ts
 │   └── main.ts
 └── test
 ```
+
+### TypeORM 
+
+Out-of-the-box, TypeORM uses the repository pattern which means that each entity has its own repository. The repositories can be used by using TypeORM's generic
+repositories which provides functionalities to query all entities or execute CRUD operations. As we do not need custom queries at the moment we can use the generic
+repository which means that there are no repository files listed in our modules. 
+
+#### Migrations
+The folder containing the migrations TypeORM will use to synchronize entity information to the database is not managed inside the source-folder (src). Because the 
+migration livecycle is maintained by the TypeORM CLI they should not be a part of source code.
+
+To get more information on the recommended architecture using TypeORM and Nest please refer to the [Nest documentation](https://docs.nestjs.com/techniques/database#database).
+For details on TypeORM please check out [typeorm.io](https://typeorm.io/).
