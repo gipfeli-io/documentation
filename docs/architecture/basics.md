@@ -15,6 +15,6 @@ and has it's own update cycle.
 graph TD;
     A(Presentation Layer: Gipfeli Frontend)-->B(Business Layer: Gipfeli Api);
     B-->C(Data Layer: PostgreSQL);
-    C-->D(PostgeSQL Server);
+    C-->D(PostgreSQL Server);
 ```
 
