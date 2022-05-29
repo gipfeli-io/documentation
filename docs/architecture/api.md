@@ -25,11 +25,11 @@ Each module represents a domain in our application and may consist of the follow
 
 There are also some more elements you can have in a module. Please refer to the official Nest documentation for a complete overview: [Nest Documentation](https://docs.nestjs.com)
 
-### Utils
+### Utils Module
 For elements which do not have a domain per se (e.g. a service to hash passwords) we created a module called "shared". This module serves as a kind of utils module
 where we add helpers we need in different parts of the application.
 
-### Project structure
+## Project structure
 
 This gives us the following project structure (to keep it easily readable we only show the root module (app) and the tour module):
 
@@ -61,13 +61,13 @@ gipfeli-api/
 └── test
 ```
 
-### TypeORM 
+## TypeORM 
 
 Out-of-the-box, TypeORM uses the repository pattern which means that each entity has its own repository. The repositories can be used by using TypeORM's generic
 repositories which provides functionalities to query all entities or execute CRUD operations. As we do not need custom queries at the moment we can use the generic
 repository which means that there are no repository files listed in our modules. 
 
-#### Migrations
+### Migrations
 The folder containing the migrations TypeORM will use to synchronize entity information to the database is not managed inside the source-folder (src). Because the 
 migration livecycle is maintained by the TypeORM CLI they should not be a part of source code.
 
