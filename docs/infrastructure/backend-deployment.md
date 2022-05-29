@@ -19,5 +19,4 @@ the following steps:
 5. Finally, we deploy our image to our CloudRun service. This automatically deploys our new image, starts its pod and gracefully replaces the old pod.
 
 ## Todo
-- [ ] Add testing documentation
 - [ ] Change link to `main` branch action when deployed to production
