@@ -169,3 +169,43 @@ lu -- UC5
 * **Postconditions**: Photos are uploaded, photos are georeferenced on the map
 * **Possible rainy day scenarios**:
   * Invalid georeference - only photo is saved.
+
+
+
+## Administration
+
+```plantuml Admin
+@startuml
+left to right direction
+actor "Admin" as a
+rectangle gipfeli.io {
+  usecase "UC10: Manage users" as UC10
+  usecase "UC11: Manage tours" as UC11
+}
+a -- UC10
+a -- UC11
+@enduml
+```
+
+### UC10: Manage users
+
+* **Actor:** Admin user
+* **Preconditions:** User is logged in, user is admin
+* **Flow of events:**
+  1. Admin sees list of users
+  2. Admin can delete users after confirmation
+* **Postconditions**: User is deleted
+* **Possible rainy day scenarios**:
+  * **none**
+
+
+### UC11: Manage tours (optional)
+
+* **Actor:** Admin user
+* **Preconditions:** User is logged in, user is admin
+* **Flow of events:**
+  1. Admin sees list of all tours
+  2. Admin can delete tours after confirmation
+* **Postconditions**: Tour is deleted
+* **Possible rainy day scenarios**:
+  * **none**
