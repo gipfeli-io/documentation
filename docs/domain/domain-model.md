@@ -33,7 +33,7 @@ classDiagram
     }
     class Role {
         name
-        moderateTours()
+        moderateUsers()
     }
     
     User "*" -- "1" Role : is
@@ -52,8 +52,8 @@ document. Additionally, each user has at least one `Role` assigned that governs 
 
 Since the application also needs some kind of moderation, each `User` has exactly one `Role` attached. The
 default `Role` is identifying any `User` as normal user, allowing them to perform the aforementioned actions on
-their `Tour` objects. Moderating users have the role `administrator` which gives them the ability to `moderateTours()`,
-meaning that they can e.g. delete `Tour` objects from other users.
+their `Tour` objects. Moderating users have the role `administrator` which gives them the ability to `moderateUsers`,
+meaning that they can e.g. delete `Users`.
 
 ## `Tour`
 
