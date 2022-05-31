@@ -2,7 +2,7 @@
 slug: sprint-3-review-sprint-4-planning.md
 title: "Sprint 3 Review & Sprint 4 Planning"
 authors: [sabrina, lukas]
-tags: [general]
+tags: [sprint, planning, review]
 ---
 
 # Sprint Review
