@@ -4,8 +4,6 @@ sidebar_position: 3
 title: Frontend Architecture
 ---
 
-# Architecture Overview
-
 Since we're using React, there is no clear-cut MVC structure such as with Angular. In recent version, React fully
 embraces the functional paradigm in
 recommending [functional components](https://reactjs.org/docs/components-and-props.html#function-and-class-components)
