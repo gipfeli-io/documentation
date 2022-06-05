@@ -1,5 +1,5 @@
 ---
-id: architecture_api
+id: api-architecture
 sidebar_position: 2
 title: API Architecture
 ---
