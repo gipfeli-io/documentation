@@ -21,12 +21,21 @@ and how we solved them or what implications they had on the project.
   rather difficult and the documentation does not provide much help. Furthermore, since the `Credentials` provider is
   disencouraged by the authors, a lot of customization has to be made. As we're using `JWT` as authentication strategy,
   it could be simpler to just build the authorization flow from scratch.
+* **Dropping next.js in favor of pure React:** The most important lesson that we learned was that next.js was the wrong
+  tool for what we had in mind. Since we are developing an application that does not require any SEO optimization, the
+  whole point of having `getServerSideProps` is void. Apart from that, we had more troubles than benefits in using
+  next.js in our setup (see above) and we found its documentation to be rather clumsy, especially with regards to the
+  typescript part. Lots of things that were easily doable with plain React required workarounds. Since one of our goals
+  was also to have an offline part, we decided it would be best to just use plain React. Because next.js is a wrapper
+  around React, we were able to create a React app from scratch and move all of our existing code to it, which worked
+  quite well.
 
 ## Backend
 
 ### nest.js
 
 * **TBD:**
+
 ## Google Cloud Platform
 
 ### General
