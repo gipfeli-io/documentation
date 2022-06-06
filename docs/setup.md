@@ -41,7 +41,7 @@ working if you executed the docker command as shown above):
 - Port: 5432
 - User: postgres
 - Password: postgres
-  :::
+:::
 
 ### Alternative database setup without docker
 
