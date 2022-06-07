@@ -4,10 +4,23 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Tue, 31 May 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 07 Jun 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Sprint 4 Review & Sprint 5 Planning]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/sprint-4-review-sprint-5-planning.md</link>
+            <guid>sprint-4-review-sprint-5-planning.md</guid>
+            <pubDate>Tue, 07 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[It was a very productive sprint. We could finish a lot of stories and were even able to re-write the frontend so it]]></description>
+            <content:encoded><![CDATA[<p>It was a very productive sprint. We could finish a lot of stories and were even able to re-write the frontend so it
+only uses ReactJS instead of NextJS. 🎉 The only big story still open is the setup for the offline functionality. But it is
+almost done.</p><h1>Sprint Planning</h1><h2 class="anchor anchorWithStickyNavbar_mojV" id="sprint-goals">Sprint Goals:<a class="hash-link" href="#sprint-goals" title="Direct link to heading">​</a></h2><ul><li>Simple offline functionality finished (load list of tours even in offline mode)</li><li>Finish user authentication: Auto logout, Refresh token, Sign up</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="vacation">Vacation<a class="hash-link" href="#vacation" title="Direct link to heading">​</a></h2><ul><li>Sabrina: 11.6. - 19.6.</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="retro">Retro<a class="hash-link" href="#retro" title="Direct link to heading">​</a></h2><ul><li>We are very happy with the past sprint. We could finish a lot of important stories and think we are on a good way. 👌</li></ul>]]></content:encoded>
+            <category>sprint</category>
+            <category>planning</category>
+            <category>review</category>
+        </item>
         <item>
             <title><![CDATA[Development Meeting 4]]></title>
             <link>https://www.gipfeli.io/meeting-notes/development-meeting-4</link>
