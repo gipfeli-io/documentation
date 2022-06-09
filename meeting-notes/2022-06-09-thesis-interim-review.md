@@ -28,6 +28,7 @@ Below is the feedback of the review team:
 - Adjust DOD with test coverage percentage.
 - Documentation scope very good, understandable, Decision Log great
 - Roadmap missing => add it to documentation (not very detailed as e.g. backlog)
+- Datamodel should be model-driven, not code-driven --> add to Documentation.
 
 
 #### A.K.
