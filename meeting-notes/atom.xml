@@ -2,11 +2,30 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.gipfeli.io/meeting-notes</id>
     <title>gipfeli.io Blog</title>
-    <updated>2022-06-07T00:00:00.000Z</updated>
+    <updated>2022-06-09T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.gipfeli.io/meeting-notes"/>
     <subtitle>gipfeli.io Blog</subtitle>
     <icon>https://www.gipfeli.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Thesis interim review]]></title>
+        <id>thesis-interim-review</id>
+        <link href="https://www.gipfeli.io/meeting-notes/thesis-interim-review"/>
+        <updated>2022-06-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We had to provide a short video where we show the current status of the project and some project specific information.]]></summary>
+        <content type="html"><![CDATA[<p>We had to provide a short video where we show the current status of the project and some project specific information.
+This was analysed by some professors at the university. In a short feedback round they gave us some input and asked us questions
+if something was unclear to them.</p><p>Below is the feedback of the review team:</p><h4 class="anchor anchorWithStickyNavbar_mojV" id="ca">C.A.<a class="hash-link" href="#ca" title="Direct link to heading">​</a></h4><ul><li>Good state, great code quality</li><li>Don't use any =&gt; use specific types correctly</li><li>Typing does not need undefined/null check</li></ul><h4 class="anchor anchorWithStickyNavbar_mojV" id="stm">St.M.<a class="hash-link" href="#stm" title="Direct link to heading">​</a></h4><ul><li>Good status</li><li>Risk analysis not available</li><li>Few tests in backend</li></ul><h4 class="anchor anchorWithStickyNavbar_mojV" id="dt">D.T.<a class="hash-link" href="#dt" title="Direct link to heading">​</a></h4><ul><li>Thinks our procedures are good and likes the app skeleton</li><li>Few tests in backend.</li><li>Measure test coverage with Sonar.</li><li>Adjust DOD with test coverage percentage.</li><li>Documentation scope very good, understandable, Decision Log great</li><li>Roadmap missing =&gt; add it to documentation (not very detailed as e.g. backlog)</li></ul><h4 class="anchor anchorWithStickyNavbar_mojV" id="ak">A.K.<a class="hash-link" href="#ak" title="Direct link to heading">​</a></h4><ul><li>Overall impression very good</li><li>Thrilled with documentation. It is clearly laid out. Decision Log great. Good balance of documenting too much and not enough.</li><li>Basic architecture concept good. Layer on own instance too much, but ok.</li><li>Flutter.js or Electron.js would maybe have been a good option? =&gt; not the way we wanted to go</li><li>Gap analysis made between hikr.org etc. =&gt; as matrix</li><li>GPX upload as a future feature? =&gt; maybe list as next steps</li></ul><h4 class="anchor anchorWithStickyNavbar_mojV" id="lb">L.B.<a class="hash-link" href="#lb" title="Direct link to heading">​</a></h4><ul><li>Clean software engineering in all areas</li><li>Risk planning for next features should be done</li><li>Good task prio</li><li>Documentation in good condition</li><li>Include technical challenges/lessons learned in doc =&gt; Typeorm,</li><li>Geo photo upload next to offline functionality</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="take-home-message">Take home message<a class="hash-link" href="#take-home-message" title="Direct link to heading">​</a></h2><ul><li>More Tests in general (especially backend)</li><li>Add EsLint rules to prevent using any / clean up repo</li><li>Configure sonar to display the test coverage. Define test coverage in DoD with percentage instead of just saying "Tests written"</li><li>Add Roadmap to show plan of future features</li><li>Add Gap analysis as a matrix to documentation</li><li>Add page for lessons learned and challenges</li></ul>]]></content>
+        <author>
+            <name>Sabrina Wullschleger</name>
+            <uri>https://github.com/Saela</uri>
+        </author>
+        <author>
+            <name>Lukas Merz</name>
+            <uri>https://github.com/Tugark</uri>
+        </author>
+        <category label="general" term="general"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Sprint 4 Review & Sprint 5 Planning]]></title>
         <id>sprint-4-review-sprint-5-planning.md</id>
