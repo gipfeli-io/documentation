@@ -4,10 +4,23 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Thu, 09 Jun 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 21 Jun 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Sprint 5 Review & Sprint 6 Planning]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/sprint-5-review-sprint-6-planning.md</link>
+            <guid>sprint-5-review-sprint-6-planning.md</guid>
+            <pubDate>Tue, 21 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[We could finish the signup process and get a good overview of the offline functionality.]]></description>
+            <content:encoded><![CDATA[<p>We could finish the signup process and get a good overview of the offline functionality.
+The offline functionality is also already started and we can continue with this so it hopefully
+will be finished at the end of Sprint 6.</p><h1>Sprint Planning</h1><h2 class="anchor anchorWithStickyNavbar_mojV" id="sprint-goals">Sprint Goals:<a class="hash-link" href="#sprint-goals" title="Direct link to heading">​</a></h2><ul><li>Finish offline functionality for tours (without user login)</li><li>Add simple image upload to tour (without coordinate information)</li><li>Password reset</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="retro">Retro<a class="hash-link" href="#retro" title="Direct link to heading">​</a></h2><ul><li>I'm (Sabrina) not entirely happy with the status of the offline functionality. I wanted to have the tour list offline functionality finished.</li><li>However, we are very happy about the overall state.</li></ul>]]></content:encoded>
+            <category>sprint</category>
+            <category>planning</category>
+            <category>review</category>
+        </item>
         <item>
             <title><![CDATA[Thesis interim review]]></title>
             <link>https://www.gipfeli.io/meeting-notes/thesis-interim-review</link>
