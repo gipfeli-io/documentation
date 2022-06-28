@@ -4,10 +4,19 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Tue, 21 Jun 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 28 Jun 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Development Meeting 5]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/development-meeting-5</link>
+            <guid>development-meeting-5</guid>
+            <pubDate>Tue, 28 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[This bi-weekly meeting was to show Tobias, our supervisor, our current progress in the form of a demo.]]></description>
+            <content:encoded><![CDATA[<p>This bi-weekly meeting was to show Tobias, our supervisor, our current progress in the form of a demo.</p><p>In the demo we showed</p><ul><li>The current status of the offline functionality</li><li>The user on-boarding process</li></ul><p>We also talked about auto synchronizing offline data and the options we have. As well as our use of the service worker and IndexedDB.</p>]]></content:encoded>
+            <category>general</category>
+        </item>
         <item>
             <title><![CDATA[Sprint 5 Review & Sprint 6 Planning]]></title>
             <link>https://www.gipfeli.io/meeting-notes/sprint-5-review-sprint-6-planning.md</link>
