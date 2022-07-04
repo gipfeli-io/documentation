@@ -1,6 +1,6 @@
 ---
-id: basics
-sidebar_position: 1
+id: basics 
+sidebar_position: 1 
 title: Basics
 ---
 
@@ -108,6 +108,8 @@ fashion. It also allows for finegrained access controls.
 We chose Cloud Storage because
 
 * It is actually the simplest, cheapest option to store for example user-provided assets such as images
+* It allows finegrained access control, while also allowing for simple almost-zero-config access via other services (
+  e.g. CloudRun).
 
 ### GCP: Cloud SQL
 
