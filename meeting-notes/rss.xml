@@ -4,10 +4,32 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Tue, 28 Jun 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 12 Jul 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Development Meeting 6]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/development-meeting-6</link>
+            <guid>development-meeting-6</guid>
+            <pubDate>Tue, 12 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Questions:]]></description>
+            <content:encoded><![CDATA[<p>Questions:</p><ul><li>Image upload context =&gt; is it fine that we have another context there?</li><li>Public google bucket =&gt; is this ok?</li><li>Frontend testing =&gt; how much do we need? what does make sense?</li></ul>]]></content:encoded>
+            <category>general</category>
+        </item>
+        <item>
+            <title><![CDATA[Sprint 6 Review & Sprint 7 Planning]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/sprint-6-review-sprint-7-planning.md</link>
+            <guid>sprint-6-review-sprint-7-planning.md</guid>
+            <pubDate>Tue, 05 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[We could add a simple image upload when creating/editing tours. This is the base for adding the geo referenced upload of tour images.]]></description>
+            <content:encoded><![CDATA[<p>We could add a simple image upload when creating/editing tours. This is the base for adding the geo referenced upload of tour images.
+The offline functionality is also implemented in a basic form (without synchronizing to the backend). We think we are still on track with
+the main features.</p><h1>Sprint Planning</h1><h2 class="anchor anchorWithStickyNavbar_mojV" id="sprint-goals">Sprint Goals:<a class="hash-link" href="#sprint-goals" title="Direct link to heading">​</a></h2><ul><li>Add synchronization for offline tours</li><li>Finish offline functionality</li><li>Add support for geo referenced image upload</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="retro">Retro<a class="hash-link" href="#retro" title="Direct link to heading">​</a></h2><p>We are happy with the sprint and think we made good progress with the must-have features.</p>]]></content:encoded>
+            <category>sprint</category>
+            <category>planning</category>
+            <category>review</category>
+        </item>
         <item>
             <title><![CDATA[Development Meeting 5]]></title>
             <link>https://www.gipfeli.io/meeting-notes/development-meeting-5</link>
