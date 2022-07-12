@@ -13,8 +13,10 @@
             <link>https://www.gipfeli.io/meeting-notes/development-meeting-6</link>
             <guid>development-meeting-6</guid>
             <pubDate>Tue, 12 Jul 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Questions:]]></description>
-            <content:encoded><![CDATA[<p>Questions:</p><ul><li>Image upload context =&gt; is it fine that we have another context there?</li><li>Public google bucket =&gt; is this ok?</li><li>Frontend testing =&gt; how much do we need? what does make sense?</li></ul>]]></content:encoded>
+            <description><![CDATA[We did a quick demo and showed the image upload incl. the coordinates extraction from the exif information. We also showed]]></description>
+            <content:encoded><![CDATA[<p>We did a quick demo and showed the image upload incl. the coordinates extraction from the exif information. We also showed
+the offline synchronization and discussed the best way to make the offline mode as intuitive for the user as possible.
+Tobias had some ideas that we will integrate in the current work.</p><p>We also had some questions:</p><ul><li>Image upload context =&gt; is it fine that we have another context there?<ul><li>Multiple contexts are absolutely ok. There is no limit.</li></ul></li><li>Public google bucket =&gt; is this ok?<ul><li>Yes, this is ok :)</li></ul></li><li>Frontend testing =&gt; how much do we need? what does make sense?<ul><li>We should ask ourselves what the most complex component is and test this.</li><li>Services should also be tested (unit tests)</li><li>Test coverage in frontend is not really useful</li></ul></li></ul>]]></content:encoded>
             <category>general</category>
         </item>
         <item>
