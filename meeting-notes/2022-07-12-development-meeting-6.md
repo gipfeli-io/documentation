@@ -5,7 +5,7 @@ authors: [sabrina, lukas, tobias]
 tags: [general]
 ---
 
-We did a quick demo and showed the image upload incl. the coordinates extraction from the exif information. We also showed
+We did a quick demo and showed the image upload incl. the coordinate extraction from the exif information. We also showed
 the offline synchronization and discussed the best way to make the offline mode as intuitive for the user as possible.
 Tobias had some ideas that we will integrate in the current work.
 
