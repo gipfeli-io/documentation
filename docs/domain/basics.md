@@ -17,7 +17,7 @@ it is important that the UI is simple yet appealing, since we cannot rely on the
 The users create reports for the tours they are planning (some sort of *todo list*) or have completed already. Tours can
 range from simple strolls to multi-day adventures and be classified as such. In order to also know where these tours are
 located, they can be geographically referenced on a map. In order to serve as some kind of diary, besides describing
-them with several attributes, users may also add photos.
+them with several attributes, users may also add photos, which can be geo-referenced as well.
 
 Since multi-day adventures often include staying at huts or in a tent in remote areas without cellphone coverage, the
 app also works offline by providing a means to complete the trip report for the past day.
