@@ -126,6 +126,15 @@ We chose Cloud Storage because
 * It allows finegrained access control, while also allowing for simple almost-zero-config access via other services (
   e.g. CloudRun).
 
+:::tip Note on our buckets access policy
+
+Our buckets are currently public, so all user uploads are - in theory - accesible by everyone. All uploads are however
+placed in a folder which is the user's UUID, and each files gets a randomized UUID prefixed to its slugified filename.
+As such, we believe that this is good enough and a nice tradeoff, because the other solution would require us to proxy
+each and every request to an image through our API, which can become a performance bottleneck.
+
+:::
+
 ### GCP: Cloud SQL
 
 We chose a Postgres database, which runs under Google's Cloud SQL naming which is an umbrella term for its managed
