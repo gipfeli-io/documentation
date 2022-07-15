@@ -1,6 +1,6 @@
 ---
-id: api-architecture 
-sidebar_position: 2 
+id: api-architecture
+sidebar_position: 2
 title: API Architecture
 ---
 
@@ -41,7 +41,33 @@ h2 -r- [UserController]
 }
 
 package "Auth" {
-[AuthService]
+interface HTTP as h4
+h4 -r- [AuthController]
+[AuthController] --> [AuthService]
+[SessionEntities] .l.> [AuthService]
+[SessionEntities] .l.> [SessionRepository]
+[SessionRepository] .d.> Postgres
+[AuthDtos] .l.> [AuthService]
+[AuthDtos] .l.> [AuthController]
+[AuthService] -d-> [SessionRepository]
+}
+
+package "Media" {
+interface HTTP as h5
+h5 -r- [MediaController]
+[MediaController] --> [MediaService]
+[MediaEntities] .l.> [MediaService]
+[MediaEntities] .l.> [MediaRepository]
+[MediaRepository] .d.> Postgres
+[MediaDtos] .l.> [MediaService]
+[MediaDtos] .l.> [MediaController]
+[MediaDtos] .l.> [MediaProviders]
+[MediaService] -d-> [MediaRepository]
+[MediaService] --> [MediaProviders]
+}
+
+package "Notification" {
+[NotificationProvider]
 }
 
 package "App" {
@@ -59,7 +85,12 @@ Auth ..> Utils
 Auth ..> User
 App ..> Auth
 App ..> Tour
-
+App ..> Media
+Auth ..> Notification
+Media ..> Notification
+Tour ..> User
+Media ..> User
+Media ..> Tour
 
 
 database "Postgres" {
@@ -68,11 +99,9 @@ database "Postgres" {
 @enduml
 ```
 
-## Structure
+## Modules
 
-### Modules
-
-Each module represents a domain in our application and may consist of the following elements:
+Each module represents a domain or a task in our application and may consist of the following elements:
 
 - DTOs
 - Interfaces
@@ -81,56 +110,70 @@ Each module represents a domain in our application and may consist of the follow
 - Services
 - Validators
 - Decorators
+- Providers
 
 There are also some more elements you can have in a module. Please refer to the official NestJS documentation for a
 complete overview: [NestJS Documentation](https://docs.nestjs.com)
 
-#### Utils Module
+### Modules
+
+#### App
+
+The app module is the root module of the application. For nest.js, this is like the entrypoint module that exposes all
+the modules (that need exposure) to the route creator. Its controller also has some convenience routes, e.g. for
+exposing a `robots.txt` file.
+
+#### Tour
+
+This module represents the `Tour` domain object. It exposes CRUD routes for dealing with tours, which is handled by its
+service. As such, it also needs the user module to attach a tour to a user.
+
+#### User
+
+The user module represents the `User` domain object and exposes CRUD routes for dealing with users. This module exposes
+some minor routes, but in essence, it is only used by other modules. It is only dependent on the utils module for
+hashing the user passwords.
+
+#### Auth
+
+This module handles all our authentication needs as well as session management. It implements various authentication
+strategies for different endpoints and exposes them to be used in other modules. It is dependent on the user and
+notification module, because the auth module handles things like login and user creation, which require both the users
+as well as the possibility to dispatch notifications.
+
+#### Media
+
+The mediamodule handles all things related to user uploads. It has several providers which perform various tasks, like
+storing it to a cloud storage or extracting GPS coordinates from images. It is dependent on the notification, user and
+tour module for notifying administrators of clean up tasks and also attaching uploads to tours and users.
+
+#### Notification
+
+This module only exposes the internally used notification provider. All modules that need to create notifications may
+import this module and get an environment-dependent notification provider (e.g. sendgrid, `console.log`).
+
+#### Utils
 
 For elements which do not have a domain per se (e.g. a service to hash passwords) we created a module that adds helpers
 we need in different parts of the application.
 
-#### Project structure
+### Other non-modules
 
-The above principles give us the following project structure (to keep it easily readable we only show the root module (
-app) and the tour module):
+Besides the mentioned modules, the project also relies upon a `config` directory which populates nest's `ConfigService`
+with several namespaces. These configuration values are populated through environment variables and exposed via the
+service wherever they are needed.
 
-```
-gipfeli-api/
-├── migrations
-├── src/
-│   ├── app/
-│   │   ├── app.controller.ts
-│   │   ├── app.module.ts
-│   │   └── app.service.ts
-│   ├── tour/
-│   │   ├── dto/
-│   │   │   ├── validators/
-│   │   │   │   ├── is-point.decorator.spec.ts
-│   │   │   │   └── is-point.decorator.ts
-│   │   │   └── tour.ts
-│   │   ├── entities/
-│   │   │   └── tour.entity.ts
-│   │   ├── mocks/
-│   │   │   ├── tour.data.mock.ts
-│   │   │   └── tour.repository.mock.ts
-│   │   ├── tour.controller.spec.ts
-│   │   ├── tour.controller.ts
-│   │   ├── tour.module.ts
-│   │   ├── tour.service.spec.ts
-│   │   └── tour.service.ts
-│   └── main.ts
-└── test
-```
+The `shared` directory consists of elements that are not part of a module, but shared across the whole application.
+Currently, only our `SentryInterceptor` is placed there, which is used to intercept any error and log it to Sentry.
 
-### TypeORM
+## TypeORM
 
 Out-of-the-box, TypeORM uses the repository pattern which means that each entity has its own repository. The
 repositories can be used by using TypeORM's generic repository which provides functionalities to query all entities or
 execute CRUD operations. As we do not need custom queries at the moment we can use the generic repository which means
 that there are no repository files listed in our modules.
 
-#### Migrations
+### Migrations
 
 The folder containing the migrations TypeORM will use to synchronize entity information to the database is not managed
 inside the source-folder (src). Because the migration lifecycle is maintained by the TypeORM CLI they should not be a
@@ -140,22 +183,30 @@ To get more information on the recommended architecture using TypeORM and NestJS
 the [NestJS documentation](https://docs.nestjs.com/techniques/database#database). For details on TypeORM please check
 out [typeorm.io](https://typeorm.io/).
 
-### Handling user uploaded images
+## Handling user uploaded images
 
-In order to provide users with a seamless user experience, the asset handling is a bit more complex than uploading the
-tour images once the tour is saved. Since a user should be able to upload several files at once and also submit a new
-tour without having to wait a long time (because he may also submit 20, 30 or more images), images are uploaded
+:::info Handling other user-provided files
+
+Currently, we only process images from user uploads. However, users might also be able to upload e.g. GPX tracks in the
+future - if so, the process outlined here could be transferred to other files as well.
+
+:::
+
+In order to provide users with a seamless user experience, the image handling is a bit more complex than just uploading
+the tour images once the tour is saved. Since a user should be able to upload several files at once and also submit a
+new tour without having to wait a long time (because he may also submit 20, 30 or more images), images are uploaded
 immediately once they are dropped in the frontend. Backendwise, the following steps are performed:
 
-1. The request (with an image) is POSTed to `api/media/upload-image`. After some basic validations (e.g. filetypes,
+1. The request (with an image) is POSTed to `media/upload-image`. After some basic validations (e.g. filetypes,
    filesize), the request is dispatched to the `MediaService`.
 2. The `MediaService` uses the storage provider that is injected via nest's DI container to store the file. In our case,
    this is the `GoogleCloudStorageProvider`.
-3. Once the provider succesfully returns, the `MediaService` stores a new `Image` object in the database, consisting of
-   the storage identifier, a UUID, the metadata and the relation to the `User` who submitted the request. At this point,
-   the relation to `Tour` is null, because we might not yet have an existing `Tour` object (e.g. in the case of adding a
-   new tour).
-4. The UUID of the newly stored `Image` entity is then returned as response to the intial POST request.
+3. Once the provider succesfully returns the identifier for the uploaded file, the `MediaService` stores a new `Image`
+   object in the database, consisting of the storage identifier, a UUID and the relation to the `User` who submitted the
+   request. At this point, the relation to `Tour` is null, because we might not yet have an existing `Tour` object (e.g.
+   in the case of adding a new tour).
+4. The UUID and identifier of the newly stored `Image` entity is then returned as response to the intial POST request
+   and stored in the frontend's current formstate.
 5. Once the user submits the complete form, they only submit the UUIDs of the images they still have in their form. The
    request to create or update a `Tour` then synchronizes the `Tour` relationship between the image.
 
@@ -171,4 +222,21 @@ The only drawback is that we use storage that may not be needed (e.g. if a user 
 then does not save the tour). However, given that the storage is very cheap and we limit the image size to 2MB, this can
 be neglected.
 
-TODO: Add note about public nature of buckets.
+### Cleaning up
+
+As mentioned above, not all uploaded and stored images may be linked to a tour. Furthermore, when a user deletes a tour,
+the images are not immediately deleted, because this might take some time. Instead, the relation to the deleted `Tour`
+is set to `NULL`.
+
+In order to clean up, the backend has a special API path, `GET api/media/clean-up-images` that finds all `Image` objects
+in the database that either have no relation to a `User` (meaning the user is deleted) or no relation to a `Tour`
+(meaning the tour is deleted) and are older than 1 day (this is required because if a user is in the process of
+uploading an image, it may not yet have a relation to a tour, but it should not yet be deleted). Objects that fulfill
+this criteria are then deleted from the storage and the database and an email with clean up statistics is sent to the
+defined administrators.
+
+This is endpoint is (weakly) protected by a simple bearer token that is defined as an environment variable. This is
+sufficient (eventhough insecure) because this endpoint does not expose anything sensitive. Furthermore, the token is
+chosen to be a long, randomized string and as SSL connections are enforced, the Authorization header is encrypted.
+
+In staging and production, this endpoint is triggered via a Cloud Scheduler task and runs once daily.

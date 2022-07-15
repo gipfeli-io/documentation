@@ -15,6 +15,11 @@ In general, our infrastructure uses the following services:
     * Hosts our backend application
     * Stores the application data
     * Contains all our containers in its registry
+    * Runs scheduled tasks
+* **Sentry**
+  * Our error logging and performance metrics solution
+* **SonarCloud**
+  * Our code quality scanning tool
 
 In terms of services used for our main application, the following diagram shows all the services, while they're
 described in more detail below.
@@ -59,6 +64,16 @@ We chose the Container Registry because
 * It seamlessly integrates with all the other GCP services
 * It is - even though deprecated - a lot cheaper than its successor (Artifact Registry), because it uses Cloud Storage
   as a backend which costs way less
+
+### SoncarCloud
+
+This tool performs code analysis in our repositories and, in the case of the backend, also makes sure the code coverage
+is good enough. It reports codesmells, security issues and much more.
+
+We chose SonarCloud because
+
+* It offers a free tier
+* It is usable withing Github Actions workflows and integrates into our workflow
 
 ## Presentation & Business Logic
 
@@ -123,3 +138,32 @@ We chose Cloud SQL (Postgres) because
 * It is a managed Postgres instance, optimized to the extreme
 * It is batteries-included - from scaling to point-in-time-recovery
 
+## Utils
+
+This layer is used for utility functions that may perform various helper tasks within our application.
+
+### Sentry
+
+Our environments log all errors to Sentry. Sentry acts as a centralized error monitoring tool which provides us with
+lots of details, such as stack traces, payloads, etc. It also offers a performance metrics solution. It is
+platform-agnostic, and there are integrations for React. Nest currently does not have an implementation, but our own
+implementation works nicely.
+
+We chose Sentry because
+
+* It is reasonably priced
+* It is performant
+* It provides in-depth error monitoring and offers environment-specific handling
+
+### GCP: Cloud Scheduler
+
+For our returning tasks, we use the Cloud Scheduler offering. Tasks can be configured just like cronjobs on an actual
+system. Because we cannot use cronjobs in our containers (because it may be that our application is scaled to several
+containers), Cloud Scheduler can be used for this. Currently, we're only using its HTTP functionality which sends a
+request at the specified interval. This request is then handled by our application and guarantees to be run only once - 
+regardless of how many containers are currently running.
+
+We chose Cloud Scheduler because
+
+* It is the only scheduling offering available that does not require loads of setup
+* It is very flexible, so it could be used in the future to also send message to PubSub queues.
