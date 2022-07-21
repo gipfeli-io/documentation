@@ -4,10 +4,23 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Tue, 12 Jul 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 21 Jul 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Sprint 7 Review & Sprint 8 Planning]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/sprint-7-review-sprint-8-planning.md</link>
+            <guid>sprint-7-review-sprint-8-planning.md</guid>
+            <pubDate>Thu, 21 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[We could finish the gps extraction of the images, and the images are now shown on the map. As an extra feature we implemented a]]></description>
+            <content:encoded><![CDATA[<p>We could finish the gps extraction of the images, and the images are now shown on the map. As an extra feature we implemented a
+cluster feature that clusters the images, so they don't clutter the map. 🎉 After a discussion with Tobi we decided to re-write
+the offline feature. It is on a good way but unfortunately not yet finished.</p><h1>Sprint Planning</h1><h2 class="anchor anchorWithStickyNavbar_mojV" id="sprint-goals">Sprint Goals:<a class="hash-link" href="#sprint-goals" title="Direct link to heading">​</a></h2><ul><li>Finish the admin panel</li><li>Finish offline functionality (this time for real🥐)</li><li>Password reset</li><li>Validations (Forms, overall)</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="retro">Retro<a class="hash-link" href="#retro" title="Direct link to heading">​</a></h2><p>We are happy with the sprint and think we made good progress with the must-have features.</p>]]></content:encoded>
+            <category>sprint</category>
+            <category>planning</category>
+            <category>review</category>
+        </item>
         <item>
             <title><![CDATA[Development Meeting 6]]></title>
             <link>https://www.gipfeli.io/meeting-notes/development-meeting-6</link>

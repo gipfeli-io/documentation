@@ -2,11 +2,32 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.gipfeli.io/meeting-notes</id>
     <title>gipfeli.io Blog</title>
-    <updated>2022-07-12T00:00:00.000Z</updated>
+    <updated>2022-07-21T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.gipfeli.io/meeting-notes"/>
     <subtitle>gipfeli.io Blog</subtitle>
     <icon>https://www.gipfeli.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Sprint 7 Review & Sprint 8 Planning]]></title>
+        <id>sprint-7-review-sprint-8-planning.md</id>
+        <link href="https://www.gipfeli.io/meeting-notes/sprint-7-review-sprint-8-planning.md"/>
+        <updated>2022-07-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We could finish the gps extraction of the images, and the images are now shown on the map. As an extra feature we implemented a]]></summary>
+        <content type="html"><![CDATA[<p>We could finish the gps extraction of the images, and the images are now shown on the map. As an extra feature we implemented a
+cluster feature that clusters the images, so they don't clutter the map. 🎉 After a discussion with Tobi we decided to re-write
+the offline feature. It is on a good way but unfortunately not yet finished.</p><h1>Sprint Planning</h1><h2 class="anchor anchorWithStickyNavbar_mojV" id="sprint-goals">Sprint Goals:<a class="hash-link" href="#sprint-goals" title="Direct link to heading">​</a></h2><ul><li>Finish the admin panel</li><li>Finish offline functionality (this time for real🥐)</li><li>Password reset</li><li>Validations (Forms, overall)</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="retro">Retro<a class="hash-link" href="#retro" title="Direct link to heading">​</a></h2><p>We are happy with the sprint and think we made good progress with the must-have features.</p>]]></content>
+        <author>
+            <name>Sabrina Wullschleger</name>
+            <uri>https://github.com/Saela</uri>
+        </author>
+        <author>
+            <name>Lukas Merz</name>
+            <uri>https://github.com/Tugark</uri>
+        </author>
+        <category label="sprint" term="sprint"/>
+        <category label="planning" term="planning"/>
+        <category label="review" term="review"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Development Meeting 6]]></title>
         <id>development-meeting-6</id>
