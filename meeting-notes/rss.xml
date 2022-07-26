@@ -4,10 +4,22 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Thu, 21 Jul 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 26 Jul 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Development Meeting 7]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/development-meeting-7</link>
+            <guid>development-meeting-7</guid>
+            <pubDate>Tue, 26 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[We showed Tobias the current status of the work and talked about form validation. He asked us]]></description>
+            <content:encoded><![CDATA[<p>We showed Tobias the current status of the work and talked about form validation. He asked us
+if we validate both in the front and backend. We initially had the idea to do both, but he
+advised us to do it in the backend only so we don't have duplicate validation logic.</p><p>Tobias asked us to provide him with an easy way to set up the application, so he does not have to
+invest too much time to let it run locally.</p>]]></content:encoded>
+            <category>general</category>
+        </item>
         <item>
             <title><![CDATA[Sprint 7 Review & Sprint 8 Planning]]></title>
             <link>https://www.gipfeli.io/meeting-notes/sprint-7-review-sprint-8-planning.md</link>
