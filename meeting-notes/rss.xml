@@ -4,10 +4,23 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Tue, 26 Jul 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 02 Aug 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Sprint 8 Review & Sprint 9 Planning]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/sprint-8-review-sprint-9-planning.md</link>
+            <guid>sprint-8-review-sprint-9-planning.md</guid>
+            <pubDate>Tue, 02 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[The offline functionality could be finished and the bugs we found during testing could be resolved. 🎉🎉 We could also]]></description>
+            <content:encoded><![CDATA[<p>The offline functionality could be finished and the bugs we found during testing could be resolved. 🎉🎉 We could also
+finish implementing the admin functionality and add validation to our forms. :) Resetting a password is also possible now.
+This means we reached all the sprint goals from sprint 8! 🥐🥐</p><h1>Sprint Planning</h1><h2 class="anchor anchorWithStickyNavbar_mojV" id="sprint-goals">Sprint Goals:<a class="hash-link" href="#sprint-goals" title="Direct link to heading">​</a></h2><ul><li>Finish GPX Import</li><li>Finish creation of logo</li><li>Finish creation of icons</li><li>Create a themes draft</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="retro">Retro<a class="hash-link" href="#retro" title="Direct link to heading">​</a></h2><p>The sprint was very productive, and we could finish a big portion of the workload. :)</p>]]></content:encoded>
+            <category>sprint</category>
+            <category>planning</category>
+            <category>review</category>
+        </item>
         <item>
             <title><![CDATA[Development Meeting 7]]></title>
             <link>https://www.gipfeli.io/meeting-notes/development-meeting-7</link>
