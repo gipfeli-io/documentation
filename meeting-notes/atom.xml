@@ -2,11 +2,32 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.gipfeli.io/meeting-notes</id>
     <title>gipfeli.io Blog</title>
-    <updated>2022-08-02T00:00:00.000Z</updated>
+    <updated>2022-08-09T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.gipfeli.io/meeting-notes"/>
     <subtitle>gipfeli.io Blog</subtitle>
     <icon>https://www.gipfeli.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Development Meeting 8]]></title>
+        <id>development-meeting-8</id>
+        <link href="https://www.gipfeli.io/meeting-notes/development-meeting-8"/>
+        <updated>2022-08-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We talked about the finished tickets and the work that is currently in progress. Tobias had some input about the documentation]]></summary>
+        <content type="html"><![CDATA[<p>We talked about the finished tickets and the work that is currently in progress. Tobias had some input about the documentation
+of our current setup. At the moment we document the application components for the version running on the server only
+(see <a href="/docs/infrastructure/basics">Infrastructure Basics</a>).
+He advised us to do the documentation of the components for the local environment too (incl. the new docker setup).
+We created a ticket for this: <a href="https://github.com/gipfeli-io/documentation/issues/19" target="_blank" rel="noopener noreferrer">https://github.com/gipfeli-io/documentation/issues/19</a></p><p>Questions:</p><p>How do we need to provide the hourly report?</p><ul><li>Tobias would prefer the hours summarized by sprint. </li><li>See ticket "Export working hours" on project board (unfortunately there is no direct link we can provide): <a href="https://github.com/orgs/gipfeli-io/projects/1/views/1#" target="_blank" rel="noopener noreferrer">https://github.com/orgs/gipfeli-io/projects/1/views/1#</a></li></ul>]]></content>
+        <author>
+            <name>Sabrina Wullschleger</name>
+            <uri>https://github.com/Saela</uri>
+        </author>
+        <author>
+            <name>Tobias Büchel</name>
+            <uri>https://www.ost.ch</uri>
+        </author>
+        <category label="general" term="general"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Sprint 8 Review & Sprint 9 Planning]]></title>
         <id>sprint-8-review-sprint-9-planning.md</id>

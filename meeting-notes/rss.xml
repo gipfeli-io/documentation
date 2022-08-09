@@ -4,10 +4,23 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Tue, 02 Aug 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 09 Aug 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Development Meeting 8]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/development-meeting-8</link>
+            <guid>development-meeting-8</guid>
+            <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[We talked about the finished tickets and the work that is currently in progress. Tobias had some input about the documentation]]></description>
+            <content:encoded><![CDATA[<p>We talked about the finished tickets and the work that is currently in progress. Tobias had some input about the documentation
+of our current setup. At the moment we document the application components for the version running on the server only
+(see <a href="/docs/infrastructure/basics">Infrastructure Basics</a>).
+He advised us to do the documentation of the components for the local environment too (incl. the new docker setup).
+We created a ticket for this: <a href="https://github.com/gipfeli-io/documentation/issues/19" target="_blank" rel="noopener noreferrer">https://github.com/gipfeli-io/documentation/issues/19</a></p><p>Questions:</p><p>How do we need to provide the hourly report?</p><ul><li>Tobias would prefer the hours summarized by sprint. </li><li>See ticket "Export working hours" on project board (unfortunately there is no direct link we can provide): <a href="https://github.com/orgs/gipfeli-io/projects/1/views/1#" target="_blank" rel="noopener noreferrer">https://github.com/orgs/gipfeli-io/projects/1/views/1#</a></li></ul>]]></content:encoded>
+            <category>general</category>
+        </item>
         <item>
             <title><![CDATA[Sprint 8 Review & Sprint 9 Planning]]></title>
             <link>https://www.gipfeli.io/meeting-notes/sprint-8-review-sprint-9-planning.md</link>
