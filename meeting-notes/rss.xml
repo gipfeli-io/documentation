@@ -4,10 +4,21 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Tue, 09 Aug 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 16 Aug 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Sprint 9 Review & Sprint 10 Planning]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/sprint-9-review-sprint-10-planning.md</link>
+            <guid>sprint-9-review-sprint-10-planning.md</guid>
+            <pubDate>Tue, 16 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[We were able to finish the gpx upload and start on some design stuff like the logo and color palettes.]]></description>
+            <content:encoded><![CDATA[<p>We were able to finish the gpx upload and start on some design stuff like the logo and color palettes. </p><h1>Sprint Planning</h1><p>We added two tickets from the nice to have pile and some maintenance stuff.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="sprint-goals">Sprint Goals:<a class="hash-link" href="#sprint-goals" title="Direct link to heading">​</a></h2><ul><li>Finish categories for tour</li><li>Add some integration tests</li><li>Add markdown to description</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="retro">Retro<a class="hash-link" href="#retro" title="Direct link to heading">​</a></h2><p>We are almost feature complete and super happy about the current state of the application. 🚀🚀</p>]]></content:encoded>
+            <category>sprint</category>
+            <category>planning</category>
+            <category>review</category>
+        </item>
         <item>
             <title><![CDATA[Development Meeting 8]]></title>
             <link>https://www.gipfeli.io/meeting-notes/development-meeting-8</link>

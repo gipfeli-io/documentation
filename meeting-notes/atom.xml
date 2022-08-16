@@ -2,11 +2,30 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.gipfeli.io/meeting-notes</id>
     <title>gipfeli.io Blog</title>
-    <updated>2022-08-09T00:00:00.000Z</updated>
+    <updated>2022-08-16T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.gipfeli.io/meeting-notes"/>
     <subtitle>gipfeli.io Blog</subtitle>
     <icon>https://www.gipfeli.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Sprint 9 Review & Sprint 10 Planning]]></title>
+        <id>sprint-9-review-sprint-10-planning.md</id>
+        <link href="https://www.gipfeli.io/meeting-notes/sprint-9-review-sprint-10-planning.md"/>
+        <updated>2022-08-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We were able to finish the gpx upload and start on some design stuff like the logo and color palettes.]]></summary>
+        <content type="html"><![CDATA[<p>We were able to finish the gpx upload and start on some design stuff like the logo and color palettes. </p><h1>Sprint Planning</h1><p>We added two tickets from the nice to have pile and some maintenance stuff.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="sprint-goals">Sprint Goals:<a class="hash-link" href="#sprint-goals" title="Direct link to heading">​</a></h2><ul><li>Finish categories for tour</li><li>Add some integration tests</li><li>Add markdown to description</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="retro">Retro<a class="hash-link" href="#retro" title="Direct link to heading">​</a></h2><p>We are almost feature complete and super happy about the current state of the application. 🚀🚀</p>]]></content>
+        <author>
+            <name>Sabrina Wullschleger</name>
+            <uri>https://github.com/Saela</uri>
+        </author>
+        <author>
+            <name>Lukas Merz</name>
+            <uri>https://github.com/Tugark</uri>
+        </author>
+        <category label="sprint" term="sprint"/>
+        <category label="planning" term="planning"/>
+        <category label="review" term="review"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Development Meeting 8]]></title>
         <id>development-meeting-8</id>
