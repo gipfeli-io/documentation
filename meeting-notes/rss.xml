@@ -4,10 +4,19 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Tue, 16 Aug 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 23 Aug 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Development Meeting 9]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/development-meeting-9</link>
+            <guid>development-meeting-9</guid>
+            <pubDate>Tue, 23 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[We talked about the finished tickets and the work that is currently in progress.]]></description>
+            <content:encoded><![CDATA[<p>We talked about the finished tickets and the work that is currently in progress. </p><p>Questions:</p><p>What do we need to provide in the abstract:</p><ul><li>Short description of the project </li><li>Example: <a href="https://github.com/mitra-social/mitra-docs/blob/master/documents/abstract.md" target="_blank" rel="noopener noreferrer">https://github.com/mitra-social/mitra-docs/blob/master/documents/abstract.md</a></li></ul><p>What is wanted in the presentation:</p><ul><li>our motivation</li><li>general overview of the project (scrum, time tracking, etc.)</li><li>project setup (tech stack etc.)</li><li>challenges</li><li>lessons learned</li><li>demo</li></ul><p>How do we need to provide the documentation?</p><ul><li>online is fine, no pdf necessary</li></ul>]]></content:encoded>
+            <category>general</category>
+        </item>
         <item>
             <title><![CDATA[Sprint 9 Review & Sprint 10 Planning]]></title>
             <link>https://www.gipfeli.io/meeting-notes/sprint-9-review-sprint-10-planning.md</link>

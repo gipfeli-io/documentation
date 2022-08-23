@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocumentation=self.webpackChunkdocumentation||[]).push([[7754],{2889:function(e){e.exports=JSON.parse('{"permalink":"/meeting-notes","page":1,"postsPerPage":10,"totalPages":2,"totalCount":20,"nextPage":"/meeting-notes/page/2","blogDescription":"Blog","blogTitle":"Blog"}')}}]);
