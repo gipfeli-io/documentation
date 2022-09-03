@@ -183,19 +183,16 @@ To get more information on the recommended architecture using TypeORM and NestJS
 the [NestJS documentation](https://docs.nestjs.com/techniques/database#database). For details on TypeORM please check
 out [typeorm.io](https://typeorm.io/).
 
-## Handling user uploaded images
+## Handling user uploaded media related to tours
 
-:::info Handling other user-provided files
+Tours can have GPX files and/or images attached to them. These files are provided during the creation/editing process of
+a tour. In order to provide users with a seamless user experience, the media handling is a bit more complex than just
+uploading the files once the form is submitted. Since a user should be able to upload several files at once and also
+submit a new tour without having to wait a long time (because he may also submit 20, 30 or more images as well as a GPX
+file), media files are uploaded immediately once they are dropped in the corresponding dropzone in the frontend.
 
-Currently, we only process images from user uploads. However, users might also be able to upload e.g. GPX tracks in the
-future - if so, the process outlined here could be transferred to other files as well.
-
-:::
-
-In order to provide users with a seamless user experience, the image handling is a bit more complex than just uploading
-the tour images once the tour is saved. Since a user should be able to upload several files at once and also submit a
-new tour without having to wait a long time (because he may also submit 20, 30 or more images), images are uploaded
-immediately once they are dropped in the frontend. Backendwise, the following steps are performed:
+Backendwise, the following steps are performed (for brevity, only the case for an image is explained; however, it works
+the same for a GPX file but with different endpoint):
 
 1. The request (with an image) is POSTed to `media/upload-image`. After some basic validations (e.g. filetypes,
    filesize), the request is dispatched to the `MediaService`.
@@ -212,31 +209,37 @@ immediately once they are dropped in the frontend. Backendwise, the following st
 
 This approach has the following benefits:
 
-* A user gets immediate feedback whether their images can be saved or not.
-* A user can still upload images and, before they actually submit the whole `Tour`, can still decide to drop some
-  images. If so, it's just the UUIDs that are not sent and no relation is made.
-* The backend can easily see which images do not have a relation to a `Tour` and can be deleted from the CloudStorage;
+* A user gets immediate feedback whether their files can be saved or not.
+* A user can still upload files and, before they actually submit the whole `Tour`, can still decide to drop some
+  files. If so, it's just the UUIDs that are not sent and no relation to a `Tour` on the previously updated file is
+  made.
+* The backend can easily see which files do not have a relation to a `Tour` and can be deleted from the CloudStorage;
   e.g. via a Cronjob that periodically checks for missing relations and asks CloudStorage to remove these files.
 
 The only drawback is that we use storage that may not be needed (e.g. if a user drops several images into the form and
-then does not save the tour). However, given that the storage is very cheap and we limit the image size to 2MB, this can
+then does not save the tour). However, given that the storage is very cheap and we limit the file size to 2MB, this can
 be neglected.
 
 ### Cleaning up
 
-As mentioned above, not all uploaded and stored images may be linked to a tour. Furthermore, when a user deletes a tour,
-the images are not immediately deleted, because this might take some time. Instead, the relation to the deleted `Tour`
-is set to `NULL`.
+As mentioned above, not all uploaded and stored files may be linked to a tour. Furthermore, when a user deletes a tour,
+the files are not immediately deleted, because this might take some time. Instead, the relation to the deleted `Tour`
+is set to `NULL`. The same also holds true if a user is deleted - since their tours are deleted, the `Tour` relation on
+all their files is set to `NULL` as well as the user relation.
 
-In order to clean up, the backend has a special API path, `GET api/media/clean-up-images` that finds all `Image` objects
-in the database that either have no relation to a `User` (meaning the user is deleted) or no relation to a `Tour`
-(meaning the tour is deleted) and are older than 1 day (this is required because if a user is in the process of
-uploading an image, it may not yet have a relation to a tour, but it should not yet be deleted). Objects that fulfill
-this criteria are then deleted from the storage and the database and an email with clean up statistics is sent to the
-defined administrators.
+In order to clean up, the backend has a special API path, `GET api/media/clean-up-media` that finds all media objects in
+the database that either have
 
-This is endpoint is (weakly) protected by a simple bearer token that is defined as an environment variable. This is
-sufficient (eventhough insecure) because this endpoint does not expose anything sensitive. Furthermore, the token is
+* no relation to a `User` (meaning the user is deleted) or
+* no relation to a `Tour`(meaning the tour is deleted) **and** are older than 1 day (this is required because if a user
+  is in the process of uploading a file, it may not yet have a relation to a tour, but it should not yet be deleted).
+ 
+Objects that fulfill this criteria are then deleted from the storage and the database and an email with clean up
+statistics is sent to the defined administrators.
+
+This endpoint is (weakly) protected by a simple bearer token that is defined as an environment variable. This is
+sufficient (even-though insecure) because this endpoint does not expose anything sensitive. Furthermore, the token is
 chosen to be a long, randomized string and as SSL connections are enforced, the Authorization header is encrypted.
 
-In staging and production, this endpoint is triggered via a Cloud Scheduler task and runs once daily.
+In staging and production, this endpoint is triggered via a Cloud Scheduler task and runs once daily at 4 o'clock in the
+morning.
