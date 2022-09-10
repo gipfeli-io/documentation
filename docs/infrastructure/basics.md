@@ -7,19 +7,19 @@ title: Basics
 In general, our infrastructure uses the following services:
 
 * **GitHub**
-  * Hosts our organization with all repositories
-  * Uses GitHub Actions to build and deploy our project
-  * Uses GitHub Pages to host our statically built documentation
+    * Hosts our organization with all repositories
+    * Uses GitHub Actions to build and deploy our project
+    * Uses GitHub Pages to host our statically built documentation
 * **Google Cloud Platform**
-  * Hosts our frontend application
-  * Hosts our backend application
-  * Stores the application data
-  * Contains all our containers in its registry
-  * Runs scheduled tasks
+    * Hosts our frontend application
+    * Hosts our backend application
+    * Stores the application data
+    * Contains all our containers in its registry
+    * Runs scheduled tasks
 * **Sentry**
-  * Our error logging and performance metrics solution
+    * Our error logging and performance metrics solution
 * **SonarCloud**
-  * Our code quality scanning tool
+    * Our code quality scanning tool
 
 In terms of services used for our main application, the following diagram shows all the services, while they're
 described in more detail below.
@@ -190,6 +190,7 @@ Currently, we have a staging and a production environment. If you need to add an
 5. Check the newly created CloudRun instance. You'll need to configure it - see the existing instances for details on
    how to configure them. Note that you'll also have to disable authentication if it is a public URL.
 6. Verify the frontend works.
-7. Repeat steps 3-6 for the backend API.
+7. Repeat steps 3-6 for the backend API. Note that you'll also have to add a connection in the deployment configuration
+   such that the API may reach the database.
 
 This is basically it. If you need subdomains, you also need to configure DNS records etc.
