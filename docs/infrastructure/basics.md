@@ -1,21 +1,21 @@
 ---
-id: basics 
-sidebar_position: 1 
+id: basics
+sidebar_position: 1
 title: Basics
 ---
 
 In general, our infrastructure uses the following services:
 
 * **GitHub**
-    * Hosts our organization with all repositories
-    * Uses GitHub Actions to build and deploy our project
-    * Uses GitHub Pages to host our statically built documentation
+  * Hosts our organization with all repositories
+  * Uses GitHub Actions to build and deploy our project
+  * Uses GitHub Pages to host our statically built documentation
 * **Google Cloud Platform**
-    * Hosts our frontend application
-    * Hosts our backend application
-    * Stores the application data
-    * Contains all our containers in its registry
-    * Runs scheduled tasks
+  * Hosts our frontend application
+  * Hosts our backend application
+  * Stores the application data
+  * Contains all our containers in its registry
+  * Runs scheduled tasks
 * **Sentry**
   * Our error logging and performance metrics solution
 * **SonarCloud**
@@ -169,10 +169,27 @@ We chose Sentry because
 For our returning tasks, we use the Cloud Scheduler offering. Tasks can be configured just like cronjobs on an actual
 system. Because we cannot use cronjobs in our containers (because it may be that our application is scaled to several
 containers), Cloud Scheduler can be used for this. Currently, we're only using its HTTP functionality which sends a
-request at the specified interval. This request is then handled by our application and guarantees to be run only once - 
+request at the specified interval. This request is then handled by our application and guarantees to be run only once -
 regardless of how many containers are currently running.
 
 We chose Cloud Scheduler because
 
 * It is the only scheduling offering available that does not require loads of setup
 * It is very flexible, so it could be used in the future to also send message to PubSub queues.
+
+## Setting up a new GCP environment
+
+Currently, we have a staging and a production environment. If you need to add another environment, follow these steps:
+
+1. Add a new CloudSQL database and a user, both named `gipfeli_io_{environment name}`. Use a strong, secure password.
+2. Create a new bucket named `gipfeli-io-{environment name}-media` and give `allUsers` the `Storage Object Viewer` role.
+3. In the frontend, configure the CI with the correct triggers for a deployment. This depends on your usecase so there
+   is no one-size-fits-all solution.
+4. Trigger the pipeline so the containers get pushed to the registry. Additionally, it will also deploy a new CloudRun
+   instance.
+5. Check the newly created CloudRun instance. You'll need to configure it - see the existing instances for details on
+   how to configure them. Note that you'll also have to disable authentication if it is a public URL.
+6. Verify the frontend works.
+7. Repeat steps 3-6 for the backend API.
+
+This is basically it. If you need subdomains, you also need to configure DNS records etc.
