@@ -183,6 +183,8 @@ Currently, we have a staging and a production environment. If you need to add an
 
 1. Add a new CloudSQL database and a user, both named `gipfeli_io_{environment name}`. Use a strong, secure password.
 2. Create a new bucket named `gipfeli-io-{environment name}-media` and give `allUsers` the `Storage Object Viewer` role.
+   Be sure to also set the correct CORS policies, as mentioned
+   in [this ticket](https://github.com/gipfeli-io/gipfeli-frontend/issues/118)
 3. In the frontend, configure the CI with the correct triggers for a deployment. This depends on your usecase so there
    is no one-size-fits-all solution.
 4. Trigger the pipeline so the containers get pushed to the registry. Additionally, it will also deploy a new CloudRun
