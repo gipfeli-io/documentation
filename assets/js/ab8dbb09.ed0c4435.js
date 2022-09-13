@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumentation=self.webpackChunkdocumentation||[]).push([[349],{3:e=>{e.exports=JSON.parse('{"permalink":"/meeting-notes/tags/sprint","page":1,"postsPerPage":10,"totalPages":2,"totalCount":12,"nextPage":"/meeting-notes/tags/sprint/page/2","blogDescription":"Blog","blogTitle":"Blog"}')}}]);

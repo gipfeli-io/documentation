@@ -4,10 +4,23 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Wed, 31 Aug 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 13 Sep 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Sprint 11 Review & Sprint 12 Planning]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/sprint-11-review-sprint-12-planning.md</link>
+            <guid>sprint-11-review-sprint-12-planning.md</guid>
+            <pubDate>Tue, 13 Sep 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[We were able to finish a lot of tickets in this sprint. We did a round of refactoring and adding]]></description>
+            <content:encoded><![CDATA[<p>We were able to finish a lot of tickets in this sprint. We did a round of refactoring and adding
+additional tests in the frontend.</p><h1>Sprint Planning</h1><p>We will finish the frontend tests and concentrate on testing and finishing the documentation for the last sprint.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="sprint-goals">Sprint Goals:<a class="hash-link" href="#sprint-goals" title="Direct link to heading">​</a></h2><ul><li>Finish tests for frontend</li><li>Test application</li><li>Finish documentation</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="retro">Retro<a class="hash-link" href="#retro" title="Direct link to heading">​</a></h2><p>We are very happy with the current look and feel of the application and are excited to start using it
+on our next tours!</p>]]></content:encoded>
+            <category>sprint</category>
+            <category>planning</category>
+            <category>review</category>
+        </item>
         <item>
             <title><![CDATA[Sprint 10 Review & Sprint 11 Planning]]></title>
             <link>https://www.gipfeli.io/meeting-notes/sprint-10-review-sprint-11-planning.md</link>
