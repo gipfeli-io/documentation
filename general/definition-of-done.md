@@ -1,6 +1,6 @@
 ---
 id: definition-of-done
-sidebar_position: 4
+sidebar_position: 3
 title: "Definition of done"
 ---
 

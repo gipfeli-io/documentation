@@ -1,6 +1,6 @@
 ---
 id: abstract
-sidebar_position: 2
+sidebar_position: 1
 title: "Abstract"
 ---
 
@@ -24,3 +24,27 @@ Mit der Abgabe konnten die Minimalziele erreicht sowie verschiedene Zusatzfeatur
 Der Einsatz verschiedenster Open Source Technologien hat sich bewährt und die Applikation bietet einen guten Stand, 
 der in Zukunft weiterentwickelt werden kann. Und weil die Applikation gänzlich quelloffen ist, kann jede und jeder 
 seine eigene Instanz hosten.
+
+## English Version
+
+To this day, we personally feel that there are no appealing, intuitive summit diaries for documenting
+future tours or collection and description of completed hiking tours.
+Our application aims to fill this gap by providing a PWA to describe and neatly document tours.
+This should be linked to spatial information - geo-referenced photos should be localized on the map,
+and it should be possible to upload and visualize GPX tracks.
+At the same time, the application should also work offline to some extent,
+so that e.g. in the evening in the cabin the past day (in the sense of a diary) can be documented.
+
+The application was implemented in the frontend with React and in the backend with NestJS and lives entirely in the Google Cloud:
+From Secret Manager to Cloud SQL to Cloud Run, a wide variety of services are used.
+The pipelines for the staging and production environment (as Github Actions) perform all unit and integration tests.
+They also check the code quality using SonarCloud and create a build of the container.
+In addition, all commits are automatically tested and built, so we always know
+whether our adjustments are correct.
+
+With the delivery, the minimum goals could be reached and several additional features
+(WYSIWYG editor, GPS localization of images, upload of GPX files, profile display of GPX files) could be implemented.
+The use of various open source technologies has proven itself and the application offers a good state
+which can be further developed in the future. And because the application is completely open source, anyone can host their own instance.
+
+Translated with www.DeepL.com/Translator (free version)
