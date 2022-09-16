@@ -34,3 +34,17 @@ Hosts our current staging build with the latest changes. Does not represent the 
 
 Hosts our current production build with the latest release.
 
+## Example image and GPX data
+
+If you'd like to test the geo-referenced image and GPX upload, you are free to use both examples
+in [this archive](/examples/examples.zip):
+
+* `malbun`: Contains a GPX file exported from [SchweizMobil](https://www.schweizmobil.ch/) for
+  the [Fürstin Gina Weg](https://www.schweizmobil.ch/de/wanderland/routen/route-0995.html) and images taken with an
+  Android Smartphone with GPS enabled.
+* `nz`: Contains a GPX file recorded with a Garmin Fenix watch and exported
+  from [GarminConnect](http://connect.garmin.com/) from
+  the [McIntosh Loop](https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/whakaari-conservation-area/things-to-do/mt-mcintosh-loop-track/)
+  in New Zealand and images taken with an Android Smartphone with GPS enabled. Some images have been geo-tagged later on
+  using [FreeMapTools](https://www.freemaptools.com/view-and-edit-photo-gps-data.htm).
+
