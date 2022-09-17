@@ -18,6 +18,8 @@ In general, our infrastructure uses the following services:
     * Runs scheduled tasks
 * **Sentry**
     * Our error logging and performance metrics solution
+* **SendGrid**
+    * Our email provider for delivering our emails
 * **SonarCloud**
     * Our code quality scanning tool
 
@@ -27,13 +29,13 @@ described in more detail below.
 [(enlarge image)](/img/docs/infrastructure/overview.svg)
 ![Infrastructure diagram](/img/docs/infrastructure/overview.svg)
 <!--
-Use https://googlecloudcheatsheet.withgoogle.com/architecture andimport ./diagrams/cloud_infrastructure.excalidraw
+Use https://googlecloudcheatsheet.withgoogle.com/architecture and import ./diagrams/cloud_infrastructure.excalidraw
 Make sure to always export the file if any changes happen and overwrite the existing file.
 -->
 :::info Note
 
 For simplicity, the documentation part is left out in the above documentation. More information can be
-found [here](./documentation-deployment.md)
+found [here](./documentation-deployment.md).
 
 :::
 
@@ -63,12 +65,13 @@ We chose the Container Registry because
 
 * It seamlessly integrates with all the other GCP services
 * It is - even though deprecated - a lot cheaper than its successor (Artifact Registry), because it uses Cloud Storage
-  as a backend which costs way less
+  as a backend which costs way less (and it still gets all security updates!)
 
 ### SoncarCloud
 
 This tool performs code analysis in our repositories and, in the case of the backend, also makes sure the code coverage
-is good enough. It reports codesmells, security issues and much more.
+is good enough. The data is [publically available](https://sonarcloud.io/organizations/gipfeli-io/projects). It reports
+codesmells, security issues and much more.
 
 We chose SonarCloud because
 
@@ -96,7 +99,8 @@ We chose Cloud Run because
 * It works out-of-the-box and integrates seamlessly with all GCP services
 * It allows for a completely private API - Cloud Run does not make its instances public by default, yet Cloud Run
   instances may talk to each other. As such, the frontend may be public, while the API itself remains private and can
-  only be access through the frontend.
+  only be access through the frontend. This is currently not used by us, but could become important if we were to
+  develop an API that handles internal tasks such as data extraction and so on
 
 ### GCP: Secret Manager
 
@@ -104,7 +108,7 @@ Cloud Run offers two means of injecting environment variables into its container
 defined on the deployment itself and variables set within the Secret Manager offering. For sensitive variables such as
 database passwords or JWT secrets, we are using the Secret Manager. It allows for securely defining variables that
 cannot be read by anyone after saving and even offers the possibility to version them. As such, they get injected into
-the Cloud Run deployments, but are not readably from any logs.
+the Cloud Run deployments, but are not readable from any logs.
 
 We chose Secret Manager because
 
@@ -123,15 +127,15 @@ fashion. It also allows for finegrained access controls.
 We chose Cloud Storage because
 
 * It is actually the simplest, cheapest option to store for example user-provided assets such as images
-* It allows finegrained access control, while also allowing for simple almost-zero-config access via other services (
-  e.g. CloudRun).
+* It allows finegrained access control, while also allowing for almost-zero-config access via other services (e.g.
+  CloudRun).
 
 :::tip Note on our buckets access policy
 
 Our buckets are currently public, so all user uploads are - in theory - accesible by everyone. All uploads are however
 placed in a folder which is the user's UUID, and each files gets a randomized UUID prefixed to its slugified filename.
 As such, we believe that this is good enough and a nice tradeoff, because the other solution would require us to proxy
-each and every request to an image through our API, which can become a performance bottleneck.
+each and every request to a user-provided asset through our API, which can become a performance bottleneck.
 
 :::
 
@@ -146,6 +150,7 @@ We chose Cloud SQL (Postgres) because
 
 * It is a managed Postgres instance, optimized to the extreme
 * It is batteries-included - from scaling to point-in-time-recovery
+* It has PostGIS extension included, which is an incredibly nice library for handling geodata
 
 ## Utils
 
@@ -153,10 +158,10 @@ This layer is used for utility functions that may perform various helper tasks w
 
 ### Sentry
 
-Our environments log all errors to Sentry. Sentry acts as a centralized error monitoring tool which provides us with
-lots of details, such as stack traces, payloads, etc. It also offers a performance metrics solution. It is
-platform-agnostic, and there are integrations for React. Nest currently does not have an implementation, but our own
-implementation works nicely.
+Our environments log all errors to [Sentry](https://sentry.io/). Sentry acts as a centralized error monitoring tool
+which provides us with lots of details, such as stack traces, payloads, etc. It also offers a performance metrics
+solution. It is platform-agnostic and there are integrations for React. Nest currently does not have an implementation,
+but our own implementation works nicely.
 
 We chose Sentry because
 
@@ -175,16 +180,30 @@ regardless of how many containers are currently running.
 We chose Cloud Scheduler because
 
 * It is the only scheduling offering available that does not require loads of setup
-* It is very flexible, so it could be used in the future to also send message to PubSub queues.
+* It is very flexible, so it could be used in the future to also send message to PubSub queues
+
+### SendGrid
+
+We use [SendGrid](https://sendgrid.com/) as an email provider. Whenever the application needs to send an email, e.g. for
+sign-up activation, we use SendGrid to deliver the message.
+
+We chose SendGrid because
+
+* It is a stable service by Twilio
+* It has a generous free tier that works at our current state
+* It employs industry best practices (e.g. DNS verification) to deliver emails in gipfeli.io's name without getting them
+  blocked
+* It has a nice SDK that can be used to integrate into our backend code
 
 ## Setting up a new GCP environment
 
 Currently, we have a staging and a production environment. If you need to add another environment, follow these steps:
 
-1. Add a new CloudSQL database and a user, both named `gipfeli_io_{environment name}`. Use a strong, secure password.
+1. Add a new CloudSQL database and a user to our instance, both named `gipfeli_io_{environment name}`. Use a strong,
+   secure password.
 2. Create a new bucket named `gipfeli-io-{environment name}-media` and give `allUsers` the `Storage Object Viewer` role.
    Be sure to also set the correct CORS policies, as mentioned
-   in [this ticket](https://github.com/gipfeli-io/gipfeli-frontend/issues/118)
+   in [this ticket](https://github.com/gipfeli-io/gipfeli-frontend/issues/118).
 3. In the frontend, configure the CI with the correct triggers for a deployment. This depends on your usecase so there
    is no one-size-fits-all solution.
 4. Trigger the pipeline so the containers get pushed to the registry. Additionally, it will also deploy a new CloudRun
@@ -196,3 +215,16 @@ Currently, we have a staging and a production environment. If you need to add an
    such that the API may reach the database.
 
 This is basically it. If you need subdomains, you also need to configure DNS records etc.
+
+## DNS routing for domains
+
+Because we're using Cloud Run instances in `europe-west1` region, we can use Cloud
+Run's [domain mapping](https://cloud.google.com/run/docs/mapping-custom-domains) feature which is currently in preview
+mode (and hence not available in the Zurich region). This mapping allows to add any domain and map them to a Cloud Run
+instance. After [verifying the ownership of the domain](https://support.google.com/webmasters/answer/9008080), this
+service will display the required DNS configuration that has to be added to our provider's DNS configuration (which
+is [Gandi](https://gandi.net/) in our case). Afterwards, Cloud Run will automatically generate SSL certificates and
+renew them.
+
+Other options which would allow us to use Zurich's datacentres would require a load balancer setup which is rather
+complicated and expensive. Once the mapping feature is rolled out to the Zurich datacentre, we might move our instances.
