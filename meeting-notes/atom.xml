@@ -2,11 +2,30 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.gipfeli.io/meeting-notes</id>
     <title>gipfeli.io Blog</title>
-    <updated>2022-09-13T00:00:00.000Z</updated>
+    <updated>2022-09-16T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.gipfeli.io/meeting-notes"/>
     <subtitle>gipfeli.io Blog</subtitle>
     <icon>https://www.gipfeli.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Development Meeting 11]]></title>
+        <id>development-meeting-11</id>
+        <link href="https://www.gipfeli.io/meeting-notes/development-meeting-11"/>
+        <updated>2022-09-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Since we deem our application feature-complete, we tested the application together and checked with]]></summary>
+        <content type="html"><![CDATA[<p>Since we deem our application feature-complete, we tested the application together and checked with
+our <a href="/docs/design/requirements">functional and non-functional requirements</a>
+and <a href="/docs/design/use-cases">use cases</a> whether they are fulfilled or not.</p><p>We also fixed a bug with our offline functionality that we noticed during a joint real-life test.</p><p>Last but not least, we split our remaining documentation requirements so we can work on finishing the documentation.</p>]]></content>
+        <author>
+            <name>Sabrina Wullschleger</name>
+            <uri>https://github.com/Saela</uri>
+        </author>
+        <author>
+            <name>Lukas Merz</name>
+            <uri>https://github.com/Tugark</uri>
+        </author>
+        <category label="general" term="general"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Sprint 11 Review & Sprint 12 Planning]]></title>
         <id>sprint-11-review-sprint-12-planning.md</id>
@@ -27,6 +46,24 @@ on our next tours!</p>]]></content>
         <category label="sprint" term="sprint"/>
         <category label="planning" term="planning"/>
         <category label="review" term="review"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Development Meeting 10]]></title>
+        <id>development-meeting-10</id>
+        <link href="https://www.gipfeli.io/meeting-notes/development-meeting-10"/>
+        <updated>2022-09-08T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In this regular dev meeting, we had a look at some code issues and did a preliminary check for the documents required]]></summary>
+        <content type="html"><![CDATA[<p>In this regular dev meeting, we had a look at some code issues and did a preliminary check for the documents required
+for our hand-in.</p><p>Since we had to move this meeting, Tobias was not able to join. We asked him to join our sprint meeting 11 instead.</p>]]></content>
+        <author>
+            <name>Sabrina Wullschleger</name>
+            <uri>https://github.com/Saela</uri>
+        </author>
+        <author>
+            <name>Lukas Merz</name>
+            <uri>https://github.com/Tugark</uri>
+        </author>
+        <category label="general" term="general"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Sprint 10 Review & Sprint 11 Planning]]></title>
@@ -496,7 +533,7 @@ the architectural decisions set in stone. As such, we agreed on the following fe
 prototypical fashion:</p><ul><li>Staging Environment with auto deployment</li><li>Login for existing users (without management functions and profile functions)</li><li>List of existing tours</li><li>CRUD functionality for tours</li><li>Offline functionality (at least conceptually, does not have to work yet)</li></ul><p>This set of features will allow us to showcase most of our application and architectural ideas, and it requires to have
 a working infrastructure ready. We also see the offline functionality as one of the most critical aspects, so we want to
 focus on that as well.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="development-process-and-timeplans">Development process and timeplans<a class="hash-link" href="#development-process-and-timeplans" title="Direct link to heading">​</a></h2><p>As per our thesis agreement, we will use an agile, Scrum-inspired approach. Therefore, we agreed on the following
-cornerstones:</p><ul><li><p>Sprints are 2 weeks long, leading us to 11 sprints in total.</p></li><li><p>We do not use the product owner/scrum master roles explicitly, since this does not really make sense in a team of two.
+cornerstones:</p><ul><li><p>Sprints are 2 weeks long, leading us to 12 sprints in total.</p></li><li><p>We do not use the product owner/scrum master roles explicitly, since this does not really make sense in a team of two.
 However, we will jointly manage our backlog both from a product owner and developer perspective, and we will help each
 other to facilitate our development.</p></li><li><p>We will use a modified subset of the typical Scrum ceremonies. They are at fixed intervals so as to guarantee a degree
 of consistency.</p><ul><li><code>Weekly</code>: Serves as our daily - we will discuss what has been achieved, what is being worked on and where issues

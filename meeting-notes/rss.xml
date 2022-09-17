@@ -4,10 +4,21 @@
         <title>gipfeli.io Blog</title>
         <link>https://www.gipfeli.io/meeting-notes</link>
         <description>gipfeli.io Blog</description>
-        <lastBuildDate>Tue, 13 Sep 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 16 Sep 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Development Meeting 11]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/development-meeting-11</link>
+            <guid>development-meeting-11</guid>
+            <pubDate>Fri, 16 Sep 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Since we deem our application feature-complete, we tested the application together and checked with]]></description>
+            <content:encoded><![CDATA[<p>Since we deem our application feature-complete, we tested the application together and checked with
+our <a href="/docs/design/requirements">functional and non-functional requirements</a>
+and <a href="/docs/design/use-cases">use cases</a> whether they are fulfilled or not.</p><p>We also fixed a bug with our offline functionality that we noticed during a joint real-life test.</p><p>Last but not least, we split our remaining documentation requirements so we can work on finishing the documentation.</p>]]></content:encoded>
+            <category>general</category>
+        </item>
         <item>
             <title><![CDATA[Sprint 11 Review & Sprint 12 Planning]]></title>
             <link>https://www.gipfeli.io/meeting-notes/sprint-11-review-sprint-12-planning.md</link>
@@ -20,6 +31,16 @@ on our next tours!</p>]]></content:encoded>
             <category>sprint</category>
             <category>planning</category>
             <category>review</category>
+        </item>
+        <item>
+            <title><![CDATA[Development Meeting 10]]></title>
+            <link>https://www.gipfeli.io/meeting-notes/development-meeting-10</link>
+            <guid>development-meeting-10</guid>
+            <pubDate>Thu, 08 Sep 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[In this regular dev meeting, we had a look at some code issues and did a preliminary check for the documents required]]></description>
+            <content:encoded><![CDATA[<p>In this regular dev meeting, we had a look at some code issues and did a preliminary check for the documents required
+for our hand-in.</p><p>Since we had to move this meeting, Tobias was not able to join. We asked him to join our sprint meeting 11 instead.</p>]]></content:encoded>
+            <category>general</category>
         </item>
         <item>
             <title><![CDATA[Sprint 10 Review & Sprint 11 Planning]]></title>
@@ -293,7 +314,7 @@ the architectural decisions set in stone. As such, we agreed on the following fe
 prototypical fashion:</p><ul><li>Staging Environment with auto deployment</li><li>Login for existing users (without management functions and profile functions)</li><li>List of existing tours</li><li>CRUD functionality for tours</li><li>Offline functionality (at least conceptually, does not have to work yet)</li></ul><p>This set of features will allow us to showcase most of our application and architectural ideas, and it requires to have
 a working infrastructure ready. We also see the offline functionality as one of the most critical aspects, so we want to
 focus on that as well.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="development-process-and-timeplans">Development process and timeplans<a class="hash-link" href="#development-process-and-timeplans" title="Direct link to heading">​</a></h2><p>As per our thesis agreement, we will use an agile, Scrum-inspired approach. Therefore, we agreed on the following
-cornerstones:</p><ul><li><p>Sprints are 2 weeks long, leading us to 11 sprints in total.</p></li><li><p>We do not use the product owner/scrum master roles explicitly, since this does not really make sense in a team of two.
+cornerstones:</p><ul><li><p>Sprints are 2 weeks long, leading us to 12 sprints in total.</p></li><li><p>We do not use the product owner/scrum master roles explicitly, since this does not really make sense in a team of two.
 However, we will jointly manage our backlog both from a product owner and developer perspective, and we will help each
 other to facilitate our development.</p></li><li><p>We will use a modified subset of the typical Scrum ceremonies. They are at fixed intervals so as to guarantee a degree
 of consistency.</p><ul><li><code>Weekly</code>: Serves as our daily - we will discuss what has been achieved, what is being worked on and where issues
