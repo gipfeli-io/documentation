@@ -45,10 +45,10 @@ performs the following steps:
 3. After this, the deployment starts, boots up our new image as a new CloudRun pod, performs healthchecks and gracefully
    replaces the previous running pod with our new pod, redirecting all traffic to this pod.
 
-:::tip Sonarcloud
+:::tip SonarCloud
 
-Because we do not use coverage analysis in the frontend as we do in the backend, we can use Sonarcloud's automatic scan.
-This is the default for any repository that is configured within Sonarcloud and executes automatically on each action
+Because we do not use coverage analysis in the frontend as we do in the backend, we can use SonarCloud's automatic scan.
+This is the default for any repository that is configured within SonarCloud and executes automatically on each action
 run. It will also automagically create a comment on every pull request with a short summary.
 
 :::

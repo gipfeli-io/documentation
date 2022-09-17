@@ -17,11 +17,11 @@ the following steps:
     1. Setting up a local Postgresql instance as a service to be used within the context of this build step
     2. Install dependencies and run unit tests and e2e tests (against the Postgresql instance from step 1). Tests are
        run with coverage.
-    3. Merge coverage reports - because Sonarcloud requires one single coverage
+    3. Merge coverage reports - because SonarCloud requires one single coverage
        file, [the unit and e2e reports have to be merged](https://github.com/gipfeli-io/gipfeli-api/tree/main#merging-coverage)
-       for Sonarcloud to be able to find them.
-    4. Run the Sonarcloud scan to check the repository. In contrast to the frontend, this is done explicitly as an
-       action, which is required by Sonarcloud for running coverage analysis.
+       for SonarCloud to be able to find them.
+    4. Run the SonarCloud scan to check the repository. In contrast to the frontend, this is done explicitly as an
+       action, which is required by SonarCloud for running coverage analysis.
     5. Set up the Docker image name as an environment variable, because the image name is different depending on the
        environment.
     6. Build the container assigning it a unique name (`gcr.io/{project_id}/{app_name}-{environment}:{commit_sha}`).
