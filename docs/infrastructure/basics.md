@@ -76,7 +76,7 @@ codesmells, security issues and much more.
 We chose SonarCloud because
 
 * It offers a free tier
-* It is usable withing Github Actions workflows and integrates into our workflow
+* It is usable withing GitHub Actions workflows and integrates into our workflow
 
 ## Presentation & Business Logic
 

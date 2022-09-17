@@ -14,7 +14,7 @@ sodass z.B. am Abend in der Hütte der vergangene Tag (ganz im Sinne eines Tageb
 
 Die Applikation wurde im Frontend mit React und im Backend mit NestJS umgesetzt und lebt gänzlich in der Google Cloud: 
 Vom Secret Manager über Cloud SQL bis hin zu Cloud Run werden verschiedenste Services angezogen. 
-Die Pipelines für die Staging- und die Produktionsumgebung (als Github Actions) führen jeweils alle Unit- 
+Die Pipelines für die Staging- und die Produktionsumgebung (als GitHub Actions) führen jeweils alle Unit- 
 und Integrationtests durch, prüfen die Codequalität mittels SonarCloud und erstellen einen Build des Containers. 
 Ausserdem werden alle Commits automatisch getestet und gebuildet, sodass wir stets wissen, 
 ob unsere Anpassungen korrekt sind.
@@ -37,7 +37,7 @@ so that e.g. in the evening in the cabin the past day (in the sense of a diary) 
 
 The application was implemented in the frontend with React and in the backend with NestJS and lives entirely in the Google Cloud:
 From Secret Manager to Cloud SQL to Cloud Run, a wide variety of services are used.
-The pipelines for the staging and production environment (as Github Actions) perform all unit and integration tests.
+The pipelines for the staging and production environment (as GitHub Actions) perform all unit and integration tests.
 They also check the code quality using SonarCloud and create a build of the container.
 In addition, all commits are automatically tested and built, so we always know
 whether our adjustments are correct.

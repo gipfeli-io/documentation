@@ -10,14 +10,14 @@ topics learned throughout the 3 CAS courses.
 
 ## General
 
-* **Github organization:** https://github.com/gipfeli-io
+* **GitHub organization:** https://github.com/gipfeli-io
 * **Project URL:** https://www.gipfeli.io
 * **Project language:** English
 * **Duration:** April - September 2022
 
 ## People
 
-| Name                 | Role       | Github profile            |
+| Name                 | Role       | GitHub profile            |
 |----------------------|------------|---------------------------|
 | Sabrina Wullschleger | Student    | https://github.com/Saela  |
 | Lukas Merz           | Student    | https://github.com/Tugark |
@@ -75,7 +75,7 @@ is doing.
 
 ### Planning
 
-We use a [dedicated Github projects board](https://github.com/orgs/gipfeli-io/projects/1) for managing all tasks in our
+We use a [dedicated GitHub projects board](https://github.com/orgs/gipfeli-io/projects/1) for managing all tasks in our
 sprints. The board allows us to track both repository-specific issues as well as tasks related to the overall project.
 It also allows us to assign iterations to each task.
 

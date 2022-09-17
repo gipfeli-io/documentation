@@ -21,7 +21,7 @@ As an important decision, we also agreed on our branching strategy.
 
 The following questions were discussed with Tobias.
 
-**Can we opensource our code? This would allow for more flexibility in the free plan on Github.com**
+**Can we opensource our code? This would allow for more flexibility in the free plan on GitHub.com**
 
 * According to Tobias, this is not an issue. However, he asked us to discuss this with Luc to get an official
 * response.
