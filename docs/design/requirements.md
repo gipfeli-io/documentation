@@ -4,27 +4,41 @@ sidebar_position: 1
 title: Requirements
 ---
 
+The requirements were defined in the beginning of our thesis. As part
+of [development meeting 11](../../meeting-notes/development-meeting-11), we checked whether and how they are
+fulfilled towards the end of our thesis..
+
 ### Functional Requirements
 
-| #   | Requirement                                                                                                                                |
-|-----|--------------------------------------------------------------------------------------------------------------------------------------------|
-| F1  | The system has to differ between "logged in" and "anonymous" users.                                                                        |
-| F2  | The system has to differ between "logged in as administrator" and "logged in as user".                                                     |
-| F3  | The system has to offer the option to register as a new user.                                                                              |
-| F4  | The system has to display a list of tours the currently logged in user created.                                                            |
-| F5  | The system has to make sure that a tour is only displayed to its creator.                                                                  |
-| F6  | The system has to offer the functionality to create, update and delete a tour for a user.                                                  |
-| F7  | The system has to display the list of tours of all users to an administrator.                                                              |
-| F8  | The system has to allow viewing and deleting a tour of a different user for an administrator.                                              |
-| F9  | The system has to provide an offline functionality so the user can create tours in a reduced fashion without a connection to the internet. |
-| F10 | The system has to provide a functionality to upload geo referenced images and display them on the map.                                     |    
+The column `Implemented` indicates whether the requirements are fulfilled before the final submission. In the
+column `Details`, some additional information regarding the (non-) fulfillment may be given.
+
+| #   | Requirement                                                                                                                                                 | Implemented | Details                                                                                                         |
+|-----|-------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------------------------------------------------------|
+| F1  | The system has to differ between "logged in" and "anonymous" users.                                                                                         | ✅           | Some routes are protected while others are public.                                                              |
+| F2  | The system has to differ between "logged in as administrator" and "logged in as user".                                                                      | ✅           | Distinguished admin functionality (user management) is reserved for admin users.                                |
+| F3  | The system has to offer the option to register as a new user.                                                                                               | ✅           |                                                                                                                 |
+| F4  | The system has to display a list of tours the currently logged in user created.                                                                             | ✅           |                                                                                                                 |
+| F5  | The system has to make sure that a tour is only displayed to its creator.                                                                                   | ✅           | Implemented via user scoping in the backend - only return tours that belong to the user performing the request. |
+| F6  | The system has to offer the functionality to create, update and delete a tour for a user.                                                                   | ✅           |                                                                                                                 |
+| F7  | The system has to display a list of registered users with details to an administrator.                                                                      | ✅           | Administrators see names, email and role for all registered users.                                              |
+| F8  | The system has to allow for deleting a user by an administrator.                                                                                            | ✅           | Administrators may remove users - as a protective measure, admins cannot be removed.                            |
+| F9  | The system has to provide an offline functionality so the user can create, edit and delete tours in a reduced fashion without a connection to the internet. | ✅           |                                                                                                                 |
+| F10 | The system has to provide a functionality to upload geo referenced images and display them on the map.                                                      | ✅           |                                                                                                                 |    
+| F11 | The system has to provide a functionality to upload GPX files and display them on the map.                                                                  | ✅           |                                                                                                                 |    
 
 ### Non Functional Requirements
 
-| #   | Requirement                                                                    |
-|-----|--------------------------------------------------------------------------------|
-| NF1 | The system has to persist the tour data for a user in a relational database.   |
-| NF2 | The system must make daily backups of the data stored in the database.         |
-| NF3 | The system must store uploaded images in an object storage.                    |
-| NF3 | The system must make daily backups of the images stored in the object storage. |
-| NF4 | The system has to be function complete by 30.9.2022                            |
+The column `Achieved` indicates whether the requirements are fulfilled before the final submission. In the
+column `Details`, additional information regarding the (non-) fulfillment is given.
+
+**Note:** The fulfillment is only guaranteed for our production environment, as e.g. backups for staging environments
+are less important.
+
+| #   | Requirement                                                                            | Achieved | Details                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|-----|----------------------------------------------------------------------------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| NF1 | The system has to persist the tour data for a user in a relational database.           | ✅        | As mentioned in the [infrastructure basics](../infrastructure/basics.md#gcp-cloud-sql), we use Google's Cloud SQL offering in form of a Postgresql database.                                                                                                                                                                                                                                                                                                                                                                                    |
+| NF2 | The system must make daily backups of the data stored in the database.                 | ✅        | We use [Cloud SQL's default backup policy](https://cloud.google.com/sql/docs/mysql/backup-recovery/backups), which creates daily backups and stores them for seven days. This could be configurable to extend up to 365 days. Furthermore, we also activated [point-in-time-recovery](https://cloud.google.com/sql/docs/postgres/backup-recovery/pitr), which allows us to recreate a database state down to fractions of a second.                                                                                                             |
+| NF3 | The system must store uploaded files in an object storage.                             | ✅        | As mentioned in the [infrastructure basics](../infrastructure/basics.md#gcp-cloud-storage), we use Google's Cloud Storage offering which is a typical object storage.                                                                                                                                                                                                                                                                                                                                                                           |
+| NF3 | The system must make daily backups of the uploaded files stored in the object storage. | ✅        | With Cloud Storage, there is no need to create backups, since it's part of the Storage offering that data is protected. It would also be wrong to backup buckets within GCP, because it's still a single point of failure. The only other option would be to backup our buckets to another storage provider - however, there is not much of a point for doing so. In turn, we could discuss about activating object-level security features such as versioning to prevent accidental data loss when users delete a file and need to recover it. |
+| NF4 | The system has to be function complete by 30.9.2022                                    | ✅        | The functional requirements are fulfilled and we have a working production environment with [gipfeli.io](https://gipfeli.io). Tickets that remain in the repository are either bug reports or features for our next version.                                                                                                                                                                                                                                                                                                                    |
