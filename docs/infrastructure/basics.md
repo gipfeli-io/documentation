@@ -78,9 +78,9 @@ We chose SonarCloud because
 * It offers a free tier
 * It is usable withing GitHub Actions workflows and integrates into our workflow
 
-## Presentation & Business Logic
+## Presentation layer & Business layer
 
-Our presentation layer serves our frontend application to the user. Our business logic layer hosts the backend API which
+Our presentation layer serves our frontend application to the user. Our business layer hosts the backend API which
 provides the data upon request from the frontend. It also handles any data wrangling or modifications. Both layers use
 Google Cloud Run.
 
@@ -115,9 +115,9 @@ We chose Secret Manager because
 * It is the only way to ensure sensitive variables are not logged in any outputs/traces
 * It integrates seamlessly with Cloud Run
 
-## Persistence
+## Data layer
 
-The persistence layer stores all the data our application needs and/or generates. We use Cloud Storage and Cloud SQL.
+The data layer stores all the data our application needs and/or generates. We use Cloud Storage and Cloud SQL.
 
 ### GCP: Cloud Storage
 
