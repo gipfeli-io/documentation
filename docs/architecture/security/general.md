@@ -5,9 +5,10 @@ title: General
 ---
 
 Generally, the application consists of **protected** (as in: you need an account and/or be an administrator) and **
-unprotected** (as in: public access) routes. Therefore, it needs both authentication (who are you) and authorization (
-what can you do) measures. This requires appropriate measures in both frontend and backend. For more information, see
-the corresponding chapters on [authentication](./authentication-session-management.md) and [authorization](./authorization.md).
+unprotected** (as in: public access) routes. Therefore, it needs both authentication (who are you) and authorization
+(what can you do) measures. This requires appropriate measures in both frontend and backend. For more information, see
+the corresponding chapters on [authentication](./authentication-session-management.md)
+and [authorization](./authorization.md).
 
 ## Infrastructural security
 
@@ -31,7 +32,8 @@ level:
 * **Cloud infrastructure:** Care has been taken to employ best practices in the cloud. This means that there are, for
   example, service accounts for handling bucket manipulation which are limited to their bucket only and no other
   services. The database itself is only accessible via TLS and requires the certificates to be installed on a user's
-  systems. As for secrets, they are encrypted and stored in the GCP Secret Manager.
+  systems. As for secrets, they are encrypted and stored in the GCP Secret Manager. This also holds true for any secrets
+  required in our GitHub Actions - they use GitHub's secrets.
 
 :::tip What about CSRF?
 
@@ -45,5 +47,4 @@ forge a request from a third-party site to our website as no cookies are sent al
 Currently, we do not enforce Content Security Policies in the frontend. The backend has them added by the aforementioned
 helmet plugin, but there is no added benefit to that. CSPs should be enforced in the frontend. Since we're using an
 NGINX instance to serve our frontend, basic plugins can be used. However, fine-tuning CSPs requires a lot of testing and
-need to be adjusted for different production environments.
-
+need to be adjusted for different production environments. See [this ticket](https://github.com/gipfeli-io/gipfeli-frontend/issues/196) for progress.

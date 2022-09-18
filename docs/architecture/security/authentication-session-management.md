@@ -83,7 +83,8 @@ Decrypted payload:
 }
 ```
 
-* **Refresh token:** This token contains an expiration date, issue date as well as the session ID. Its validity period is
+* **Refresh token:** This token contains an expiration date, issue date as well as the session ID. Its validity period
+  is
   configurable and should be configured to be long.
 
 ```
@@ -111,11 +112,45 @@ The backend verifies the integrity of the token and its validity and passes the 
 ### Refreshing the access token
 
 The access token should have a short validity period because it authenticates the user. In order to refresh its
-validity, the refresh token is used. The refresh token is tied to a session ID. Before the access token expires, a
-request to the dedicated refresh endpoint should be made. Instead of the access token in the Authorization header, the
-refresh token is used. The backend verifies the token and checks whether the included session ID exists and is still
-valid. If so, it creates a new access token and a new refresh token and returns them. From this point on, the validity
-is extended again.
+validity, the refresh token is used. The refresh token is tied to a session ID that is stored in the database. Before
+the access token expires, a request to the dedicated refresh endpoint should be made. Instead of the access token in the 
+Authorization header, the refresh token is used. The backend verifies the token and checks whether the included session 
+ID exists and is still valid. If so, it creates a new access token and a new refresh token and returns them. From this 
+point on, the validity is extended again.
+
+```plantuml Refresh flow
+@startuml
+
+|Frontend|
+start
+:AccessToken is about to expire;
+:Send request to /refresh \nwith Bearer {RefreshToken};
+|#AntiqueWhite|Backend|
+:Verify JWT;
+if (Valid?) then (yes)
+else (no)
+  :Return error;
+  |Frontend|
+  :Logout & Show error;
+  stop
+endif
+|#AntiqueWhite|Backend|
+if (Does session ID exist and is valid?) then (yes)
+else (no)
+  :Return error;
+  |Frontend|
+  :Logout & Show error;
+  stop
+endif
+|#AntiqueWhite|Backend|
+:Update session validity;
+:Create new access token and new refresh token and return;
+|Frontend|
+:Store tokens in local storage;
+stop
+
+@enduml
+```
 
 ### Logout
 
@@ -155,7 +190,7 @@ for issues.
 See also [lessons learned](../../../general/lessons-learned).
 
 Unfortunately, Nest does not provide a fully-fledged authentication flow, while providers such as Auth0 are very
-expensive. This is why we implemented the flow ourselves. While it does work, it has two important issues:
+expensive. This is why we implemented the flow ourselves. While it does work, it has three important issues:
 
 * **Over-engineered:** In its current state, it is a bit overengineered. In fact, we would not require any JWTs and
   refresh flows, because we could just return the session ID (or a secret attached to the session ID) and store this for
@@ -167,6 +202,9 @@ expensive. This is why we implemented the flow ourselves. While it does work, it
   period has expired. If a user were to logout and retain their access token, they could still perform authenticated
   requests. This issue is mitigated in part by the validity period (which should be very low for the access token), but
   it might be a security issue nonetheless.
+* **Refresh tokens are not invalidated:** While we do hand out new refresh tokens, the old ones are not invalidated. As
+  long as the tokens are stored safely, nothing can happen, but if an attacker intercepts the refresh token, it might be
+  used to get a new access token.
 
 In the end, we realized that we probably should go for an authentication provider like Auth0 nonetheless. This is why we
 did not remove the whole refresh token flow, because we are already well-prepared for implementing the OAuth flows.
