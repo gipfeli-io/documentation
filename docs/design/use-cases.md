@@ -78,10 +78,17 @@ rectangle gipfeli.io {
   usecase "UC8: Delete tour" as UC3
   usecase "UC6: View tour" as UC4
   usecase "UC7: Create tour" as UC5
-  usecase "UC9: Upload geo referenced images" as UC7
+  usecase "UC9: Upload images" as UC7
+  usecase "UC9.1: Upload geo referenced images" as UC8
+  usecase "UC10: Upload GPX track" as UC9
   
   UC2 <-up. UC7 : <<extend>>
   UC5 <. UC7 : <<extend>>
+  
+  UC2 <-up. UC9 : <<extend>>
+  UC5 <. UC9 : <<extend>>
+  
+  UC7 <-up. UC8 : <<extend>>
 }
 lu -- UC1
 lu -- UC2
@@ -128,6 +135,8 @@ lu -- UC5
 * **Postconditions**: *none*
 * **Possible rainy day scenarios**:
     * User has no tours - detail screen is not accessible.
+    * User accesses tour that does not exists - error message shown.
+    * User accesses tour that does not belong to them - error message shown.
 
 ### UC7: Create tour
 
@@ -143,34 +152,63 @@ lu -- UC5
 * **Possible rainy day scenarios**:
     * *none*
 
-
 ### UC8: Delete tour
 
 * **Actor:** Registered user
 * **Preconditions:** User has a verified account, user is logged in, user has an existing tour
 * **Flow of events:**
-  1. User enters overview page
-  2. User enters detail page and clicks delete *or* directly deletes from overview page
-  3. User confirms deletion
-  4. Success message is shown
+    1. User enters overview page
+    2. User enters detail page and clicks delete *or* directly deletes from overview page
+    3. User confirms deletion
+    4. Success message is shown
 * **Postconditions**: Tour is deleted.
 * **Possible rainy day scenarios**:
-  * User does not confirm deletion - tour is not deleted.
+    * User does not confirm deletion - tour is not deleted.
 
-
-### UC9: Upload geo referenced images
+### UC9: Upload images
 
 * **Actor:** Registered user
-* **Preconditions:** User has a verified account, user is logged in, user has an existing tour, user is either creating or editing a tour
+* **Preconditions:** User has a verified account, user is logged in, user has an existing tour, user is either creating
+  or editing a tour
 * **Flow of events:**
-  1. User uploads images
-  2. Images are checked for coordinates and saved accordingly
-  3. On detail pages, the images are shown on the map
-* **Postconditions**: Photos are uploaded, photos are georeferenced on the map
+    1. User uploads images
+    2. Images are checked for file size and mimetype and saved to object storage
+    3. On detail pages, the images are shown in form of a gallery and can be viewed
+* **Postconditions**: Photos are uploaded and attached to tour
 * **Possible rainy day scenarios**:
-  * Invalid georeference - only photo is saved.
+    * Invalid file size - error message shown.
+    * Invalid file type - error message shown.
 
+### UC9.1: Upload geo referenced images
 
+*Note: This is an extension of [UC9](#uc9-upload-images) and is automatically applied if the photos are geo-referenced.
+The user does not have to take any action. UC9 applies here as well.*
+
+* **Actor:** Registered user
+* **Preconditions:** User has a verified account, user is logged in, user has an existing tour, user is either creating
+  or editing a tour
+* **Flow of events:**
+    1. User uploads images
+    2. Images are checked for filesize, mimetypes and coordinates and saved accordingly
+    3. On detail pages, the images are shown on the map
+* **Postconditions**: Photos are uploaded, photos are georeferenced on the map and attached to the tour
+* **Possible rainy day scenarios**:
+    * Invalid georeference - only photo is saved.
+
+### UC10: Upload GPX track (optional)
+
+* **Actor:** Registered user
+* **Preconditions:** User has a verified account, user is logged in, user has an existing tour, user is either creating
+  or editing a tour
+* **Flow of events:**
+    1. User uploads GPX track file
+    2. GPX track file is checked for file size and mimetype and saved to object storage
+    3. On detail pages, the GPX track is shown on the map and the file may be downloaded
+* **Postconditions**: GPX track is uploaded and shown on the map and attached to the tour
+* **Possible rainy day scenarios**:
+  * Invalid file size - error message shown.
+  * Invalid file type - error message shown.
+  * Invalid GPX file - map does still render.
 
 ## Administration
 
@@ -180,10 +218,8 @@ left to right direction
 actor "Admin" as a
 rectangle gipfeli.io {
   usecase "UC10: Manage users" as UC10
-  usecase "UC11: Manage tours" as UC11
 }
 a -- UC10
-a -- UC11
 @enduml
 ```
 
@@ -192,20 +228,8 @@ a -- UC11
 * **Actor:** Admin user
 * **Preconditions:** User is logged in, user is admin
 * **Flow of events:**
-  1. Admin sees list of users
-  2. Admin can delete users after confirmation
+    1. Admin sees list of users
+    2. Admin can delete users after confirmation
 * **Postconditions**: User is deleted
 * **Possible rainy day scenarios**:
-  * **none**
-
-
-### UC11: Manage tours (optional)
-
-* **Actor:** Admin user
-* **Preconditions:** User is logged in, user is admin
-* **Flow of events:**
-  1. Admin sees list of all tours
-  2. Admin can delete tours after confirmation
-* **Postconditions**: Tour is deleted
-* **Possible rainy day scenarios**:
-  * **none**
+    * **none**
