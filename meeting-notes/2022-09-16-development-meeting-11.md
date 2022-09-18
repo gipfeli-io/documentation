@@ -11,4 +11,4 @@ and [use cases](/docs/design/use-cases) whether they are fulfilled or not.
 
 We also fixed a bug with our offline functionality that we noticed during a joint real-life test.
 
-Last but not least, we split our remaining documentation requirements so we can work on finishing the documentation.
+Last but not least, we split our remaining documentation requirements, so we can work on finishing the documentation.
