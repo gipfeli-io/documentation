@@ -87,6 +87,11 @@ const config = {
                         position: 'left'
                     },
                     {
+                        href: 'https://api.gipfeli.io/api',
+                        label: 'API Docs',
+                        position: 'right',
+                    },
+                    {
                         href: 'https://github.com/gipfeli-io',
                         label: 'GitHub',
                         position: 'right',

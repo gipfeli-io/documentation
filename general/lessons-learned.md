@@ -36,7 +36,7 @@ and how we solved them or what implications they had on the project.
 
 * **Authentication:** Sadly, nest.js does not offer a fully-fledged authentication solution, but just the basics to
   implement it yourself. As mentioned
-  in [the authentication docs](../docs/architecture/security/authentication-session-management.md), this leads to some
+  in [the authentication docs](../docs/architecture/security/security-authentication-session-management), this leads to some
   security issues. While it is not insecure per se, and while we use existing, well-tested libraries for
   security-related features (e.g. `bcrypt` for hashing, `passport.js` for strategies), it still is a very hard process
   to implement a secure authentication flow. As such, we probably would go for Auth0 or similar providers in the future,
