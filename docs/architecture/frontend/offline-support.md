@@ -1,6 +1,6 @@
 ---
 id: offline-support
-sidebar_position: 5
+sidebar_position: 2
 title: Offline Support
 ---
 ## PWA basics
