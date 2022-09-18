@@ -34,9 +34,9 @@ We are using a JWT-based authentication flow. Whenever a user logs in, the follo
 
 |Frontend|
 start
-:User enters email and password and submits form;
+:User enters email and\npassword and submits form;
 |#AntiqueWhite|Backend|
-:Find user with submitted email in database;
+:Find user with submitted\nemail in database;
 if (User exists?) then (yes)
 else (no)
   :Return error;
@@ -45,7 +45,7 @@ else (no)
   stop
 endif
 |#AntiqueWhite|Backend|
-if (Does hashed, submitted password match saved hash?) then (yes)
+if (Does hashed, submitted password\nmatch saved hash?) then (yes)
 else (no)
   :Return error;
   |Frontend|
@@ -54,9 +54,9 @@ else (no)
 endif
 |#AntiqueWhite|Backend|
 :Create a new session in the database;
-:Create an access token and a refresh token and return;
+:Create an access token and\na refresh token and return;
 |Frontend|
-:Store tokens in local storage and proceed to next page;
+:Store tokens in local storage\nand proceed to next page;
 stop
 
 @enduml
@@ -144,7 +144,7 @@ else (no)
 endif
 |#AntiqueWhite|Backend|
 :Update session validity;
-:Create new access token and new refresh token and return;
+:Create new access token and \nnew refresh token and return;
 |Frontend|
 :Store tokens in local storage;
 stop
