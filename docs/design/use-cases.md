@@ -232,4 +232,4 @@ a -- UC10
     2. Admin can delete users after confirmation
 * **Postconditions**: User is deleted
 * **Possible rainy day scenarios**:
-    * **none**
+    * *none*
