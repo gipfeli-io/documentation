@@ -16,7 +16,7 @@
             <description><![CDATA[Since we deem our application feature-complete, we tested the application together and checked with]]></description>
             <content:encoded><![CDATA[<p>Since we deem our application feature-complete, we tested the application together and checked with
 our <a href="/docs/design/requirements">functional and non-functional requirements</a>
-and <a href="/docs/design/use-cases">use cases</a> whether they are fulfilled or not.</p><p>We also fixed a bug with our offline functionality that we noticed during a joint real-life test.</p><p>Last but not least, we split our remaining documentation requirements so we can work on finishing the documentation.</p>]]></content:encoded>
+and <a href="/docs/design/use-cases">use cases</a> whether they are fulfilled or not.</p><p>We also fixed a bug with our offline functionality that we noticed during a joint real-life test.</p><p>Last but not least, we split our remaining documentation requirements, so we can work on finishing the documentation.</p>]]></content:encoded>
             <category>general</category>
         </item>
         <item>

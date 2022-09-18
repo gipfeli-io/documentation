@@ -15,7 +15,7 @@
         <summary type="html"><![CDATA[Since we deem our application feature-complete, we tested the application together and checked with]]></summary>
         <content type="html"><![CDATA[<p>Since we deem our application feature-complete, we tested the application together and checked with
 our <a href="/docs/design/requirements">functional and non-functional requirements</a>
-and <a href="/docs/design/use-cases">use cases</a> whether they are fulfilled or not.</p><p>We also fixed a bug with our offline functionality that we noticed during a joint real-life test.</p><p>Last but not least, we split our remaining documentation requirements so we can work on finishing the documentation.</p>]]></content>
+and <a href="/docs/design/use-cases">use cases</a> whether they are fulfilled or not.</p><p>We also fixed a bug with our offline functionality that we noticed during a joint real-life test.</p><p>Last but not least, we split our remaining documentation requirements, so we can work on finishing the documentation.</p>]]></content>
         <author>
             <name>Sabrina Wullschleger</name>
             <uri>https://github.com/Saela</uri>
