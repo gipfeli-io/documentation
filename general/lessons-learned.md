@@ -24,11 +24,31 @@ and how we solved them or what implications they had on the project.
 * **Dropping next.js in favor of pure React:** The most important lesson that we learned was that next.js was the wrong
   tool for what we had in mind. Since we are developing an application that does not require any SEO optimization, the
   whole point of having `getServerSideProps` is void. Apart from that, we had more troubles than benefits in using
-  next.js in our setup (see above) and we found its documentation to be rather clumsy, especially with regards to the
+  next.js in our setup (see above) and we found its documentation to be rather clumsy, especially in regard to the
   typescript part. Lots of things that were easily doable with plain React required workarounds. Since one of our goals
   was also to have an offline part, we decided it would be best to just use plain React. Because next.js is a wrapper
   around React, we were able to create a React app from scratch and move all of our existing code to it, which worked
   quite well.
+
+### Offline Support
+We quickly realized that even though PWAs are the newest recommendations for web apps, when your goal is to provide dynamic data when the 
+application is offline there is no pre-paved way to do this. There are a lot of solutions with fundamentally different approaches out there.
+The common consensus is to "find the best way for your application", as currently, there is no best practice. This would not be that bad if that would be all. 
+The one thing you really need here as an easy and reliable way to check if your application is connected to the internet or not.
+But: There is currently no such way to check if the user is online or offline. You have to make a call to a web server to find out. 
+The next thing is differing between http status code 500 for an internal server error and http status code 500 when the application has no connection to the
+internet. We ended up implementing a workaround and also parsing the error message, so we could find out what status code 500 means (but of course
+the error message we get from Safari is different from the one we get from all the other browsers 😅). We hope there will be a better way to 
+check browser connectivity in the future.
+
+For storing the data in the browser we went with using IndexedDB. As the native api is quite horrible and hard to use we used DexieJS as
+a wrapper. Even though DexieJS is extremely nice and easy to use we ran into a multitude of issues, primarily regarding updating the
+IndexedDB after application changes. If the IndexedDB on a mobile device was somehow corrupted (e.g. a new version was available, but
+it could not upgrade automatically) it was pretty hard to reset the IndexedDB using the provided browser functionality. We had to add
+a reset functionality so the user can manually reset if needed.
+
+Even with all of these things the offline functionality came out fine and makes for a nice addition. But if we'd ever write an application with
+offline functionality again we'd implement a native app.
 
 ## Backend
 
