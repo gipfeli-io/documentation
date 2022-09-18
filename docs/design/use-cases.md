@@ -217,13 +217,13 @@ The user does not have to take any action. UC9 applies here as well.*
 left to right direction
 actor "Admin" as a
 rectangle gipfeli.io {
-  usecase "UC10: Manage users" as UC10
+  usecase "UC11: Manage users" as UC11
 }
-a -- UC10
+a -- UC11
 @enduml
 ```
 
-### UC10: Manage users
+### UC11: Manage users
 
 * **Actor:** Admin user
 * **Preconditions:** User is logged in, user is admin
