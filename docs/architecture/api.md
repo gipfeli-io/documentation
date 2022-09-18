@@ -82,6 +82,7 @@ Tour ..> User
 Tour ..> Media
 Tour ..> User
 Tour ..> Lookup
+User ..> Auth
 @enduml
 ```
 
@@ -170,7 +171,8 @@ The user module represents the `User` domain object and exposes CRUD routes for 
 some minor routes, but in essence, it is only used by other modules. The only actual direct functionality is used for
 the administration of users. Because it also deals with authentication parts relating to the users, it has a second
 service, `UserAuthService` that deals with authentication components, whereas the `UserService` is the direct interface
-for the user entities. It is only dependent on the utils module for hashing the user passwords.
+for the user entities. It is only dependent on the utils module for hashing the user passwords. To protect user
+management routes, it also relies on the auth module for its `AdminGuard`.
 
 #### Auth
 
