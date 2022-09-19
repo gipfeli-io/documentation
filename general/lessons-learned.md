@@ -50,11 +50,11 @@ offline functionality again we'd implement a native app.
 
 * **Authentication:** Sadly, nest.js does not offer a fully-fledged authentication solution, but just the basics to
   implement it yourself. As mentioned
-  in [the authentication docs](../docs/architecture/security/security-authentication-session-management), this leads to some
+  in [the authentication docs](../docs/architecture/security/security-authentication-session-management#limitations-known-issues-and-outlook), this leads to some
   security issues. While it is not insecure per se, and while we use existing, well-tested libraries for
   security-related features (e.g. `bcrypt` for hashing, `passport.js` for strategies), it still is a very hard process
-  to implement a secure authentication flow. As such, we probably would go for Auth0 or similar providers in the future,
-  even-though that means additional costs.
+  to implement a secure authentication flow (see also our reflection on existing issues in the link above). One very important learning is that these flows should not be implemented lightheartedly and as such, we probably would go for Auth0 or similar providers in the future,
+  even-though that means additional costs. This is tracked in [this issue](https://docs.gipfeli.io/docs/architecture/security/security-authentication-session-management#limitations-known-issues-and-outlook) and something for our next iteration.
 * **e2e tests:** While we had unit tests from the beginning on, we did not start with e2e tests until one of the last sprints. Our reason for this was that we felt we'd have to change the tests all the time while quickly iterating in the beginning. However, the amount of configuration required to implement the e2e tests in the end was rather high, which would have been easier (because more gradual) if we had started with e2e tests right from the start. Additionally, some nasty bugs could have been identified much sooner.
 
 ## SonarCloud
