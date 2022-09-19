@@ -9,18 +9,12 @@ and how we solved them or what implications they had on the project.
 
 ## Organisation
 
-* **TBD**:
+* **GitHub project management**: While the GitHub project management board was still in its beta phase when we started our thesis, it actually worked quite well. It still has some minor issues that make it a bit cumbersome to use. One thing we missed was the ability to have issues that affect multiple repositories. For example, an auth related ticket had to be added twice (backend and frontend), even though the issue was related.
 
 ## Frontend
 
 ### next.js
 
-* **next-auth:** We use [next-auth](https://next-auth.js.org/) as our authentication framework. It was chosen because of
-  its seamless integration into `next.js`. However, we had to realize that it only works as seamlessly as advertised if
-  you use the API capabilities of `next.js` itself. Since we're building our API as a separate service, integration is
-  rather difficult and the documentation does not provide much help. Furthermore, since the `Credentials` provider is
-  disencouraged by the authors, a lot of customization has to be made. As we're using `JWT` as authentication strategy,
-  it could be simpler to just build the authorization flow from scratch.
 * **Dropping next.js in favor of pure React:** The most important lesson that we learned was that next.js was the wrong
   tool for what we had in mind. Since we are developing an application that does not require any SEO optimization, the
   whole point of having `getServerSideProps` is void. Apart from that, we had more troubles than benefits in using
@@ -61,6 +55,11 @@ offline functionality again we'd implement a native app.
   security-related features (e.g. `bcrypt` for hashing, `passport.js` for strategies), it still is a very hard process
   to implement a secure authentication flow. As such, we probably would go for Auth0 or similar providers in the future,
   even-though that means additional costs.
+* **e2e tests:** While we had unit tests from the beginning on, we did not start with e2e tests until one of the last sprints. Our reason for this was that we felt we'd have to change the tests all the time while quickly iterating in the beginning. However, the amount of configuration required to implement the e2e tests in the end was rather high, which would have been easier (because more gradual) if we had started with e2e tests right from the start. Additionally, some nasty bugs could have been identified much sooner.
+
+## SonarCloud
+
+All in all, SonarCloud is a very nice tool that adds quite some value. It forces you to write clean code and it immediately penalizes any shortcuts you might take. However, configuring it is rather difficult and if you want to use it within your CICD pipeline, you cannot rely on the automatic configuration. Furthermore, creating coverage from more than one test run requires the installation of additional packages and implementation of CICD steps to create a single merged coverage report.
 
 ## Google Cloud Platform
 
