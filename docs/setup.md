@@ -5,13 +5,22 @@ title: Development Setup
 ---
 
 Currently, there is no dockerized configuration for local development. Instead, you have to clone both
-the [gipfeli.io API](https://github.com/gipfeli-io/gipfeli-api) as well as
+the [gipfeli.io API](https://github.com/gipfeli-io/gipfeli-api) and
 the [gipfeli.io frontend](https://github.com/gipfeli-io/gipfeli-frontend) and run both processes manually. For
 more information on how to set up the project, please refer to the sections below.
 
+### Development Environment Overview
+[(enlarge image)](/img/docs/general/local_env_infrastructure.svg)
+![Infrastructure diagram](/img/docs/general/local_env_infrastructure.svg)
+
+:::info
+Please be aware that you don't have to configure Sentry or SendGrid. The application will also run without adding them.
+Adding a valid bucket (cloud storage) is necessary if you want to upload images or gpx files.
+:::
+
 ### Prerequisites
 
-- Node >=14.0.0 and NPM >=5.6. Installation with nvm is recommended. Read more her: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+- Node >=14.0.0 and NPM >=5.6. Installation with nvm is recommended. Read more here: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
 - Git https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 - An IDE of your choice with which you can develop React and NestJS applications. E.g. WebStorm, IntelliJ
 - Docker Desktop or Docker Engine

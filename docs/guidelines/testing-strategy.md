@@ -4,7 +4,7 @@ sidebar_position: 2
 title: Testing strategy
 ---
 
-Our testing strategy differs between frontend and backend. We do not aim for 100% testcoverage, but rather for a
+Our testing strategy differs between frontend and backend. We do not aim for 100% test coverage, but rather for a
 well-thought subset of functionality that is covered by unit tests. Because we see our backend as the critical part, we enforce a strict coverage requirement of **at least 80%** on new code to ensure we cover new code and work towards a generally high test coverage in the backend. For the frontend, we do not enforce this since we do not aim to have a specific coverage, but rather test some specific, single cases.
 
 ## Backend
