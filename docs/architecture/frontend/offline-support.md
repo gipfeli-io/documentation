@@ -4,16 +4,17 @@ sidebar_position: 2
 title: Offline Support
 ---
 ## PWA basics
-A PWA (Progressive Web App) is a simple way to give a user the feel of a native app without writing a native app. The application is installable on 
+A PWA (Progressive Web App) is a simple way to give a user the feel of a native app without requiring the developer to write a native app. The application is installable on 
 a device (can also be a laptop) and can be used accessing an icon on the home screen/desktop. With the help of a manifest file we can configure the 
-look of the app during startup, how it is displayed on the device and the app icon. There are some limitations like accessing the hardware (e.g. storage)
-of a device but overall the app feels like a native app.
+look of the app during startup, how it is displayed on the device and the app icon that is added to the home screen/desktop. There are some limitations like accessing the hardware (e.g. storage)
+of a device but overall the app feels like a native app. It also lets us circumvent the sometimes very long approval process by the app or play store.
 
 ## Static files
 
 ### Service Worker
 We are using workbox from Google to work with the service worker. This is the recommended way by React.
-When creating a pwa with react-create-app it is pre-installed and pre-configured to precache all items in the manifest.json (ReactJS will inject some additional assets there. So not everything needs
+When creating a pwa with [create-react-app](https://github.com/facebook/create-react-app) it is pre-installed and 
+pre-configured to pre-cache all items in the manifest.json (ReactJS will inject some additional assets there. So not everything needs
 to be specified manually).
 
 ## Dynamic data
@@ -27,7 +28,7 @@ We decided to use [Dexie.js](https://dexie.org/) as it can be used with async/aw
 
 :::info
 Why not use local storage for storing the data? 
-Local storage is synchronous and therefore blocks the main thread. It is also limited in space and only lets us save strings which makes
+Local storage is synchronous and therefore blocks the main thread. It is also limited in space (5MB) and only lets us save strings which makes
 working with complex data structures very uncomfortable.
 :::
 
@@ -37,7 +38,7 @@ working with complex data structures very uncomfortable.
 We decided to only make the tours usable offline. If an administrator wants to modify users they have to do it while online. 
 We decided to allow all the CRUD functionality for tours but to restrict the tour form. As it is nearly impossible to be able to use 
 the map offline due to the amount of (tile) data we need for this we decided to hide the map when the user is offline. We also decided that the 
-user won't be able to upload images while using the offline mode as with the current solution it won't work (we also don't want to
+user won't be able to upload images or gpx files while using the offline mode as with the current solution it won't work (we also don't want to
 duplicate the code to extract GPS data from an image). So essentially what is possible to do while using the offline mode:
 
 - Create a new tour, set a title and add the tour documentation
@@ -82,7 +83,7 @@ stop
 
 While testing we realised that this is not the optimal way to handle the offline functionality. The constant pinging of the backend was unfortunate
 and always switching between offline/online mode (even with auto sync) would result in sometimes unpredicted behaviour (especially in error cases). 
-So we brainstormed some time and then implemented the following workflow:
+So we came up with the following workflow:
 
 ```plantuml Current workflow with manual switch between offline and online mode
 @startuml
@@ -97,7 +98,7 @@ note left
   For Delete and Edit we send the data
   to the api and check the response
 end note
-if(request returns 500 - fetch failed?) then (yes)
+if(request returns 500 - Failed to fetch | Load failed?) then (yes)
 :show banner with button to go into offline mode;
 if(user goes into offline mode?) then (yes)
 :show offline banner;
@@ -115,7 +116,7 @@ if(user goes into offline mode?) then (yes)
       break;
     else (no)
     endif
-  repeat while ( 500 - fetch failed?)
+  repeat while ( 500 - Failed to fetch | Load failed?)
 else (no)
 :app is not usable until connection is back;
 endif
@@ -134,12 +135,20 @@ what to expect from the app. We could also clear up a lot of otherwise pretty co
 #### Browser support
 Unfortunately there are some browser quirks we have to work with that are not solvable just yet. For example when using Firefox in private mode
 it is not possible to use indexedDB as they restrict it. There is also the problem with iOS devices because the only way to install the application
-is using Safari. Firefox and Chrome on iOS Mobile don't allow installing PWAs.
+is using Safari. Firefox and Chrome on iOS Mobile don't allow installing PWAs. This doesn't prevent iOS users to use the app, but it is quite a nuisance.
 
 ### Synchronize offline data with database
 When the user decides to go into online mode again we will automatically synchronize all of their data. The only thing we cannot synchronize right 
-away are tours that were created while in offline mode. Those tour lack the information about the waypoints which are mandatory for each tour. We 
+away are tours that were created while in offline mode. Those tours lack some information (e.g. waypoints) which are mandatory for each tour. We 
 mark the tour with a batch and as soon as the user is ready they can add the missing information and submit the tour to our server.
+
+## To be considered
+There is no out-of-the-box or best practice way to handle data offline. There are a plethora of different solutions out there and all of them are valid
+as they were created for a specific situation. Nonetheless, handling two data sources and syncing them is quite a feat and a source for a lot of issues.
+What has to be taken into account is the rapidly changing browser and feature landscape and that not all browsers implement all the possible/recommended features 
+(e.g. Firefox which doesn't allow IndexedDBs in private mode). Which makes it quite hard to provide a consistent feature-set for a pwa.
+So the main lesson we have learned from this is that implementing offline functionality for a pwa has to be well-thought through and the cost benefit ration
+has to be right. Otherwise, you might want to re-think your approach and maybe implement a native app rather than a pwa.
 
 ## Articles used
 

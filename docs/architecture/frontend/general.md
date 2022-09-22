@@ -4,7 +4,7 @@ sidebar_position: 1
 title: General
 ---
 
-Since we're using React, there is no clear-cut MVC structure such as with Angular. In recent version, React fully
+Since we're using React, there is no clear-cut MVC structure such as with Angular. In the recent version, React fully
 embraces the functional paradigm in
 recommending [functional components](https://reactjs.org/docs/components-and-props.html#function-and-class-components)
 and using the powerful [hooks](https://reactjs.org/docs/hooks-intro.html). However, we still decided to have some kind
@@ -68,7 +68,7 @@ Components are React components and can be divided in 3 subgroups.
 
 `Pages` are special kinds of components that define a page that is accessible via a URL through ReactRouter. A `Page`
 handles the choice of components for its functionality as well as data fetching on a global (read: page-wide) scale. It
-uses various `ReactComponents`, both custom as well as visual ones from the Material UI library.
+uses various `ReactComponents`, both custom and visual ones from the Material UI library.
 
 :::tip Example
 
@@ -104,7 +104,7 @@ As such, they can also use `Services` if they require things from data sources.
 ## Hooks
 
 These are a recent React feature that allows to use things that were previously only usable in class components, such as
-state. Besides the [official hooks](https://reactjs.org/docs/hooks-reference.html), we also added custom hooks, which
+state. Beside the [official hooks](https://reactjs.org/docs/hooks-reference.html), we also added custom hooks, which
 can be used by our `Components`.
 
 They can use `Services` and also reference `Contexts`
@@ -120,21 +120,19 @@ A context defines an interface that is provided by a provider and consumed by a 
 ## Hooks, Context and Providers explained
 
 We use these features to implement large-scale contexts. We also have smaller contexts (e.g. a `MapContext`) that are
-used within a contained environment, such as a group of components (e.g. the `Map` component). These work in a similar
-way, but can be simplified without hooks and external providers.
-
-We have the following contexts:
-
-* `ThemeContext`: Used to retrieve, set and store the user's preference for darkmode or lightmode
-* `AuthenticationContext`: Used to store the user's login state
-* `NotificationContext`: Used to display notifications that can be triggered by any component in the tree
+used within a contained environment, such as a group of components (e.g. the `Map` component).
 
 The way we implemented these features is as follows:
 
-* The `Context` defines its interface, specifying which props it has (which can be values or functions)
+* The `Context`<sup>*</sup> defines its interface, specifying which props it has (which can be values or functions)
 * The `Provider` is an actual implementation of a `Context` which returns a `ContextProvider` with the interface
-  implementation. It wraps around all the child components it gets passed as props.
+  implementation. It wraps around all the child components that were passed as props.
 * The `Hook` basically just returns `useContext` and can be used by components requiring the `Context`.
 
 Using this pattern, the components do not need to know anything about the implementation of the context, since that is
 delegated fully to the `Provider`. Just using the `Hook` is enough to access the `Context`.
+
+<sup>*</sup>We decided to add all the context interfaces to one file (`contexts.ts`) to keep the application as easily readable as possible.
+
+## Offline Functionality
+An important part of the application is the offline support. Read more about it here: [Offline Support](offline-support) 
