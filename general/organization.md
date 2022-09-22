@@ -88,3 +88,49 @@ We use the following labels for all tasks:
 * `PR pending`: Tickets that are in technical review
 * `Testing`: Tickets that can be tested during the sprint review, i.e. they are already merged to staging
 * `Done`: Tickets that have been tested and can be deployed as a release artifact.
+
+## Quality assurance
+
+We employ both organizational as well as technical measures to ensure our code quality remains high.
+
+### Organizational measures
+
+#### Workflow
+
+All issues that are generated as part of the aforementioned meetings or issues that arise during development/testing are added to the corresponding GitHub repository. As soon as it is added to a sprint, it can be worked on. 
+
+As soon as the ticket is finished (fully or in parts), the pull request workflow begins. In order to ensure our code is reviewed by a peer, we use pull requests for all features. The following rules apply:
+* **No commits shall be made directly to stage and/or master except for emergencies**. 
+* Each pull request should, if applicable, be linked to its corresponding github issue (note: some PRs do not have an issue, so they require at least some description of what they are about, e.g. [this PR](https://github.com/gipfeli-io/gipfeli-api/pull/125) which was a fix noticed during documentation review)
+* If needed, additional details may be added to the description to explain what was done.
+  * A good example is [this PR](https://github.com/gipfeli-io/gipfeli-api/pull/99): It is linked to its issue while also providing an overview what was changed, especially if its scope is a bit wider than what can be guessed from the PR title alone)
+* **All PRs must be reviewed**, either before merge or after. Feedback should be acknowledged and implemented, potentially also in a seperate PR if the PR is already merged.
+* **Important:** A PR should only be merged if all required checks (as configured in GitHub) have passed (see technical measures below). This ensures we only have working builds on staging and production.
+
+:::tip Note
+
+For more technical information on how this flow is executed, please see the [dedicated guideline](../docs/guidelines/branching-strategy).
+
+:::
+
+#### Testing through external people
+
+In the last two sprints, we only want to fix major bugs. Because we aim to be feature complete by then, we plan to give access to our app to some of our colleagues with out further instructions. They shall test the app and give us feedback. By doing it this way, we aim to:
+
+* Get feedback on the usage of the app (e.g. is it understandable?)
+* Get feedback on missing (and therefore potentially future) features
+* Find bugs resulting in environments that we cannot test or through usage we did not foresee
+
+These bugs can be added to our `enhancement` issues and tackled in future iterations.
+
+
+### Technical measures
+
+We also employ the following technical mesaures to automatically check code quality:
+
+* **Testing:** We use automated tests in our CICD to ensure any PRs do not have failing tests. For more information on testing, see our [testing guideline](../docs/guidelines/testing-strategy).
+* **Naming conventions:** Developers are encouraged to follow our defined [naming conventions](../docs/guidelines/conventions) and only deviate in special circumstances. This ensures that e.g. our OpenAPI specification is automatically and correctly generated.
+* **Build tests:** Our CICD pipelines also create a build of the app to ensure no failures occur during the build process.
+* **SonarCloud:** Both frontend and backend, as part of their CICD, run automated code analysis with SonarCloud. Failure to fulfill these criteria (e.g. if the test coverage falls below a certain degree) leads to the PR not being able to be merged. We also aim to eliminate all Code Smells, either by fixing them or labelling them as `won't fix` in SonarCloud.
+  * *Frontend:* We use the automatic analysis to get a quick summary on what has changed. See [SonarCloud](https://sonarcloud.io/project/overview?id=gipfeli-io_gipfeli-frontend) for an overview. 
+  * *Backend:* We use a custom analysis run for our backend because we also need coverage information. This is in line with our [testing guideline](../docs/guidelines/testing-strategy) that puts an emphasis on the backend quality - since this is our source of true, its quality requirements are even higher. This means that we also check whether the coverage on new code falls below a certain treshold, and if so, the check fails. This ensures that we always add unit tests for new features. See [SonarCloud](https://sonarcloud.io/project/overview?id=gipfeli-io_gipfeli-api) for an overview.
