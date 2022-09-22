@@ -6,8 +6,7 @@ title: Development Setup
 
 Currently, there is no dockerized configuration for local development. Instead, you have to clone both
 the [gipfeli.io API](https://github.com/gipfeli-io/gipfeli-api) as well as
-the [gipfeli.io frontend](https://github.com/gipfeli-io/gipfeli-frontend) and run both processes manually. If you want
-to contribute to the documentation, use the [documentation](https://github.com/gipfeli-io/documentation) repository. For
+the [gipfeli.io frontend](https://github.com/gipfeli-io/gipfeli-frontend) and run both processes manually. For
 more information on how to set up the project, please refer to the sections below.
 
 ### Prerequisites

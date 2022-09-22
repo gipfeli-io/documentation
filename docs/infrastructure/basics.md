@@ -67,11 +67,11 @@ We chose the Container Registry because
 * It is - even though deprecated - a lot cheaper than its successor (Artifact Registry), because it uses Cloud Storage
   as a backend which costs way less (and it still gets all security updates!)
 
-### SoncarCloud
+### SonarCloud
 
 This tool performs code analysis in our repositories and, in the case of the backend, also makes sure the code coverage
-is good enough. The data is [publically available](https://sonarcloud.io/organizations/gipfeli-io/projects). It reports
-codesmells, security issues and much more.
+is good enough. The data is [publicly available](https://sonarcloud.io/organizations/gipfeli-io/projects). It reports
+code smells, security issues and much more.
 
 We chose SonarCloud because
 

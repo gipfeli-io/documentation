@@ -18,6 +18,9 @@ the [meeting notes](../meeting-notes) section.
 
 :::
 
+## Documentation
+If you want to contribute to the documentation, use the [documentation](https://github.com/gipfeli-io/documentation) repository.
+
 ## Environments
 
 ### Staging
@@ -33,6 +36,20 @@ Hosts our current staging build with the latest changes. Does not represent the 
 **Backend:** https://api.gipfeli.io
 
 Hosts our current production build with the latest release.
+
+## External services
+Also see our [infrastructure docs](infrastructure/basics.md) for more information on the services below.
+
+### Email Service
+We use [SendGrid](https://sendgrid.com/) as an email service. 
+
+### Logging
+As a logging tool for the api and the frontend we use [Sentry](https://sentry.io). 
+
+### Code Quality
+To improve our code quality and make sure we have a well maintainable application, we use [SonarCloud](https://www.sonarsource.com/). 
+You can find our analysis page for [gipfeli-frontend](https://github.com/gipfeli-io/gipfeli-frontend) and [gipfeli-api](https://github.com/gipfeli-io/gipfeli-api) 
+here: [Gipfeli.io SonarCloud](https://sonarcloud.io/organizations/gipfeli-io/projects).
 
 ## Example image and GPX data
 
