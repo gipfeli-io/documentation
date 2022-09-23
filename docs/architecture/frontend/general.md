@@ -139,7 +139,6 @@ and directly set the state of this component.
 
 For more information on specific implementations please have a look at the corresponding context file in the application: [Contexts](https://github.com/gipfeli-io/gipfeli-frontend/tree/main/src/contexts).
 
-<sup>*</sup>We decided to add all the context interfaces to one file (`contexts.ts`) to keep the application as easily readable as possible.
 <sup>*</sup>We decided to add all the context interfaces to one file (<code>contexts.ts</code>) to keep the application as easily
 readable as possible.
 

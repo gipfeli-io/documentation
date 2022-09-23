@@ -1,7 +1,7 @@
 ---
 id: api-architecture
 sidebar_position: 2
-title: API Architecture
+title: API
 ---
 
 We are using the out-of-the-box architecture provided by NestJS which consists of a modular approach. Each domain gets

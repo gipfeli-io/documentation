@@ -54,3 +54,28 @@ I'm looking forward to developing the app even further - our backlog is full and
 * Docker shenanigans
 
 ### Sabrina Wullschleger
+
+When I started school two and a half years ago I knew I wanted to do something fun for my master thesis which I would be happy to develop
+further even after the master thesis was done. I was thinking about an application like gipfeli.io for a long time and was quite happy to have
+found a team member who had almost the same idea for an app and with whom I share the same passion for hiking and being in nature. Working together was a lot 
+of fun, and we had some great brainstorming sessions which resulted in the current state of gipfeli.io (and all the improvement
+tickets still in the backlog. 😂).
+
+It was my first project entirely written in typescript and even though as a seasoned .NET developer I was sceptical at
+first to use typescript for a backend I was surprised how nice of an experience it was. Also working with React was rather new for me,
+but I enjoyed it quite a lot. It certainly broadened my horizon, and I learned a lot of new and very interesting things. 
+The chance to work on a project without any specifications regarding hosting,
+setup and software was also quite refreshing and resulted in getting a deeper grasp on all the needed components like a solid architecture design,
+a thought through infrastructure setup and writing well maintainable code. Especially the rough learnings we had with setting up Google Cloud or using NextJS
+were the most fruitful in the end - personally as a developer and for my daily work in general. 
+Seeing how well a project can run if the communication is right and all parties think in the same direction and are also eager to find the 
+best possible solution was a great reminder to have an eye on these aspects when starting or resuming a project, and change them if they are not
+optimal to make sure the project runs smoothly. 
+
+What was very interesting from a project manager perspective was once again how much time and money you have to invest to get a decent infrastructure setup and great and
+easily maintainable code. In a lot of projects I've worked on either a decent infrastructure setup was skipped or the code was written without
+quality and maintainability in mind because the project was offered for a price that was too low for the expectations of the customer. It was certainly a good refresher which I can take
+and use for future estimations and discussions with customers at work.
+
+The whole master thesis, even though very exhausting due to the amount of hours we had to spend on it in a very short time, was a great experience, and I am very proud of the end result 
+we managed to create. I'm really looking forward to keep on developing gipfeli.io. 🚀🥐
