@@ -205,13 +205,13 @@ setup, we're (currently) not using any user or rights library, but we might star
 note, we also discussed some approaches for handling JWT token and token refresh.</p><p>We also had some questions which we addressed:</p><ul><li><a href="https://github.com/gipfeli-io/gipfeli-frontend/issues/31" target="_blank" rel="noopener noreferrer"><strong>Frontend bug</strong></a>: We analyzed the problem with Tobias and
 quickly found a solution. Besides, we also got some feedback regarding code quality.</li><li><strong>Redux for state management</strong>: We were wondering whether we should use Redux for state management. Tobias said that,
 given our current scope, it might be overkill, though our considerations were valid in that state would provide us
-with some cleaner code - however, it would require more investement and learning and might be overkill.</li><li><strong>Using React context</strong>: Since we do not want to overuse context, we showed our usage of context and Tobias said that
+with some cleaner code - however, it would require more investment and learning and might be overkill.</li><li><strong>Using React context</strong>: Since we do not want to overuse context, we showed our usage of context and Tobias said that
 we're using it correctly.</li><li><strong>Should we drop next.js</strong>: So far, next.js has proven to be rather cumbersome to use; and also the documentation is
 rather bad. Since we're not using any of the SSR capabilities (which we can't since we rely on custom data for each
 request), we were wondering whether we should drop it in favor of a pure React application. At this point, we're still
 able to drop it and the move should be feasible since next.js is basically a supercharged wrapper around React. Tobias
 said that it's okay to switch and that these are valid concerns - if we're not really using the framework (or not to
-the full extent), there is no reason for keeping it.</li></ul><p>After our meeting, we decided to go the oure React route - also because the offline functionality seems to be more
+the full extent), there is no reason for keeping it.</li></ul><p>After our meeting, we decided to go the React route - also because the offline functionality seems to be more
 straightforward to implement when not using next.js.</p>]]></content:encoded>
             <category>general</category>
         </item>
