@@ -19,7 +19,7 @@ The project is divided into 12 sprints of 2 weeks duration and governed by sever
 | 4         | 2022-09-23 | Hand in of final abstract                                                                                                                                                                                                                                                                                                                                                                       |
 
 Milestone 4 also concludes our development workflow. The remaining two weeks are then spent on creating the final
-presentation.
+presentation and polishing our documentation.
 
 ## Sprints
 

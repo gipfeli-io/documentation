@@ -18,4 +18,3 @@ well-thought subset of functionality that is covered by unit tests. Because we s
 
 * **Unit-tests:** Only components that have special functionality (e.g. in terms of logged-in state) have to be
   unit-tests. We do not unit test each and every simple component and or route.
-* **Integration-tests:** Integration-tests should mainly deal with ensuring that authorization is implemented properly.

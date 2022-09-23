@@ -12,7 +12,7 @@ deployable.
 
 - `feature` - use this prefix when you are implementing a new feature
 - `bugfix` - use this prefix when you are fixing a bug
-- `hotfix` - use this prefix when you need to fix a bug that needs to be deployed immediately
+- `hotfix` or `fix` - use this prefix when you need to fix a bug that needs to be deployed immediately
 
 ## Branches
 
