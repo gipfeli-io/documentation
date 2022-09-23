@@ -107,7 +107,7 @@ These are a recent React feature that allows to use things that were previously 
 state. Beside the [official hooks](https://reactjs.org/docs/hooks-reference.html), we also added custom hooks, which
 can be used by our `Components`.
 
-They can use `Services` and also reference `Contexts`
+They can use `Services` and also reference `Contexts`.
 
 ## Services
 
@@ -119,8 +119,9 @@ A context defines an interface that is provided by a provider and consumed by a 
 
 ## Hooks, Context and Providers explained
 
-We use these features to implement large-scale contexts. We also have smaller contexts (e.g. a `MapContext`) that are
-used within a contained environment, such as a group of components (e.g. the `Map` component).
+We use these features to implement large-scale contexts (e.g. `NotificationContext` which is available globally) as well
+as smaller contexts (e.g. a `MapContext`) that are used within a contained environment, such as a group of components 
+(e.g. the `Map` component).
 
 The way we implemented these features is as follows:
 
@@ -139,6 +140,9 @@ and directly set the state of this component.
 For more information on specific implementations please have a look at the corresponding context file in the application: [Contexts](https://github.com/gipfeli-io/gipfeli-frontend/tree/main/src/contexts).
 
 <sup>*</sup>We decided to add all the context interfaces to one file (`contexts.ts`) to keep the application as easily readable as possible.
+<sup>*</sup>We decided to add all the context interfaces to one file (<code>contexts.ts</code>) to keep the application as easily
+readable as possible.
 
 ## Offline Functionality
+
 An important part of the application is the offline support. Read more about it here: [Offline Support](offline-support) 

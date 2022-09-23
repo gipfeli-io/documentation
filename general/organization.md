@@ -115,7 +115,7 @@ For more technical information on how this flow is executed, please see the [ded
 
 #### Testing through external people
 
-In the last two sprints, we only want to fix major bugs. Because we aim to be feature complete by then, we plan to give access to our app to some of our colleagues with out further instructions. They shall test the app and give us feedback. By doing it this way, we aim to:
+In the last two sprints, we only want to fix major bugs. Because we aim to be feature complete by then, we plan to give access to our app to some of our colleagues without further instructions. They shall test the app and give us feedback. By doing it this way, we aim to:
 
 * Get feedback on the usage of the app (e.g. is it understandable?)
 * Get feedback on missing (and therefore potentially future) features
@@ -133,4 +133,4 @@ We also employ the following technical mesaures to automatically check code qual
 * **Build tests:** Our CICD pipelines also create a build of the app to ensure no failures occur during the build process.
 * **SonarCloud:** Both frontend and backend, as part of their CICD, run automated code analysis with SonarCloud. Failure to fulfill these criteria (e.g. if the test coverage falls below a certain degree) leads to the PR not being able to be merged. We also aim to eliminate all Code Smells, either by fixing them or labelling them as `won't fix` in SonarCloud.
   * *Frontend:* We use the automatic analysis to get a quick summary on what has changed. See [SonarCloud](https://sonarcloud.io/project/overview?id=gipfeli-io_gipfeli-frontend) for an overview. 
-  * *Backend:* We use a custom analysis run for our backend because we also need coverage information. This is in line with our [testing guideline](../docs/guidelines/testing-strategy) that puts an emphasis on the backend quality - since this is our source of truth, its quality requirements are even higher. This means that we also check whether the coverage on new code falls below a certain treshold, and if so, the check fails. This ensures that we always add unit tests for new features. See [SonarCloud](https://sonarcloud.io/project/overview?id=gipfeli-io_gipfeli-api) for an overview.
+  * *Backend:* We use a custom analysis run for our backend because we also need coverage information. This is in line with our [testing guideline](../docs/guidelines/testing-strategy) that puts an emphasis on the backend quality - since this is our source of truth, its quality requirements are even higher. This means that we also check whether the coverage on new code falls below a certain treshold, and if so, the check fails. This ensures that we always add tests for new features. See [SonarCloud](https://sonarcloud.io/project/overview?id=gipfeli-io_gipfeli-api) for an overview.

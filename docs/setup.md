@@ -15,7 +15,7 @@ more information on how to set up the project, please refer to the sections belo
 
 :::info
 Please be aware that you don't have to configure Sentry or SendGrid. The application will also run without adding them.
-Adding a valid bucket (cloud storage) is necessary if you want to upload images or gpx files.
+Adding a valid bucket (cloud storage) is mandatory.
 :::
 
 ### Prerequisites
@@ -59,7 +59,7 @@ install the PostGIS extension with
 `CREATE EXTENSION postgis;`. For more information check out the [PostGIS](https://postgis.net/) page.
 
 ### Frontend Setup
-Clone the frontend repository: https://github.com/gipfeli-io/gipfeli-frontend. Follow the guide in the .readme file of the repository.
+Clone the frontend repository: https://github.com/gipfeli-io/gipfeli-frontend. Follow the guide in the README file of the repository.
 
 :::caution
 If you want the frontend port autoconfigured, make sure to start the frontend after the backend is already running. 
@@ -68,7 +68,7 @@ will interfere with the api port if you use the standard configuration there. Yo
 :::
 
 ### Api Setup
-Clone the api repository: https://github.com/gipfeli-io/gipfeli-api. Follow the guide in the .readme file of the repository.
+Clone the api repository: https://github.com/gipfeli-io/gipfeli-api. Follow the guide in the README file of the repository.
 
 #### Database migrations
 
@@ -106,4 +106,4 @@ version of gipfeli.io as the references on the main branches have to be manually
 :::
 We provide a repository where you can clone a dockerized environment of gipfeli.io. You cannot develop with this configuration, but you can 
 test the whole application stack locally. 
-For details on how to set it up please refer to the .readme of this repository: [Gipfeli Docker Repository](https://github.com/gipfeli-io/gipfeli-docker).
+For details on how to set it up please refer to the README of this repository: [Gipfeli Docker Repository](https://github.com/gipfeli-io/gipfeli-docker).
