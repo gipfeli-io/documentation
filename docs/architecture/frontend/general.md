@@ -132,6 +132,12 @@ The way we implemented these features is as follows:
 Using this pattern, the components do not need to know anything about the implementation of the context, since that is
 delegated fully to the `Provider`. Just using the `Hook` is enough to access the `Context`.
 
+There are however some exceptions where it made more sense to directly implement the context inside the component and skip the 
+provider altogether. This is e.g. the case for the ErrorBoundaryContext. For the implementation of the context we needed some values from the ErrorBoundary-Component
+and directly set the state of this component. 
+
+For more information on specific implementations please have a look at the corresponding context file in the application: [Contexts](https://github.com/gipfeli-io/gipfeli-frontend/tree/main/src/contexts).
+
 <sup>*</sup>We decided to add all the context interfaces to one file (`contexts.ts`) to keep the application as easily readable as possible.
 
 ## Offline Functionality
