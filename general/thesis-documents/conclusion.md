@@ -6,6 +6,33 @@ title: "Conclusion"
 
 ## General
 
+Being able to do a project from start to finish and take on the roles from product owner to developer was an interesting
+experience. It was nice to use all the software engineering principles in a project, as normally as a developer you are only involved
+in the programming part. Doing a project the right way from start to finish was a refreshing experience,
+but we also realized once more that it needs a lot of effort (and money 😇) and can not easily be translated to a real life 
+project.
+
+We are proud that we could realize all our goals and also implement several optional features. We could improve our software skills
+a lot and had an in-depth look at some new frameworks and infrastructure. We are also happy that our initial time and milestone
+planning was spot on! 💪
+
+### The good,
+- NestJS is awesome! 🚀
+- Doing React the right way is nice. 
+- Google Cloud offerings are pretty cool.
+- Team 😍
+
+### the bad
+- Implementing Offline Functionality in Browsers
+- Implementing Authentication on your own
+- Using mural for the wireframes
+
+### ...and the ugly
+- Next.js 👿
+- ol-ext 
+
+[Read more](../lessons-learned) about our lessons learned.
+
 ## Personal
 
 ### Lukas Merz
@@ -21,7 +48,7 @@ I'm looking forward to developing the app even further - our backlog is full and
 
 #### Positive aspects
 
-* **Teamwork:** We did not hit any bumps and you could always rely on each other that the assigned
+* **Teamwork:** We did not hit any bumps, and you could always rely on each other that the assigned
   tasks will be handled properly and in a timely fashion. I also profited from the pull reviews and code/infrastructure
   discussions during our meetings. As such, it was a blast 🚀
 * **Chosen frameworks:** Both React and nest.js were a pleasure to work with. While React was sometimes a bit tedious
