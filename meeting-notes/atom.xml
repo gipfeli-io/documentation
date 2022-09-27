@@ -48,6 +48,25 @@ on our next tours!</p>]]></content>
         <category label="review" term="review"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Sprint 12 Review & Finalizing]]></title>
+        <id>sprint-12-review-final.md</id>
+        <link href="https://www.gipfeli.io/meeting-notes/sprint-12-review-final.md"/>
+        <updated>2022-09-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The sprint went according to plan, and we finished all of our remaining tasks. 🎉]]></summary>
+        <content type="html"><![CDATA[<p>The sprint went according to plan, and we finished all of our remaining tasks. 🎉</p><h1>Sprint Planning</h1><p><img loading="lazy" alt="Finished!" src="/assets/images/finish_meme-b6b3043a1acc1883b76ad70334af0fbd.png" width="600" height="405" class="img_ev3q"></p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="retro">Retro<a class="hash-link" href="#retro" title="Direct link to heading">​</a></h2><p>We are finally done!!!!</p><p><img loading="lazy" alt="Finished!" src="/assets/images/woohoo-cd44c46fd857ab4a9a6bd1b3a37c9f5d.gif" width="480" height="362" class="img_ev3q"></p>]]></content>
+        <author>
+            <name>Sabrina Wullschleger</name>
+            <uri>https://github.com/Saela</uri>
+        </author>
+        <author>
+            <name>Lukas Merz</name>
+            <uri>https://github.com/Tugark</uri>
+        </author>
+        <category label="sprint" term="sprint"/>
+        <category label="planning" term="planning"/>
+        <category label="review" term="review"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Development Meeting 10]]></title>
         <id>development-meeting-10</id>
         <link href="https://www.gipfeli.io/meeting-notes/development-meeting-10"/>
